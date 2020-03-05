@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Ligne (lv_line) &mdash; LittlevGL 6.0 documentation</title>
+  <title>Ligne (lv_line) &mdash; LittlevGL  documentation</title>
   
 
   
@@ -78,7 +78,7 @@
             
             
               <div class="version">
-                6.0
+                v6.1.2
               </div>
             
           
@@ -170,7 +170,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../porting/display.html">Interface d’affichage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../porting/display.html#display-buffer">Display buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../porting/display.html#tampon-d-affichage">Tampon d’affichage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../porting/display.html#pilote-d-affichage">Pilote d’affichage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../porting/display.html#api">API</a></li>
 </ul>
@@ -178,9 +178,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../porting/indev.html">Interface de périphérique d’entrée</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../porting/indev.html#types-de-peripheriques-d-entree">Types de périphériques d’entrée</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../porting/indev.html#pave-tactile-souris-ou-autre-pointeur">Pavé tactile, souris ou autre pointeur</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../porting/indev.html#keypad-or-keyboard">Keypad or keyboard</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../porting/indev.html#encoder">Encoder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../porting/indev.html#button">Button</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../porting/indev.html#pave-numerique-ou-clavier">Pavé numérique ou clavier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../porting/indev.html#encodeur">Encodeur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../porting/indev.html#bouton">Bouton</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../porting/indev.html#autres-fonctionnalites">Autres fonctionnalités</a></li>
@@ -233,6 +233,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../overview/event.html">Evénements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../overview/event.html#types-d-evenements">Types d’événements</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../overview/event.html#evenements-generiques">Evénements génériques</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/event.html#relatifs-aux-peripheriques-d-entree">Relatifs aux  périphériques d’entrée</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../overview/event.html#relatif-au-pointeur">Relatif au pointeur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../overview/event.html#relatif-au-pave-numerique-et-encodeur">Relatif au pavé numérique et encodeur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../overview/event.html#evenements-generaux">Evénements généraux</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../overview/event.html#evenements-speciaux">Evénements spéciaux</a></li>
 </ul>
 </li>
@@ -241,11 +247,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../overview/style.html">Styles</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../overview/style.html#use-the-styles">Use the styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/style.html#utiliser-les-styles">Utiliser les styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../overview/style.html#heritage-de-styles">Héritage de styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../overview/style.html#proprietes-de-style">Propriétés de style</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../overview/style.html#proprietes-communes">Propriétés communes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../overview/style.html#body-style-properties">Body style properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../overview/style.html#proprietes-de-style-de-corps">Propriétés de style de corps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../overview/style.html#proprietes-de-style-de-texte">Propriétés de style de texte</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../overview/style.html#proprietes-de-style-d-image">Propriétés de style d’image</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../overview/style.html#proprietes-de-style-de-ligne">Propriétés de style de ligne</a></li>
@@ -305,6 +311,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../overview/font.html">Polices</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../overview/font.html#support-unicode">Support Unicode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../overview/font.html#polices-integrees">Polices intégrées</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/font.html#special-features">Special features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../overview/font.html#bidirectional-support">Bidirectional support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../overview/font.html#subpixel-rendering">Subpixel rendering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../overview/font.html#compress-fonts">Compress fonts</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../overview/font.html#ajouter-une-nouvelle-police">Ajouter une nouvelle police</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../overview/font.html#ajouter-de-nouveaux-symboles">Ajouter de nouveaux symboles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../overview/font.html#ajouter-un-nouveau-moteur-de-polices">Ajouter un nouveau moteur de polices</a></li>
@@ -469,7 +481,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="btnm.html#styles">Styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="btnm.html#evenements">Evénements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="btnm.html#touches">Touches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="btnm.html#keys">Keys</a></li>
 <li class="toctree-l3"><a class="reference internal" href="btnm.html#exemple">Exemple</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="btnm.html#c">C</a></li>
 <li class="toctree-l4"><a class="reference internal" href="btnm.html#micropython">MicroPython</a></li>
@@ -561,7 +573,7 @@
 <li class="toctree-l2"><a class="reference internal" href="cont.html">Conteneur (lv_cont)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="cont.html#vue-densemble">Vue d’ensemble</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cont.html#mise-en-page">Mise en page</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cont.html#ajustement-automatique">Ajustement automatique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cont.html#autofit">Autofit</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cont.html#styles">Styles</a></li>
@@ -575,7 +587,20 @@
 <li class="toctree-l3"><a class="reference internal" href="cont.html#api">API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ddlist.html">Liste déroulante (lv_ddlist)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cpicker.html">Color picker (lv_cpicker)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cpicker.html#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cpicker.html#types-of-color-pickers">Types of color pickers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpicker.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cpicker.html#styles">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpicker.html#events">Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpicker.html#keys">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpicker.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpicker.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ddlist.html">Drop-down list (lv_ddlist)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ddlist.html#vue-densemble">Vue d’ensemble</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="ddlist.html#definir-les-elements">Définir les éléments</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ddlist.html#obtenir-l-element-selectionne">Obtenir l’élément sélectionné</a></li>
@@ -584,6 +609,7 @@
 <li class="toctree-l4"><a class="reference internal" href="ddlist.html#barres-de-defilement">Barres de défilement</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ddlist.html#duree-d-animation">Durée d’animation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ddlist.html#fleche-decorative">Flèche décorative</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ddlist.html#manually-open-close">Manually open/close</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ddlist.html#rester-ouvert">Rester ouvert</a></li>
 </ul>
 </li>
@@ -600,7 +626,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="gauge.html">Jauge (lv_gauge)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gauge.html#vue-densemble">Vue d’ensemble</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="gauge.html#echelle-graduee">Echelle graduée</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gauge.html#scale">Scale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gauge.html#aiguilles">Aiguilles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gauge.html#plage">Plage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gauge.html#valeur-critique">Valeur critique</a></li>
@@ -662,7 +688,7 @@
 <li class="toctree-l3"><a class="reference internal" href="kb.html#vue-densemble">Vue d’ensemble</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="kb.html#modes">Modes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="kb.html#zone-de-texte">Zone de texte</a></li>
-<li class="toctree-l4"><a class="reference internal" href="kb.html#nouvelle-disposition-de-touches">Nouvelle disposition de touches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kb.html#new-keymap">New Keymap</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="kb.html#styles">Styles</a></li>
@@ -739,6 +765,7 @@
 <li class="toctree-l4"><a class="reference internal" href="list.html#ajouter-des-boutons">Ajouter des boutons</a></li>
 <li class="toctree-l4"><a class="reference internal" href="list.html#supprimer-des-boutons">Supprimer des boutons</a></li>
 <li class="toctree-l4"><a class="reference internal" href="list.html#navigation-manuelle">Navigation manuelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="list.html#mise-en-page">Mise en page</a></li>
 <li class="toctree-l4"><a class="reference internal" href="list.html#mise-en-evidence-du-bord">Mise en évidence du bord</a></li>
 <li class="toctree-l4"><a class="reference internal" href="list.html#propagation-du-defilement">Propagation du défilement</a></li>
 </ul>
@@ -758,6 +785,7 @@
 <li class="toctree-l3"><a class="reference internal" href="lmeter.html#vue-d-ensemble">Vue d’ensemble</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="lmeter.html#definir-la-valeur">Définir la valeur</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lmeter.html#intervalle-et-angles">Intervalle et angles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lmeter.html#decalage-d-angle">Décalage d’angle</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lmeter.html#styles">Styles</a></li>
@@ -853,6 +881,7 @@
 <li class="toctree-l2"><a class="reference internal" href="slider.html">Curseur (lv_slider)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="slider.html#vue-d-ensemble">Vue d’ensemble</a></li>
 <li class="toctree-l3"><a class="reference internal" href="slider.html#valeur-et-intervalle">Valeur et intervalle</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="slider.html#symetrie">Symétrie</a></li>
 <li class="toctree-l4"><a class="reference internal" href="slider.html#placement-du-bouton">Placement du bouton</a></li>
 </ul>
 </li>
@@ -1162,7 +1191,36 @@ Si activé, alors lorsque les points sont définis, la largeur et la hauteur de 
 </div>
 <div class="section" id="micropython">
 <h3>MicroPython<a class="headerlink" href="#micropython" title="Permalink to this headline">¶</a></h3>
-<p>No examples yet.</p>
+<div class="section" id="id1">
+<h4>Simple Line<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<img alt="Line example in LittlevGL with MicroPython" src="../_images/lv_ex_line_1.png" />
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>code</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an array for the points of the line</span>
+<span class="n">line_points</span> <span class="o">=</span> <span class="p">[</span> <span class="p">{</span><span class="s2">&quot;x&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">},</span> 
+                <span class="p">{</span><span class="s2">&quot;x&quot;</span><span class="p">:</span><span class="mi">70</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span><span class="mi">70</span><span class="p">},</span> 
+                <span class="p">{</span><span class="s2">&quot;x&quot;</span><span class="p">:</span><span class="mi">120</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">},</span> 
+                <span class="p">{</span><span class="s2">&quot;x&quot;</span><span class="p">:</span><span class="mi">180</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span><span class="mi">60</span><span class="p">},</span> 
+                <span class="p">{</span><span class="s2">&quot;x&quot;</span><span class="p">:</span><span class="mi">240</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">}]</span>
+
+<span class="c1"># Create new style (thick dark blue)</span>
+<span class="n">style_line</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">style_t</span><span class="p">()</span>
+<span class="n">lv</span><span class="o">.</span><span class="n">style_copy</span><span class="p">(</span><span class="n">style_line</span><span class="p">,</span> <span class="n">lv</span><span class="o">.</span><span class="n">style_plain</span><span class="p">)</span>
+<span class="n">style_line</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">color_make</span><span class="p">(</span><span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x3b</span><span class="p">,</span> <span class="mh">0x75</span><span class="p">)</span>
+<span class="n">style_line</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">style_line</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">rounded</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># Copy the previous line and apply the new style</span>
+<span class="n">line1</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">scr_act</span><span class="p">())</span>
+<span class="n">line1</span><span class="o">.</span><span class="n">set_points</span><span class="p">(</span><span class="n">line_points</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">line_points</span><span class="p">))</span>      <span class="c1"># Set the points</span>
+<span class="n">line1</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">STYLE</span><span class="o">.</span><span class="n">MAIN</span><span class="p">,</span> <span class="n">style_line</span><span class="p">)</span>
+<span class="n">line1</span><span class="o">.</span><span class="n">align</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">lv</span><span class="o">.</span><span class="n">ALIGN</span><span class="o">.</span><span class="n">CENTER</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="api">
@@ -1178,12 +1236,12 @@ Si activé, alors lorsque les points sont définis, la largeur et la hauteur de 
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Enums</p>
 <dl class="enum">
-<dt id="_CPPv4Ut7_anon_65">
-<span id="_CPPv3Ut7_anon_65"></span><span class="target" id="lv__line_8h_1a8628933cde20921c453a6d2607bdad62"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut7_anon_65" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut7_anon_72">
+<span id="_CPPv3Ut7_anon_72"></span><span class="target" id="lv__line_8h_1a68c01102755fc7d1c810bb0b0635fa90"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut7_anon_72" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
 <dt id="_CPPv418LV_LINE_STYLE_MAIN">
-<span id="_CPPv318LV_LINE_STYLE_MAIN"></span><span id="_CPPv218LV_LINE_STYLE_MAIN"></span><span class="target" id="lv__line_8h_1a8628933cde20921c453a6d2607bdad62ac729e41e95548754129fd433625562e0"></span><code class="sig-name descname">LV_LINE_STYLE_MAIN</code><a class="headerlink" href="#_CPPv418LV_LINE_STYLE_MAIN" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv318LV_LINE_STYLE_MAIN"></span><span id="_CPPv218LV_LINE_STYLE_MAIN"></span><span class="target" id="lv__line_8h_1a68c01102755fc7d1c810bb0b0635fa90ac729e41e95548754129fd433625562e0"></span><code class="sig-name descname">LV_LINE_STYLE_MAIN</code><a class="headerlink" href="#_CPPv418LV_LINE_STYLE_MAIN" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1356,7 +1414,7 @@ Si activé, alors lorsque les points sont définis, la largeur et la hauteur de 
     <p>
         &copy; Copyright 2019, Gabor Kiss-Vamosi
       <span class="lastupdated">
-        Last updated on Oct 11, 2019.
+        Last updated on Feb 26, 2020.
       </span>
 
     </p>

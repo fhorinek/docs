@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Görevler &mdash; LittlevGL 6.0 documentation</title>
+  <title>Görevler &mdash; LittlevGL  documentation</title>
   
 
   
@@ -78,7 +78,7 @@
             
             
               <div class="version">
-                6.0
+                v6.1.2
               </div>
             
           
@@ -305,6 +305,12 @@
 <li class="toctree-l2"><a class="reference internal" href="font.html">Fonts</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="font.html#unicode-support">Unicode support</a></li>
 <li class="toctree-l3"><a class="reference internal" href="font.html#built-in-fonts">Built-in fonts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="font.html#special-features">Special features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="font.html#bidirectional-support">Bidirectional support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="font.html#subpixel-rendering">Subpixel rendering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="font.html#compress-fonts">Compress fonts</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="font.html#add-new-font">Add new font</a></li>
 <li class="toctree-l3"><a class="reference internal" href="font.html#add-new-symbols">Add new symbols</a></li>
 <li class="toctree-l3"><a class="reference internal" href="font.html#add-a-new-font-engine">Add a new font engine</a></li>
@@ -469,6 +475,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/btnm.html#bicimler">Biçimler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/btnm.html#olaylar">Olaylar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/btnm.html#keys">Keys</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/btnm.html#ornek">Örnek</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/btnm.html#c">C</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/btnm.html#micropython">MicroPython</a></li>
@@ -515,7 +522,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../object-types/canvas.html#api">API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../object-types/cb.html">Onay kutusu (lv_cb)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../object-types/cb.html">Checkbox (lv_cb)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/cb.html#giris">Giriş</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/cb.html#metin">Metin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/cb.html#onay-onayi-kaldir">Onay/Onayı Kaldır</a></li>
@@ -560,7 +567,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../object-types/cont.html">Container (lv_cont)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/cont.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/cont.html#layout">Layout</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/cont.html#auto-fit">Auto fit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/cont.html#autofit">Autofit</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/cont.html#styles">Styles</a></li>
@@ -574,7 +581,20 @@
 <li class="toctree-l3"><a class="reference internal" href="../object-types/cont.html#api">API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../object-types/ddlist.html">Drop down list (lv_ddlist)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../object-types/cpicker.html">Color picker (lv_cpicker)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cpicker.html#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/cpicker.html#types-of-color-pickers">Types of color pickers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/cpicker.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cpicker.html#styles">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cpicker.html#events">Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cpicker.html#keys">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cpicker.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cpicker.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../object-types/ddlist.html">Drop-down list (lv_ddlist)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/ddlist.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#set-options">Set options</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#get-selected-option">Get selected option</a></li>
@@ -583,6 +603,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#scrollbars">Scrollbars</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#animation-time">Animation time</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#decoration-arrow">Decoration arrow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#manually-open-close">Manually open/close</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#stay-open">Stay open</a></li>
 </ul>
 </li>
@@ -599,7 +620,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../object-types/gauge.html">Gösterge (lv_gauge)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/gauge.html#giris">Giriş</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/gauge.html#olcek">Ölçek</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/gauge.html#scale">Scale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/gauge.html#ibreler">ibreler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/gauge.html#aralik">Aralık</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/gauge.html#kritik-deger">Kritik Değer</a></li>
@@ -661,7 +682,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../object-types/kb.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/kb.html#modes">Modes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/kb.html#assign-text-area">Assign Text area</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/kb.html#new-key-map">New key map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/kb.html#new-keymap">New Keymap</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/kb.html#styles">Styles</a></li>
@@ -738,6 +759,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../object-types/list.html#add-buttons">Add buttons</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/list.html#delete-buttons">Delete buttons</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/list.html#manual-navigation">Manual navigation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/list.html#layout">Layout</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/list.html#edge-flash">Edge flash</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/list.html#scroll-propagation">Scroll propagation</a></li>
 </ul>
@@ -757,6 +779,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../object-types/lmeter.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/lmeter.html#set-value">Set value</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/lmeter.html#range-and-angles">Range and Angles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/lmeter.html#angle-offset">Angle offset</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/lmeter.html#styles">Styles</a></li>
@@ -852,6 +875,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../object-types/slider.html">Slider (lv_slider)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/slider.html#genel-bakis">Genel bakış</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/slider.html#deger-ve-aralik">Değer ve aralık</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/slider.html#symmetrical">Symmetrical</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/slider.html#dugme-yerlestirme">Düğme yerleştirme</a></li>
 </ul>
 </li>
@@ -1090,13 +1114,13 @@
             
   <div class="section" id="gorevler">
 <h1>Görevler<a class="headerlink" href="#gorevler" title="Permalink to this headline">¶</a></h1>
-<p>LittlevGL dahili  görev sistemine sahiptir. Periyodik olarak çağırmak için bir fonksiyon kaydedebilirsiniz. Birkaç saniyede çağrılması gereken bu görevler görevler <code class="docutils literal notranslate"><span class="pre">lv_task_handler()</span></code> ile çağrılır ve işlenir.
+<p>LittlevGL has a built-in task system. You can register a function to have it be called periodically. The tasks are handled and called in <code class="docutils literal notranslate"><span class="pre">lv_task_handler()</span></code>, which needs to be called periodically every few milliseconds.
 Daha fazla bilgi için <a class="reference internal" href="../porting/task-handler.html"><span class="doc">Porting</span></a> bakınız.</p>
-<p>Görevler non-preemptive dir yani bir görev diğerini kesebilir. Bu yüzden görevin içinde herhangi bir LittlevGL fonksiyonunu çağırabilirsiniz.</p>
+<p>The tasks are non-preemptive, which means a task cannot interrupt another task. Therefore, you can call any LittlevGL related function in a task.</p>
 <div class="section" id="bir-gorev-olustur">
 <h2>Bir görev oluştur<a class="headerlink" href="#bir-gorev-olustur" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">lv_task_create(task_cb,</span> <span class="pre">period_ms,</span> <span class="pre">LV_TASK_PRIO_OFF/LOWEST/LOW/MID/HIGH/HIGHEST,</span> <span class="pre">user_data)</span></code> yeni bir görev oluşturmak için kullanılır. Görevin parametrelerini değiştirmek için sonradan kullanılabilen bir <code class="docutils literal notranslate"><span class="pre">lv_task_t</span> <span class="pre">*</span></code> değişkeni oluşturacak.
-Ayrıca <code class="docutils literal notranslate"><span class="pre">lv_task_create_basic()</span></code> herhangi bir parametre belirtmeksizin yeni ir görev oluşturmak içinde kullanılabilir.</p>
+<p>To create a new task, use <code class="docutils literal notranslate"><span class="pre">lv_task_create(task_cb,</span> <span class="pre">period_ms,</span> <span class="pre">LV_TASK_PRIO_OFF/LOWEST/LOW/MID/HIGH/HIGHEST,</span> <span class="pre">user_data)</span></code>. It will create an <code class="docutils literal notranslate"><span class="pre">lv_task_t</span> <span class="pre">*</span></code> variable, which can be used later to modify the parameters of the task.
+<code class="docutils literal notranslate"><span class="pre">lv_task_create_basic()</span></code> can also be used. It allows you to create a new task without specifying any parameters.</p>
 <p>Bşir görev geri çağırması <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">(*lv_task_cb_t)(lv_task_t</span> <span class="pre">*);</span></code> prototipine sahip olmalı.</p>
 <p>Örneğin:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">my_task</span><span class="p">(</span><span class="n">lv_task_t</span> <span class="o">*</span> <span class="n">task</span><span class="p">)</span>
@@ -1104,7 +1128,7 @@ Ayrıca <code class="docutils literal notranslate"><span class="pre">lv_task_cre
   <span class="cm">/*Kullanıcı verisini kullan*/</span>
   <span class="kt">uint32_t</span> <span class="o">*</span> <span class="n">user_data</span> <span class="o">=</span> <span class="n">task</span><span class="o">-&gt;</span><span class="n">user_data</span><span class="p">;</span>
   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;my_task called with user data: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">user_data</span><span class="p">);</span>
-  
+
   <span class="cm">/*i LittlevGL ile birşeyler yap*/</span>
   <span class="k">if</span><span class="p">(</span><span class="n">something_happened</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">something_happened</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
@@ -1122,7 +1146,7 @@ Ayrıca <code class="docutils literal notranslate"><span class="pre">lv_task_cre
 <div class="section" id="hazir-ve-reset">
 <h2>Hazır ve Reset<a class="headerlink" href="#hazir-ve-reset" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">lv_task_ready(task)</span></code> görevin <code class="docutils literal notranslate"><span class="pre">lv_task_handler()</span></code> ‘ın bir sonraki çağrısında çalışmasını sağlar.</p>
-<p><code class="docutils literal notranslate"><span class="pre">lv_task_reset(task)</span></code> bir görevin periyotunu resetler. Belirlenen milisaniye periyotu süresi sonrasında çağrılır.göre</p>
+<p><code class="docutils literal notranslate"><span class="pre">lv_task_reset(task)</span></code> resets the period of a task. It will be called again after the defined period of milliseconds has elapsed.</p>
 </div>
 <div class="section" id="parametreleri-ayarlama">
 <h2>Parametreleri ayarlama<a class="headerlink" href="#parametreleri-ayarlama" title="Permalink to this headline">¶</a></h2>
@@ -1135,23 +1159,23 @@ Ayrıca <code class="docutils literal notranslate"><span class="pre">lv_task_cre
 </div>
 <div class="section" id="tek-seferlik-gorevler">
 <h2>Tek seferlik görevler<a class="headerlink" href="#tek-seferlik-gorevler" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">lv_task_once(task)</span></code>çağırarak bir kez çalışacak bir görev yapabilirsiniz. Bu görev ilk çağırmadan sonra otomatik olarak silinecektir.</p>
+<p>You can make a task to run only once by calling<code class="docutils literal notranslate"><span class="pre">lv_task_once(task)</span></code>. The task will automatically be deleted after being called for the first time.</p>
 </div>
 <div class="section" id="bos-zaman-olcme">
 <h2>Boş zaman ölçme<a class="headerlink" href="#bos-zaman-olcme" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">lv_task_get_idle()</span></code> ile <code class="docutils literal notranslate"><span class="pre">lv_task_handler</span></code>’ın boş zaman yüzdesini elde edebilirsiniz. Tüm sistemin boş zaman süresini değil, sadece<code class="docutils literal notranslate"><span class="pre">lv_task_handler</span></code>’ın ölçtüğünü unutmayınız.
-Eğer bir işletim sistemi kullanıyorsunuz bir görevde <code class="docutils literal notranslate"><span class="pre">lv_task_handler</span></code>’ı çağırırsanız,yanıltıcı olabilir.</p>
+<p>You can get the idle percentage time <code class="docutils literal notranslate"><span class="pre">lv_task_handler</span></code> with <code class="docutils literal notranslate"><span class="pre">lv_task_get_idle()</span></code>. Note that, it doesn’t measure the idle time of the overall system, only <code class="docutils literal notranslate"><span class="pre">lv_task_handler</span></code>.
+It can be misleading if you use an operating system and call <code class="docutils literal notranslate"><span class="pre">lv_task_handler</span></code> in an  task, as it won’t actually measure the time the OS spends in an idle thread.</p>
 </div>
 <div class="section" id="es-zamanli-olmayan-cagirmalar">
 <h2>Eş zamanlı olmayan çağırmalar<a class="headerlink" href="#es-zamanli-olmayan-cagirmalar" title="Permalink to this headline">¶</a></h2>
-<p>Bazı durumlarda, hızlıca bir aksiyon yapamazsınız. Örneğin, bir nesneyi şuan silemezsin çünkü bir şey onu hala kullanılıyor veya yürütmeyi şuan kapatmak istemezsin.
-Bazı durumlar için, <code class="docutils literal notranslate"><span class="pre">lv_task_handler'</span> <span class="pre">'ın</span> <span class="pre">bir</span> <span class="pre">sonraki</span> <span class="pre">çağrısında</span> </code>my_function<code class="docutils literal notranslate"><span class="pre">çağrılması</span> <span class="pre">için</span></code>lv_async_call(my_function, data_p)<code class="docutils literal notranslate"><span class="pre">kullanılabilir.</span></code>data_p` çağrıldığında fonksiyona geçecek.
+<p>In some cases, you can’t do an action immediately. For example, you can’t delete an object right now because something else is still using it or you don’t want to block the execution now.
+For these cases, you can use the <code class="docutils literal notranslate"><span class="pre">lv_async_call(my_function,</span> <span class="pre">data_p)</span></code> to make <code class="docutils literal notranslate"><span class="pre">my_function</span></code> be called on the next call of <code class="docutils literal notranslate"><span class="pre">lv_task_handler</span></code>. <code class="docutils literal notranslate"><span class="pre">data_p</span></code> will be passed to function when it’s called.
 Note that, only the pointer of the data is saved so you need to ensure that the variable will be “alive” while the function is called. Global veya dinamik olarak ayrılmış veri, <em>static</em> kullanılabilir.</p>
 <p>Örneğin:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">my_screen_clean_up</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span> <span class="n">scr</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="cm">/*`scr` ile ilgili bazı kaynakları serbest bırakın*/</span>
-  
+
   <span class="cm">/*En sonunda ekranı sil*/</span>
   <span class="n">lv_obj_del</span><span class="p">(</span><span class="n">scr</span><span class="p">);</span>  
 <span class="p">}</span>
@@ -1166,6 +1190,7 @@ Note that, only the pointer of the data is saved so you need to ensure that the 
 <span class="cm">/*Ekran hala geçerlidir, bu yüzden onunla başka şeyler yapabilirsiniz*/</span>
 </pre></div>
 </div>
+<p>If you just want to delete an object, and don’t need to clean anything up in <code class="docutils literal notranslate"><span class="pre">my_screen_cleanup</span></code>, you could just use <code class="docutils literal notranslate"><span class="pre">lv_obj_del_async</span></code>, which will delete the object on the next call to <code class="docutils literal notranslate"><span class="pre">lv_task_handler</span></code>.</p>
 </div>
 <div class="section" id="api">
 <h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
@@ -1192,43 +1217,43 @@ Note that, only the pointer of the data is saved so you need to ensure that the 
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Enums</p>
 <dl class="enum">
-<dt id="_CPPv4Ut7_anon_33">
-<span id="_CPPv3Ut7_anon_33"></span><span class="target" id="lv__task_8h_1a4caf8d8f829279fba122163d961608a4"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut7_anon_33" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut7_anon_36">
+<span id="_CPPv3Ut7_anon_36"></span><span class="target" id="lv__task_8h_1a458e651af6690959efa2afb96be7d609"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut7_anon_36" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Possible priorities for lv_tasks </p>
 <p><em>Values:</em></p>
 <dl class="enumerator">
 <dt id="_CPPv416LV_TASK_PRIO_OFF">
-<span id="_CPPv316LV_TASK_PRIO_OFF"></span><span id="_CPPv216LV_TASK_PRIO_OFF"></span><span class="target" id="lv__task_8h_1a4caf8d8f829279fba122163d961608a4a63f1ed372b224a31b8da52ebab208af5"></span><code class="sig-name descname">LV_TASK_PRIO_OFF</code> = 0<a class="headerlink" href="#_CPPv416LV_TASK_PRIO_OFF" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv316LV_TASK_PRIO_OFF"></span><span id="_CPPv216LV_TASK_PRIO_OFF"></span><span class="target" id="lv__task_8h_1a458e651af6690959efa2afb96be7d609a63f1ed372b224a31b8da52ebab208af5"></span><code class="sig-name descname">LV_TASK_PRIO_OFF</code> = 0<a class="headerlink" href="#_CPPv416LV_TASK_PRIO_OFF" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv419LV_TASK_PRIO_LOWEST">
-<span id="_CPPv319LV_TASK_PRIO_LOWEST"></span><span id="_CPPv219LV_TASK_PRIO_LOWEST"></span><span class="target" id="lv__task_8h_1a4caf8d8f829279fba122163d961608a4a07a2ded65dab9ae8dcfa85fff6f77d23"></span><code class="sig-name descname">LV_TASK_PRIO_LOWEST</code><a class="headerlink" href="#_CPPv419LV_TASK_PRIO_LOWEST" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv319LV_TASK_PRIO_LOWEST"></span><span id="_CPPv219LV_TASK_PRIO_LOWEST"></span><span class="target" id="lv__task_8h_1a458e651af6690959efa2afb96be7d609a07a2ded65dab9ae8dcfa85fff6f77d23"></span><code class="sig-name descname">LV_TASK_PRIO_LOWEST</code><a class="headerlink" href="#_CPPv419LV_TASK_PRIO_LOWEST" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv416LV_TASK_PRIO_LOW">
-<span id="_CPPv316LV_TASK_PRIO_LOW"></span><span id="_CPPv216LV_TASK_PRIO_LOW"></span><span class="target" id="lv__task_8h_1a4caf8d8f829279fba122163d961608a4a0344c523bc7d1c7e3920abb5c0cfeeb5"></span><code class="sig-name descname">LV_TASK_PRIO_LOW</code><a class="headerlink" href="#_CPPv416LV_TASK_PRIO_LOW" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv316LV_TASK_PRIO_LOW"></span><span id="_CPPv216LV_TASK_PRIO_LOW"></span><span class="target" id="lv__task_8h_1a458e651af6690959efa2afb96be7d609a0344c523bc7d1c7e3920abb5c0cfeeb5"></span><code class="sig-name descname">LV_TASK_PRIO_LOW</code><a class="headerlink" href="#_CPPv416LV_TASK_PRIO_LOW" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv416LV_TASK_PRIO_MID">
-<span id="_CPPv316LV_TASK_PRIO_MID"></span><span id="_CPPv216LV_TASK_PRIO_MID"></span><span class="target" id="lv__task_8h_1a4caf8d8f829279fba122163d961608a4a844c317809c97853d1f0959fe381448e"></span><code class="sig-name descname">LV_TASK_PRIO_MID</code><a class="headerlink" href="#_CPPv416LV_TASK_PRIO_MID" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv316LV_TASK_PRIO_MID"></span><span id="_CPPv216LV_TASK_PRIO_MID"></span><span class="target" id="lv__task_8h_1a458e651af6690959efa2afb96be7d609a844c317809c97853d1f0959fe381448e"></span><code class="sig-name descname">LV_TASK_PRIO_MID</code><a class="headerlink" href="#_CPPv416LV_TASK_PRIO_MID" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv417LV_TASK_PRIO_HIGH">
-<span id="_CPPv317LV_TASK_PRIO_HIGH"></span><span id="_CPPv217LV_TASK_PRIO_HIGH"></span><span class="target" id="lv__task_8h_1a4caf8d8f829279fba122163d961608a4a6e4148a4990dbfc98f449c9deb4c4ae9"></span><code class="sig-name descname">LV_TASK_PRIO_HIGH</code><a class="headerlink" href="#_CPPv417LV_TASK_PRIO_HIGH" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv317LV_TASK_PRIO_HIGH"></span><span id="_CPPv217LV_TASK_PRIO_HIGH"></span><span class="target" id="lv__task_8h_1a458e651af6690959efa2afb96be7d609a6e4148a4990dbfc98f449c9deb4c4ae9"></span><code class="sig-name descname">LV_TASK_PRIO_HIGH</code><a class="headerlink" href="#_CPPv417LV_TASK_PRIO_HIGH" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv420LV_TASK_PRIO_HIGHEST">
-<span id="_CPPv320LV_TASK_PRIO_HIGHEST"></span><span id="_CPPv220LV_TASK_PRIO_HIGHEST"></span><span class="target" id="lv__task_8h_1a4caf8d8f829279fba122163d961608a4a0da23266b0380ef5e9adb95f59679228"></span><code class="sig-name descname">LV_TASK_PRIO_HIGHEST</code><a class="headerlink" href="#_CPPv420LV_TASK_PRIO_HIGHEST" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv320LV_TASK_PRIO_HIGHEST"></span><span id="_CPPv220LV_TASK_PRIO_HIGHEST"></span><span class="target" id="lv__task_8h_1a458e651af6690959efa2afb96be7d609a0da23266b0380ef5e9adb95f59679228"></span><code class="sig-name descname">LV_TASK_PRIO_HIGHEST</code><a class="headerlink" href="#_CPPv420LV_TASK_PRIO_HIGHEST" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv417_LV_TASK_PRIO_NUM">
-<span id="_CPPv317_LV_TASK_PRIO_NUM"></span><span id="_CPPv217_LV_TASK_PRIO_NUM"></span><span class="target" id="lv__task_8h_1a4caf8d8f829279fba122163d961608a4ad6a0021bc430f2998dd17f017073b351"></span><code class="sig-name descname">_LV_TASK_PRIO_NUM</code><a class="headerlink" href="#_CPPv417_LV_TASK_PRIO_NUM" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv317_LV_TASK_PRIO_NUM"></span><span id="_CPPv217_LV_TASK_PRIO_NUM"></span><span class="target" id="lv__task_8h_1a458e651af6690959efa2afb96be7d609ad6a0021bc430f2998dd17f017073b351"></span><code class="sig-name descname">_LV_TASK_PRIO_NUM</code><a class="headerlink" href="#_CPPv417_LV_TASK_PRIO_NUM" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1449,7 +1474,7 @@ Note that, only the pointer of the data is saved so you need to ensure that the 
     <p>
         &copy; Copyright 2019, Gabor Kiss-Vamosi
       <span class="lastupdated">
-        Last updated on Oct 11, 2019.
+        Last updated on Feb 26, 2020.
       </span>
 
     </p>

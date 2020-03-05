@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Keyboard (lv_kb) &mdash; LittlevGL 6.0 documentation</title>
+  <title>Keyboard (lv_kb) &mdash; LittlevGL  documentation</title>
   
 
   
@@ -78,7 +78,7 @@
             
             
               <div class="version">
-                6.0
+                v6.1.2
               </div>
             
           
@@ -305,6 +305,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../overview/font.html">Fonts</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../overview/font.html#unicode-support">Unicode support</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../overview/font.html#built-in-fonts">Built-in fonts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/font.html#special-features">Special features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../overview/font.html#bidirectional-support">Bidirectional support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../overview/font.html#subpixel-rendering">Subpixel rendering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../overview/font.html#compress-fonts">Compress fonts</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../overview/font.html#add-new-font">Add new font</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../overview/font.html#add-new-symbols">Add new symbols</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../overview/font.html#add-a-new-font-engine">Add a new font engine</a></li>
@@ -469,6 +475,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="btnm.html#bicimler">Biçimler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="btnm.html#olaylar">Olaylar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="btnm.html#keys">Keys</a></li>
 <li class="toctree-l3"><a class="reference internal" href="btnm.html#ornek">Örnek</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="btnm.html#c">C</a></li>
 <li class="toctree-l4"><a class="reference internal" href="btnm.html#micropython">MicroPython</a></li>
@@ -515,7 +522,7 @@
 <li class="toctree-l3"><a class="reference internal" href="canvas.html#api">API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="cb.html">Onay kutusu (lv_cb)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cb.html">Checkbox (lv_cb)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="cb.html#giris">Giriş</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cb.html#metin">Metin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cb.html#onay-onayi-kaldir">Onay/Onayı Kaldır</a></li>
@@ -560,7 +567,7 @@
 <li class="toctree-l2"><a class="reference internal" href="cont.html">Container (lv_cont)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="cont.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cont.html#layout">Layout</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cont.html#auto-fit">Auto fit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cont.html#autofit">Autofit</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cont.html#styles">Styles</a></li>
@@ -574,7 +581,20 @@
 <li class="toctree-l3"><a class="reference internal" href="cont.html#api">API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ddlist.html">Drop down list (lv_ddlist)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cpicker.html">Color picker (lv_cpicker)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cpicker.html#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cpicker.html#types-of-color-pickers">Types of color pickers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpicker.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cpicker.html#styles">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpicker.html#events">Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpicker.html#keys">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpicker.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpicker.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ddlist.html">Drop-down list (lv_ddlist)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ddlist.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="ddlist.html#set-options">Set options</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ddlist.html#get-selected-option">Get selected option</a></li>
@@ -583,6 +603,7 @@
 <li class="toctree-l4"><a class="reference internal" href="ddlist.html#scrollbars">Scrollbars</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ddlist.html#animation-time">Animation time</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ddlist.html#decoration-arrow">Decoration arrow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ddlist.html#manually-open-close">Manually open/close</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ddlist.html#stay-open">Stay open</a></li>
 </ul>
 </li>
@@ -599,7 +620,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="gauge.html">Gösterge (lv_gauge)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gauge.html#giris">Giriş</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="gauge.html#olcek">Ölçek</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gauge.html#scale">Scale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gauge.html#ibreler">ibreler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gauge.html#aralik">Aralık</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gauge.html#kritik-deger">Kritik Değer</a></li>
@@ -661,7 +682,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#modes">Modes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#assign-text-area">Assign Text area</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#new-key-map">New key map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#new-keymap">New Keymap</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#styles">Styles</a></li>
@@ -738,6 +759,7 @@
 <li class="toctree-l4"><a class="reference internal" href="list.html#add-buttons">Add buttons</a></li>
 <li class="toctree-l4"><a class="reference internal" href="list.html#delete-buttons">Delete buttons</a></li>
 <li class="toctree-l4"><a class="reference internal" href="list.html#manual-navigation">Manual navigation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="list.html#layout">Layout</a></li>
 <li class="toctree-l4"><a class="reference internal" href="list.html#edge-flash">Edge flash</a></li>
 <li class="toctree-l4"><a class="reference internal" href="list.html#scroll-propagation">Scroll propagation</a></li>
 </ul>
@@ -757,6 +779,7 @@
 <li class="toctree-l3"><a class="reference internal" href="lmeter.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="lmeter.html#set-value">Set value</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lmeter.html#range-and-angles">Range and Angles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lmeter.html#angle-offset">Angle offset</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lmeter.html#styles">Styles</a></li>
@@ -852,6 +875,7 @@
 <li class="toctree-l2"><a class="reference internal" href="slider.html">Slider (lv_slider)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="slider.html#genel-bakis">Genel bakış</a></li>
 <li class="toctree-l3"><a class="reference internal" href="slider.html#deger-ve-aralik">Değer ve aralık</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="slider.html#symmetrical">Symmetrical</a></li>
 <li class="toctree-l4"><a class="reference internal" href="slider.html#dugme-yerlestirme">Düğme yerleştirme</a></li>
 </ul>
 </li>
@@ -1097,69 +1121,69 @@
 <h3>Modes<a class="headerlink" href="#modes" title="Permalink to this headline">¶</a></h3>
 <p>The Keyboards have two modes:</p>
 <ul class="simple">
-<li><p><strong>LV_KB_MODE_TEXT</strong> display letters, number, and special characters</p></li>
-<li><p><strong>LV_KB_MODE_NUM</strong> display numbers, +/- sign and decimal dot</p></li>
+<li><p><strong>LV_KB_MODE_TEXT</strong> - Display letters, number, and special characters.</p></li>
+<li><p><strong>LV_KB_MODE_NUM</strong> - Display numbers, +/- sign, and decimal dot.</p></li>
 </ul>
-<p>To set the mode use <code class="docutils literal notranslate"><span class="pre">lv_kb_set_mode(kb,</span> <span class="pre">mode)</span></code>. The default is  <em>LV_KB_MODE_TEXT</em></p>
+<p>To set the mode, use <code class="docutils literal notranslate"><span class="pre">lv_kb_set_mode(kb,</span> <span class="pre">mode)</span></code>. The default is  <em>LV_KB_MODE_TEXT</em>.</p>
 </div>
 <div class="section" id="assign-text-area">
 <h3>Assign Text area<a class="headerlink" href="#assign-text-area" title="Permalink to this headline">¶</a></h3>
 <p>You can assign a <a class="reference internal" href="ta.html"><span class="doc">Text area</span></a> to the Keyboard to automatically put the clicked characters there.
-To assign the Text area use <code class="docutils literal notranslate"><span class="pre">lv_kb_set_ta(kb,</span> <span class="pre">ta)</span></code>.</p>
-<p>The assigned Text area’s <strong>cursor can be managed</strong> by the keyboard: when the keyboard is assigned the previous Text area’s cursor will be hidden an the new’s will be shown.
-When the keyboard is closed by the <em>Ok</em> or <em>Close</em> buttons the cursor also will be hidden. The cursor manager feature is enabled by <code class="docutils literal notranslate"><span class="pre">lv_kb_set_cursor_manage(kb,</span> <span class="pre">true)</span></code>. The default is not managed.</p>
+To assign the text area, use <code class="docutils literal notranslate"><span class="pre">lv_kb_set_ta(kb,</span> <span class="pre">ta)</span></code>.</p>
+<p>The assigned text area’s <strong>cursor can be managed</strong> by the keyboard: when the keyboard is assigned, the previous text area’s cursor will be hidden and the new one will be shown.
+When the keyboard is closed by the <em>Ok</em> or <em>Close</em> buttons, the cursor also will be hidden. The cursor manager feature is enabled by <code class="docutils literal notranslate"><span class="pre">lv_kb_set_cursor_manage(kb,</span> <span class="pre">true)</span></code>. The default is not managed.</p>
 </div>
-<div class="section" id="new-key-map">
-<h3>New key map<a class="headerlink" href="#new-key-map" title="Permalink to this headline">¶</a></h3>
-<p>You can specify a new map (layout) for the keyboard with <code class="docutils literal notranslate"><span class="pre">lv_kb_set_map(kb,</span> <span class="pre">map)</span></code>. and <code class="docutils literal notranslate"><span class="pre">lv_kb_set_ctrl_map(kb,</span> <span class="pre">ctrl_map)</span></code>.
-Learn more about in the <a class="reference internal" href="btnm.html"><span class="doc">Button matrix</span></a> object.
-Keep in mind using following keywords will have the same effect as with the original map:</p>
+<div class="section" id="new-keymap">
+<h3>New Keymap<a class="headerlink" href="#new-keymap" title="Permalink to this headline">¶</a></h3>
+<p>You can specify a new map (layout) for the keyboard with <code class="docutils literal notranslate"><span class="pre">lv_kb_set_map(kb,</span> <span class="pre">map)</span></code> and <code class="docutils literal notranslate"><span class="pre">lv_kb_set_ctrl_map(kb,</span> <span class="pre">ctrl_map)</span></code>.
+Learn more about the <a class="reference internal" href="btnm.html"><span class="doc">Button matrix</span></a> object.
+Keep in mind that, using following keywords will have the same effect as with the original map:</p>
 <ul class="simple">
-<li><p><em>LV_SYMBOL_OK</em> Apply</p></li>
-<li><p><em>SYMBOL_CLOSE</em> Close</p></li>
-<li><p><em>LV_SYMBOL_LEFT</em> Move the cursor left</p></li>
-<li><p><em>LV_SYMBOL_RIGHT</em> Move the cursor right</p></li>
-<li><p><em>“ABC”</em> load the uppercase map</p></li>
-<li><p><em>“abc”</em> load the lower case map</p></li>
-<li><p><em>“Enter”</em> new line</p></li>
-<li><p><em>“Bkps”</em> Delete on the left</p></li>
+<li><p><em>LV_SYMBOL_OK</em> - Apply.</p></li>
+<li><p><em>SYMBOL_CLOSE</em> - Close.</p></li>
+<li><p><em>LV_SYMBOL_LEFT</em> - Move the cursor left.</p></li>
+<li><p><em>LV_SYMBOL_RIGHT</em> - Move the cursor right.</p></li>
+<li><p><em>“ABC”</em> - Load the uppercase map.</p></li>
+<li><p><em>“abc”</em> - Load the lower case map.</p></li>
+<li><p><em>“Enter”</em> - New line.</p></li>
+<li><p><em>“Bkps”</em> - Delete on the left.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="styles">
 <h2>Styles<a class="headerlink" href="#styles" title="Permalink to this headline">¶</a></h2>
-<p>The Keyboards work with 6 styles: a background and 5 button styles for each state.
+<p>The Keyboard work with 6 styles: a background and 5 button styles for each state.
 You can set the styles with <code class="docutils literal notranslate"><span class="pre">lv_kb_set_style(btn,</span> <span class="pre">LV_KB_STYLE_...,</span> <span class="pre">&amp;style)</span></code>.
 The background and the buttons use the <code class="docutils literal notranslate"><span class="pre">style.body</span></code> properties.
 The labels use the <code class="docutils literal notranslate"><span class="pre">style.text</span></code> properties of the buttons’ styles.</p>
 <ul class="simple">
-<li><p><strong>LV_KB_STYLE_BG</strong> Background style. Uses all <code class="docutils literal notranslate"><span class="pre">style.body</span></code> properties including <code class="docutils literal notranslate"><span class="pre">padding</span></code> Default: <code class="docutils literal notranslate"><span class="pre">lv_style_pretty</span></code></p></li>
-<li><p><strong>LV_KB_STYLE_BTN_REL</strong> style of the released  buttons. Default: <code class="docutils literal notranslate"><span class="pre">lv_style_btn_rel</span></code></p></li>
-<li><p><strong>LV_KB_STYLE_BTN_PR</strong> style of the pressed buttons. Default: <code class="docutils literal notranslate"><span class="pre">lv_style_btn_pr</span></code></p></li>
-<li><p><strong>LV_KB_STYLE_BTN_TGL_REL</strong> style of the toggled released  buttons. Default: <code class="docutils literal notranslate"><span class="pre">lv_style_btn_tgl_rel</span></code></p></li>
-<li><p><strong>LV_KB_STYLE_BTN_TGL_PR</strong> style of the toggled pressed  buttons. Default: <code class="docutils literal notranslate"><span class="pre">lv_style_btn_tgl_pr</span></code></p></li>
-<li><p><strong>LV_KB_STYLE_BTN_INA</strong> style of the inactive  buttons. Default: <code class="docutils literal notranslate"><span class="pre">lv_style_btn_ina</span></code></p></li>
+<li><p><strong>LV_KB_STYLE_BG</strong> - Background style. Uses all <code class="docutils literal notranslate"><span class="pre">style.body</span></code> properties including <code class="docutils literal notranslate"><span class="pre">padding</span></code> Default: <code class="docutils literal notranslate"><span class="pre">lv_style_pretty</span></code>.</p></li>
+<li><p><strong>LV_KB_STYLE_BTN_REL</strong> - Style of the released  buttons. Default: <code class="docutils literal notranslate"><span class="pre">lv_style_btn_rel</span></code>.</p></li>
+<li><p><strong>LV_KB_STYLE_BTN_PR</strong> - Style of the pressed buttons. Default: <code class="docutils literal notranslate"><span class="pre">lv_style_btn_pr</span></code>.</p></li>
+<li><p><strong>LV_KB_STYLE_BTN_TGL_REL</strong> - Style of the toggled released  buttons. Default: <code class="docutils literal notranslate"><span class="pre">lv_style_btn_tgl_rel</span></code>.</p></li>
+<li><p><strong>LV_KB_STYLE_BTN_TGL_PR</strong> - Style of the toggled pressed  buttons. Default: <code class="docutils literal notranslate"><span class="pre">lv_style_btn_tgl_pr</span></code>.</p></li>
+<li><p><strong>LV_KB_STYLE_BTN_INA</strong> - Style of the inactive  buttons. Default: <code class="docutils literal notranslate"><span class="pre">lv_style_btn_ina</span></code>.</p></li>
 </ul>
 </div>
 <div class="section" id="events">
 <h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>
-<p>Besides the <a class="reference external" href="/overview/event.html#generic-events">Generic events</a> the following <a class="reference external" href="/overview/event.html#special-events">Special events</a> are sent by the keyboards:</p>
+<p>Besides the <a class="reference external" href="/overview/event.html#generic-events">Generic events</a>, the following <a class="reference external" href="/overview/event.html#special-events">Special events</a> are sent by the keyboards:</p>
 <ul class="simple">
-<li><p><strong>LV_EVENT_VALUE_CHANGED</strong> sent when the button is pressed/released or repeated after long press. The event data is set to ID of the pressed/released button.</p></li>
-<li><p><strong>LV_EVENT_APPLY</strong> the <em>Ok</em> button is clicked</p></li>
-<li><p><strong>LV_EVENT_CANCEL</strong> the <em>Close</em> button is clicked</p></li>
+<li><p><strong>LV_EVENT_VALUE_CHANGED</strong> - Sent when the button is pressed/released or repeated after long press. The event data is set to the ID of the pressed/released button.</p></li>
+<li><p><strong>LV_EVENT_APPLY</strong> - The <em>Ok</em> button is clicked.</p></li>
+<li><p><strong>LV_EVENT_CANCEL</strong> - The <em>Close</em> button is clicked.</p></li>
 </ul>
 <p>The keyboard has a <strong>default event handler</strong> callback called <code class="docutils literal notranslate"><span class="pre">lv_kb_def_event_cb</span></code>.
-It handles the button pressing, map changing, the assigned Text area, etc.
-You can completely replace it with your custom event handler but you can call <code class="docutils literal notranslate"><span class="pre">lv_kb_def_event_cb</span></code> at the beginning of your event handler to handle the same things as before.</p>
+It handles the button pressing, map changing, the assigned text area, etc.
+You can completely replace it with your custom event handler however, you can call <code class="docutils literal notranslate"><span class="pre">lv_kb_def_event_cb</span></code> at the beginning of your event handler to handle the same things as before.</p>
 <p>Learn more about <a class="reference internal" href="../overview/event.html"><span class="doc">Events</span></a>.</p>
 </div>
 <div class="section" id="keys">
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
-<p>The following <em>Keys</em> are processed by the Buttons:</p>
+<p>The following <em>Keys</em> are processed by the buttons:</p>
 <ul class="simple">
-<li><p><strong>LV_KEY_RIGHT/UP/LEFT/RIGHT</strong> To navigate among the buttons and elect one</p></li>
-<li><p><strong>LV_KEY_ENTER</strong> To press/release the selected button</p></li>
+<li><p><strong>LV_KEY_RIGHT/UP/LEFT/RIGHT</strong> - To navigate among the buttons and select one.</p></li>
+<li><p><strong>LV_KEY_ENTER</strong> - To press/release the selected button.</p></li>
 </ul>
 <p>Learn more about <a class="reference internal" href="../overview/indev.html"><span class="doc">Keys</span></a>.</p>
 </div>
@@ -1211,7 +1235,43 @@ You can completely replace it with your custom event handler but you can call <c
 </div>
 <div class="section" id="micropython">
 <h3>MicroPython<a class="headerlink" href="#micropython" title="Permalink to this headline">¶</a></h3>
-<p>No examples yet.</p>
+<div class="section" id="id1">
+<h4>Keyboard with text area<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<img alt="Keyboard example in LittlevGL with MicroPython" src="../_images/lv_ex_kb_1.gif" />
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>code</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create styles for the keyboard</span>
+<span class="n">rel_style</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">style_t</span><span class="p">()</span>
+<span class="n">pr_style</span>  <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">style_t</span><span class="p">()</span>
+
+<span class="n">lv</span><span class="o">.</span><span class="n">style_copy</span><span class="p">(</span><span class="n">rel_style</span><span class="p">,</span> <span class="n">lv</span><span class="o">.</span><span class="n">style_btn_rel</span><span class="p">)</span>
+<span class="n">rel_style</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">rel_style</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">border</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">lv</span><span class="o">.</span><span class="n">style_copy</span><span class="p">(</span><span class="n">pr_style</span><span class="p">,</span> <span class="n">lv</span><span class="o">.</span><span class="n">style_btn_pr</span><span class="p">)</span>
+<span class="n">pr_style</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">pr_style</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">border</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># Create a keyboard and apply the styles</span>
+<span class="n">kb</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">kb</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">scr_act</span><span class="p">())</span>
+<span class="n">kb</span><span class="o">.</span><span class="n">set_cursor_manage</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">kb</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">kb</span><span class="o">.</span><span class="n">STYLE</span><span class="o">.</span><span class="n">BG</span><span class="p">,</span> <span class="n">lv</span><span class="o">.</span><span class="n">style_transp_tight</span><span class="p">)</span>
+<span class="n">kb</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">kb</span><span class="o">.</span><span class="n">STYLE</span><span class="o">.</span><span class="n">BTN_REL</span><span class="p">,</span> <span class="n">rel_style</span><span class="p">)</span>
+<span class="n">kb</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">kb</span><span class="o">.</span><span class="n">STYLE</span><span class="o">.</span><span class="n">BTN_PR</span><span class="p">,</span> <span class="n">pr_style</span><span class="p">)</span>
+
+<span class="c1"># Create a text area. The keyboard will write here</span>
+<span class="n">ta</span> <span class="o">=</span> <span class="n">lv</span><span class="o">.</span><span class="n">ta</span><span class="p">(</span><span class="n">lv</span><span class="o">.</span><span class="n">scr_act</span><span class="p">())</span>
+<span class="n">ta</span><span class="o">.</span><span class="n">align</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">lv</span><span class="o">.</span><span class="n">ALIGN</span><span class="o">.</span><span class="n">IN_TOP_MID</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">ta</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Assign the text area to the keyboard</span>
+<span class="n">kb</span><span class="o">.</span><span class="n">set_ta</span><span class="p">(</span><span class="n">ta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="api">
@@ -1232,54 +1292,59 @@ You can completely replace it with your custom event handler but you can call <c
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Enums</p>
 <dl class="enum">
-<dt id="_CPPv4Ut7_anon_58">
-<span id="_CPPv3Ut7_anon_58"></span><span class="target" id="lv__kb_8h_1ae6dceca96ec2c7a1b4aa211264a87ef6"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut7_anon_58" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut7_anon_65">
+<span id="_CPPv3Ut7_anon_65"></span><span class="target" id="lv__kb_8h_1a8628933cde20921c453a6d2607bdad62"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut7_anon_65" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Current keyboard mode. </p>
 <p><em>Values:</em></p>
 <dl class="enumerator">
 <dt id="_CPPv415LV_KB_MODE_TEXT">
-<span id="_CPPv315LV_KB_MODE_TEXT"></span><span id="_CPPv215LV_KB_MODE_TEXT"></span><span class="target" id="lv__kb_8h_1ae6dceca96ec2c7a1b4aa211264a87ef6a7901575ceaa5a146319a74196697a410"></span><code class="sig-name descname">LV_KB_MODE_TEXT</code><a class="headerlink" href="#_CPPv415LV_KB_MODE_TEXT" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv315LV_KB_MODE_TEXT"></span><span id="_CPPv215LV_KB_MODE_TEXT"></span><span class="target" id="lv__kb_8h_1a8628933cde20921c453a6d2607bdad62a7901575ceaa5a146319a74196697a410"></span><code class="sig-name descname">LV_KB_MODE_TEXT</code><a class="headerlink" href="#_CPPv415LV_KB_MODE_TEXT" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv414LV_KB_MODE_NUM">
-<span id="_CPPv314LV_KB_MODE_NUM"></span><span id="_CPPv214LV_KB_MODE_NUM"></span><span class="target" id="lv__kb_8h_1ae6dceca96ec2c7a1b4aa211264a87ef6af28986bda22c0968b053a30e8ff875e2"></span><code class="sig-name descname">LV_KB_MODE_NUM</code><a class="headerlink" href="#_CPPv414LV_KB_MODE_NUM" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv314LV_KB_MODE_NUM"></span><span id="_CPPv214LV_KB_MODE_NUM"></span><span class="target" id="lv__kb_8h_1a8628933cde20921c453a6d2607bdad62af28986bda22c0968b053a30e8ff875e2"></span><code class="sig-name descname">LV_KB_MODE_NUM</code><a class="headerlink" href="#_CPPv414LV_KB_MODE_NUM" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv421LV_KB_MODE_TEXT_UPPER">
+<span id="_CPPv321LV_KB_MODE_TEXT_UPPER"></span><span id="_CPPv221LV_KB_MODE_TEXT_UPPER"></span><span class="target" id="lv__kb_8h_1a8628933cde20921c453a6d2607bdad62a88cace257590eda3c08e6ecc67220900"></span><code class="sig-name descname">LV_KB_MODE_TEXT_UPPER</code><a class="headerlink" href="#_CPPv421LV_KB_MODE_TEXT_UPPER" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="enum">
-<dt id="_CPPv4Ut7_anon_59">
-<span id="_CPPv3Ut7_anon_59"></span><span class="target" id="lv__kb_8h_1a56a0f36da7f9eaaf54bd05cc2bf49173"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut7_anon_59" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut7_anon_66">
+<span id="_CPPv3Ut7_anon_66"></span><span class="target" id="lv__kb_8h_1ade9ca5088d171ad20b4c237f1c2d6260"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut7_anon_66" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
 <dt id="_CPPv414LV_KB_STYLE_BG">
-<span id="_CPPv314LV_KB_STYLE_BG"></span><span id="_CPPv214LV_KB_STYLE_BG"></span><span class="target" id="lv__kb_8h_1a56a0f36da7f9eaaf54bd05cc2bf49173a4db3c1bd371258ce2bad32afbe604646"></span><code class="sig-name descname">LV_KB_STYLE_BG</code><a class="headerlink" href="#_CPPv414LV_KB_STYLE_BG" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv314LV_KB_STYLE_BG"></span><span id="_CPPv214LV_KB_STYLE_BG"></span><span class="target" id="lv__kb_8h_1ade9ca5088d171ad20b4c237f1c2d6260a4db3c1bd371258ce2bad32afbe604646"></span><code class="sig-name descname">LV_KB_STYLE_BG</code><a class="headerlink" href="#_CPPv414LV_KB_STYLE_BG" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv419LV_KB_STYLE_BTN_REL">
-<span id="_CPPv319LV_KB_STYLE_BTN_REL"></span><span id="_CPPv219LV_KB_STYLE_BTN_REL"></span><span class="target" id="lv__kb_8h_1a56a0f36da7f9eaaf54bd05cc2bf49173a5f02b7afb15bb442f9597fc37a3c6f9b"></span><code class="sig-name descname">LV_KB_STYLE_BTN_REL</code><a class="headerlink" href="#_CPPv419LV_KB_STYLE_BTN_REL" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv319LV_KB_STYLE_BTN_REL"></span><span id="_CPPv219LV_KB_STYLE_BTN_REL"></span><span class="target" id="lv__kb_8h_1ade9ca5088d171ad20b4c237f1c2d6260a5f02b7afb15bb442f9597fc37a3c6f9b"></span><code class="sig-name descname">LV_KB_STYLE_BTN_REL</code><a class="headerlink" href="#_CPPv419LV_KB_STYLE_BTN_REL" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv418LV_KB_STYLE_BTN_PR">
-<span id="_CPPv318LV_KB_STYLE_BTN_PR"></span><span id="_CPPv218LV_KB_STYLE_BTN_PR"></span><span class="target" id="lv__kb_8h_1a56a0f36da7f9eaaf54bd05cc2bf49173a822e0a5a2e65b0f7ea19556c4723ebe8"></span><code class="sig-name descname">LV_KB_STYLE_BTN_PR</code><a class="headerlink" href="#_CPPv418LV_KB_STYLE_BTN_PR" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv318LV_KB_STYLE_BTN_PR"></span><span id="_CPPv218LV_KB_STYLE_BTN_PR"></span><span class="target" id="lv__kb_8h_1ade9ca5088d171ad20b4c237f1c2d6260a822e0a5a2e65b0f7ea19556c4723ebe8"></span><code class="sig-name descname">LV_KB_STYLE_BTN_PR</code><a class="headerlink" href="#_CPPv418LV_KB_STYLE_BTN_PR" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv423LV_KB_STYLE_BTN_TGL_REL">
-<span id="_CPPv323LV_KB_STYLE_BTN_TGL_REL"></span><span id="_CPPv223LV_KB_STYLE_BTN_TGL_REL"></span><span class="target" id="lv__kb_8h_1a56a0f36da7f9eaaf54bd05cc2bf49173a08e3c668b2cd9b04f316862927b2a29e"></span><code class="sig-name descname">LV_KB_STYLE_BTN_TGL_REL</code><a class="headerlink" href="#_CPPv423LV_KB_STYLE_BTN_TGL_REL" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv323LV_KB_STYLE_BTN_TGL_REL"></span><span id="_CPPv223LV_KB_STYLE_BTN_TGL_REL"></span><span class="target" id="lv__kb_8h_1ade9ca5088d171ad20b4c237f1c2d6260a08e3c668b2cd9b04f316862927b2a29e"></span><code class="sig-name descname">LV_KB_STYLE_BTN_TGL_REL</code><a class="headerlink" href="#_CPPv423LV_KB_STYLE_BTN_TGL_REL" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv422LV_KB_STYLE_BTN_TGL_PR">
-<span id="_CPPv322LV_KB_STYLE_BTN_TGL_PR"></span><span id="_CPPv222LV_KB_STYLE_BTN_TGL_PR"></span><span class="target" id="lv__kb_8h_1a56a0f36da7f9eaaf54bd05cc2bf49173a3b8460a3816278905f4327fa184a7d09"></span><code class="sig-name descname">LV_KB_STYLE_BTN_TGL_PR</code><a class="headerlink" href="#_CPPv422LV_KB_STYLE_BTN_TGL_PR" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv322LV_KB_STYLE_BTN_TGL_PR"></span><span id="_CPPv222LV_KB_STYLE_BTN_TGL_PR"></span><span class="target" id="lv__kb_8h_1ade9ca5088d171ad20b4c237f1c2d6260a3b8460a3816278905f4327fa184a7d09"></span><code class="sig-name descname">LV_KB_STYLE_BTN_TGL_PR</code><a class="headerlink" href="#_CPPv422LV_KB_STYLE_BTN_TGL_PR" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv419LV_KB_STYLE_BTN_INA">
-<span id="_CPPv319LV_KB_STYLE_BTN_INA"></span><span id="_CPPv219LV_KB_STYLE_BTN_INA"></span><span class="target" id="lv__kb_8h_1a56a0f36da7f9eaaf54bd05cc2bf49173adb5580a78b2ff89ca43d23680682668a"></span><code class="sig-name descname">LV_KB_STYLE_BTN_INA</code><a class="headerlink" href="#_CPPv419LV_KB_STYLE_BTN_INA" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv319LV_KB_STYLE_BTN_INA"></span><span id="_CPPv219LV_KB_STYLE_BTN_INA"></span><span class="target" id="lv__kb_8h_1ade9ca5088d171ad20b4c237f1c2d6260adb5580a78b2ff89ca43d23680682668a"></span><code class="sig-name descname">LV_KB_STYLE_BTN_INA</code><a class="headerlink" href="#_CPPv419LV_KB_STYLE_BTN_INA" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1519,7 +1584,7 @@ You can completely replace it with your custom event handler but you can call <c
     <p>
         &copy; Copyright 2019, Gabor Kiss-Vamosi
       <span class="lastupdated">
-        Last updated on Oct 11, 2019.
+        Last updated on Feb 26, 2020.
       </span>
 
     </p>

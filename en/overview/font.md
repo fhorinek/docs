@@ -57,6 +57,64 @@ Or more symbols together:
 lv_label_set_text(my_label, LV_SYMBOL_OK LV_SYMBOL_WIFI LV_SYMBOL_PLAY);
 ```
 
+## Special features
+
+### Bidirectional support
+Most of the languages use Left-to-Right (LTR for short) writing direction, however some languages (such as Hebrew) uses Right-to-Left (RTL for short) direction. 
+
+LittlevGL not only supports RTL texts but supports mixed (a.k.a. bidirectional, BiDi) text rendering too. Some examples:
+
+![](/misc/bidi.png "Bidirectional text examples")
+
+The BiDi support can be enabled by `LV_USE_BIDI` in *lv_conf.h*
+
+All texts have a base direction (LTR or RTL) which determines some rendering rules and the default alignment of the text (Left or Right).
+However, in LittlevGL, base direction is not only for labels. It's a general property which can be set for every object. 
+If unset then it will be inherited from the parent. 
+So it's enough to set the base direction of the screen and every object will inherit it.
+
+The default base direction of screen can be set by `LV_BIDI_BASE_DIR_DEF` in *lv_conf.h*.
+
+To set an object's base direction use `lv_obj_set_base_dir(obj, base_dir)`.  The possible base direction are:
+- `LV_BIDI_DIR_LTR`: Left to Right base direction
+- `LV_BIDI_DIR_RTL`: Right to Left base direction
+- `LV_BIDI_DIR_AUTO`: Auto detect base direction
+- `LV_BIDI_DIR_INHERIT`: Inherit the base direction from the parent (default for non-screen objects)
+
+
+This list summarizes the effect of RTL base direction on objects:
+- Create objects by default on the right
+- `lv_tabview`: displays tabs from right to left
+- `lv_cb`: Show the box on the right
+- `lv_btnm`: Show buttons from right to left
+- `lv_list`: Show the icon on the right
+- `lv_ddlist`: Align the options to the right
+- The texts in `lv_table`, `lv_btnm`, `lv_kb`, `lv_tabview`, `lv_ddlist`, `lv_roller` are processed to display correctly with RTL parts too
+
+
+
+### Subpixel rendering
+
+Subpixel rendering means to increase the horizontal resolution by rendering on Red, Green and Blue channel instead of pixel level. It results in higher quality letter anti-alaising.
+
+Subpixel rendering requires to generate the fonts with special settings: 
+- In the online converter tick the `Subpixel` box
+- In the command line tool use `--lcd` flag. Note that the generated font needs about 3 times more memory.
+
+Subpixel rendering works only if the color channels of the pixels have a horizontal layout. That is the R, G, B channels are next eachother and not above eachother. 
+The order of color channels also needs to match with the library settings. By default the LittlevGL assumes `RGB` order, however it can ba swapped by setting `LV_SUBPX_BGR  1` in *lv_conf.h*.
+
+### Compress fonts
+The bitmaps of the fonts can be compressed by 
+- ticking the `Compressed` check box in the online converter
+- not passing `--no-compress`flag to the offline converter (applies compression by default) 
+
+The compression is more effective with larger fonts and higher bpp. However, it's about 30% slower to render the compressed fonts.
+Therefore it's recommended to compress only the largest fonts of user interface, because
+- they need the most memory 
+- they can be compressed better
+- and probably they are used less frequently then the medium sized fonts. (so performance cost is smaller)
+
 ## Add new font
 
 There are several ways to add a new font to your project:
@@ -70,14 +128,21 @@ To declare the font in a file, use `LV_FONT_DECLARE(my_font_name)`.
 To make the fonts globally available (like the builtin fonts), add them to `LV_FONT_CUSTOM_DECLARE` in *lv_conf.h*.
 
 ## Add new symbols
-The built-in symbols are created from [FontAwesome](https://fontawesome.com/) font. To add new symbols from the FontAwesome font do the following steps:
-1. Search symbol on [https://fontawesome.com](https://fontawesome.com). For example the [USB symbol](https://fontawesome.com)
-2. Open the [Online font converter](https://littlevgl.com/ttf-font-to-c-array) add [FontAwesome.ttf](https://littlevgl.com/tools/FontAwesome.ttf) and add the Unicode ID of the symbol to the range field. E.g.` 0xf287` for the USB symbol.
-More symbols can be enumerated with `,`.
-3. Convert the font and copy it to your project.
-4. Convert the Unicode value to UTF8. You can do it e.g.on [this site](http://www.ltg.ed.ac.uk/~richard/utf-8.cgi?input=f287&mode=hex). For `0xf287` the *Hex UTF-8 bytes* are `EF 8A 87`.
-5. Create a `define` from the UTF8 values: `#define MY_USB_SYMBOL "\xEF\x8A\x87"`
-6. Use the symbol as the built-in symbols. `lv_label_set_text(label, MY_USB_SYMBOL)`
+The built-in symbols are created from [FontAwesome](https://fontawesome.com/) font. 
+
+1. Search symbol on [https://fontawesome.com](https://fontawesome.com). For example the [USB symbol](https://fontawesome.com/icons/usb?style=brands). Copy it's Unicode ID which is `0xf287` in this case.
+2. Open the [Online font converter](https://littlevgl.com/ttf-font-to-c-array). Add Add [FontAwesome.woff](https://littlevgl.com/tools/FontAwesome5-Solid+Brands+Regular.woff). . 
+3. Set the parameters such as Name, Size, BPP. You'll use this name to declare and use the font in your code.
+4. Add the Unicode ID of the symbol to the range field. E.g.` 0xf287` for the USB symbol. More symbols can be enumerated with `,`.
+5. Convert the font and copy it to your project. Make sure to compile the .c file of your font.
+6. Declare the font using `extern lv_font_t my_font_name;` or simply `LV_FONT_DECLARE(my_font_name);`.
+
+**Using the symbol**
+1. Convert the Unicode value to UTF8. You can do it e.g on [this site](http://www.ltg.ed.ac.uk/~richard/utf-8.cgi?input=f287&mode=hex). For `0xf287` the *Hex UTF-8 bytes* are `EF 8A 87`.
+2. Create a `define` from the UTF8 values: `#define MY_USB_SYMBOL "\xEF\x8A\x87"`
+3. Create a label and set the text. Eg. `lv_label_set_text(label, MY_USB_SYMBOL)`
+
+Note - `lv_label_set_text(label, MY_USB_SYMBOL)` searches for this symbol in the font defined in `style.text.font` properties. To use the symbol you may need to change it. Eg ` style.text.font = my_font_name` 
 
 ## Add a new font engine
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Styles &mdash; LittlevGL 6.0 documentation</title>
+  <title>Styles &mdash; LittlevGL  documentation</title>
   
 
   
@@ -78,7 +78,7 @@
             
             
               <div class="version">
-                6.0
+                v6.1.2
               </div>
             
           
@@ -241,6 +241,30 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Styles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#states">States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cascading-styles">Cascading styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inheritance">Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#part-of-the-objects">Part of the objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initialize-styles-and-set-get-properties">Initialize styles and set/get properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#managing-style-list">Managing style list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#local-styles">Local styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transitions">Transitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#properties">Properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mixed-properties">Mixed properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#padding-properties">Padding properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#background-properties">Background properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#border-properties">Border properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outline-properties">Outline properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shadow-properties">Shadow properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pattern-properties">Pattern properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#value-properties">Value properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#text-properties">Text properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#line-properties">Line properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#image-properties">Image properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transition-properties">Transition properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scale-properties">Scale properties</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#use-the-styles">Use the styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#inherit-styles">Inherit styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#style-properties">Style properties</a><ul>
@@ -305,6 +329,12 @@
 <li class="toctree-l2"><a class="reference internal" href="font.html">Fonts</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="font.html#unicode-support">Unicode support</a></li>
 <li class="toctree-l3"><a class="reference internal" href="font.html#built-in-fonts">Built-in fonts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="font.html#special-features">Special features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="font.html#bidirectional-support">Bidirectional support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="font.html#subpixel-rendering">Subpixel rendering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="font.html#compress-fonts">Compress fonts</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="font.html#add-new-font">Add new font</a></li>
 <li class="toctree-l3"><a class="reference internal" href="font.html#add-new-symbols">Add new symbols</a></li>
 <li class="toctree-l3"><a class="reference internal" href="font.html#add-a-new-font-engine">Add a new font engine</a></li>
@@ -469,11 +499,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/btnm.html#styles">Styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/btnm.html#events">Events</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../object-types/btnm.html#example">Example</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/btnm.html#c">C</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/btnm.html#micropython">MicroPython</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/btnm.html#keys">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/btnm.html#example">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/btnm.html#api">API</a></li>
 </ul>
 </li>
@@ -516,7 +543,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../object-types/canvas.html#api">API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../object-types/cb.html">Check box (lv_cb)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../object-types/cb.html">Checkbox (lv_cb)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/cb.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/cb.html#text">Text</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/cb.html#check-uncheck">Check/Uncheck</a></li>
@@ -526,11 +553,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../object-types/cb.html#styles">Styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/cb.html#events">Events</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/cb.html#keys">Keys</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../object-types/cb.html#example">Example</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/cb.html#c">C</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/cb.html#micropython">MicroPython</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cb.html#example">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/cb.html#api">API</a></li>
 </ul>
 </li>
@@ -561,7 +584,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../object-types/cont.html">Container (lv_cont)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/cont.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/cont.html#layout">Layout</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/cont.html#auto-fit">Auto fit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/cont.html#autofit">Autofit</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/cont.html#styles">Styles</a></li>
@@ -575,7 +598,20 @@
 <li class="toctree-l3"><a class="reference internal" href="../object-types/cont.html#api">API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../object-types/ddlist.html">Drop down list (lv_ddlist)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../object-types/cpicker.html">Color picker (lv_cpicker)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cpicker.html#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/cpicker.html#types-of-color-pickers">Types of color pickers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/cpicker.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cpicker.html#styles">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cpicker.html#events">Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cpicker.html#keys">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cpicker.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/cpicker.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../object-types/ddlist.html">Drop-down list (lv_ddlist)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/ddlist.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#set-options">Set options</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#get-selected-option">Get selected option</a></li>
@@ -584,17 +620,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#scrollbars">Scrollbars</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#animation-time">Animation time</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#decoration-arrow">Decoration arrow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#manually-open-close">Manually open/close</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#stay-open">Stay open</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/ddlist.html#styles">Styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/ddlist.html#events">Events</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/ddlist.html#keys">Keys</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../object-types/ddlist.html#example">Example</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#c">C</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/ddlist.html#micropython">MicroPython</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/ddlist.html#example">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/ddlist.html#api">API</a></li>
 </ul>
 </li>
@@ -662,17 +695,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../object-types/kb.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/kb.html#modes">Modes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/kb.html#assign-text-area">Assign Text area</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/kb.html#new-key-map">New key map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/kb.html#new-keymap">New Keymap</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/kb.html#styles">Styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/kb.html#events">Events</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/kb.html#keys">Keys</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../object-types/kb.html#examples">Examples</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/kb.html#c">C</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/kb.html#micropython">MicroPython</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/kb.html#examples">Examples</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/kb.html#api">API</a></li>
 </ul>
 </li>
@@ -739,6 +768,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../object-types/list.html#add-buttons">Add buttons</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/list.html#delete-buttons">Delete buttons</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/list.html#manual-navigation">Manual navigation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/list.html#layout">Layout</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/list.html#edge-flash">Edge flash</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/list.html#scroll-propagation">Scroll propagation</a></li>
 </ul>
@@ -758,16 +788,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../object-types/lmeter.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/lmeter.html#set-value">Set value</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/lmeter.html#range-and-angles">Range and Angles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/lmeter.html#angle-offset">Angle offset</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/lmeter.html#styles">Styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/lmeter.html#events">Events</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/lmeter.html#keys">Keys</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../object-types/lmeter.html#example">Example</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/lmeter.html#c">C</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/lmeter.html#micropython">MicroPython</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/lmeter.html#example">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/lmeter.html#api">API</a></li>
 </ul>
 </li>
@@ -780,11 +807,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/mbox.html#styles">Styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/mbox.html#events">Events</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../object-types/mbox.html#example">Example</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/mbox.html#c">C</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/mbox.html#micropython">MicroPython</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/mbox.html#example">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/mbox.html#api">API</a></li>
 </ul>
 </li>
@@ -822,8 +845,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../object-types/preload.html#events">Events</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/preload.html#keys">Keys</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/preload.html#example">Example</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/preload.html#c">C</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/preload.html#id1">MicroPython</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/preload.html#micropython">MicroPython</a></li>
 </ul>
 </li>
@@ -853,6 +874,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../object-types/slider.html">Slider (lv_slider)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/slider.html#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/slider.html#value-and-range">Value and range</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../object-types/slider.html#symmetrical">Symmetrical</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../object-types/slider.html#knob-placement">Knob placement</a></li>
 </ul>
 </li>
@@ -894,11 +916,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../object-types/sw.html#styles">Styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/sw.html#events">Events</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/sw.html#keys">Keys</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../object-types/sw.html#example">Example</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/sw.html#c">C</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/sw.html#micropython">MicroPython</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/sw.html#example">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/sw.html#api">API</a></li>
 </ul>
 </li>
@@ -968,11 +986,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../object-types/ta.html#style-usage">Style usage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/ta.html#events">Events</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/ta.html#keys">Keys</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../object-types/ta.html#example">Example</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/ta.html#c">C</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../object-types/ta.html#micropython">MicroPython</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../object-types/ta.html#example">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../object-types/ta.html#api">API</a></li>
 </ul>
 </li>
@@ -1091,7 +1105,447 @@
             
   <div class="section" id="styles">
 <h1>Styles<a class="headerlink" href="#styles" title="Permalink to this headline">¶</a></h1>
-<p><em>Styles</em> are used to set the appearance of the objects. A style is a structure with attributes like colors, paddings, opacity, font, etc.</p>
+<p><em>Styles</em> are used to set the appearance of the objects. Styles in lvgl are heavily inspired by CSS. The concept in nutshell is the following:</p>
+<ul class="simple">
+<li><p>A style is an <code class="docutils literal notranslate"><span class="pre">lv_style_t</span></code> variable which can hold properties, for example border width, text color and so on. It’s similar to <code class="docutils literal notranslate"><span class="pre">class</span></code> in CSS.</p></li>
+<li><p>Not all properties have to be specified. Unspecified properties will use a default value.</p></li>
+<li><p>Styles can be assigned to objects to change their appearance.</p></li>
+<li><p>A style can be used by any number of objects.</p></li>
+<li><p>Styles can be cascaded which means multiple styles can be assigned to an object and each style can have different properties.For example <code class="docutils literal notranslate"><span class="pre">style_btn</span></code> can result in a default gray button and <code class="docutils literal notranslate"><span class="pre">style_btn_red</span></code> can add only a <code class="docutils literal notranslate"><span class="pre">background-color=red</span></code> to overwrite the background color.</p></li>
+<li><p>Later added styles have higher precedence. It means if a property is specified in two styles the later added will be used.</p></li>
+<li><p>Some properties (e.g. text color) can be inherited from the parent(s) if it’s not specified in the object.</p></li>
+<li><p>Objects can have local styles which has higher precedence than “normal” styles.</p></li>
+<li><p>Unlike CSS (where pseudo classes describes different states, e.g. <code class="docutils literal notranslate"><span class="pre">:hover</span></code>), in lvgl a property is assigned to a given state.</p></li>
+<li><p>Transition can be applied when the object changes state.</p></li>
+</ul>
+<div class="section" id="states">
+<h2>States<a class="headerlink" href="#states" title="Permalink to this headline">¶</a></h2>
+<p>The objects can be in the following states:</p>
+<ul class="simple">
+<li><p><strong>LV_STATE_DEFAULT</strong> (0x00): Normal, released</p></li>
+<li><p><strong>LV_STATE_CHECKED</strong> (0x01): Toggled or checked</p></li>
+<li><p><strong>LV_STATE_FOCUSED</strong> (0x02): Focused via keypad or encoder or clicked via touchpad/mouse</p></li>
+<li><p><strong>LV_STATE_EDITED</strong>  (0x04): Edit by an encoder</p></li>
+<li><p><strong>LV_STATE_HOVERED</strong> (0x08): Hovered by mouse (not supported now)</p></li>
+<li><p><strong>LV_STATE_PRESSED</strong> (0x10): Pressed</p></li>
+<li><p><strong>LV_STATE_DISABLED</strong> (0x20): Disabled or inactive</p></li>
+</ul>
+<p>Combination of states are	also possible, for example <code class="docutils literal notranslate"><span class="pre">LV_STATE_FOCUSED</span> <span class="pre">|</span> <span class="pre">LV_STATE_PRESSED</span></code>.</p>
+<p>The styles properties can be defined in every state and state combination. For example setting different background color for default and pressed state.
+If a property is not defined in a state the best matching state’s property will be used. Typically it means the property with <code class="docutils literal notranslate"><span class="pre">LV_STATE_DEFAULT</span></code> state.˛
+If the property is not set even for the default state the default value will be used. (See later)</p>
+<p>But what does the “best matching state’s property” really means?
+States has a precedence which is shown by their value (see in the above list). A higher value means a higher precedence.
+To determine which state’s property to use let’s use an example. Let’s see the background color is defined like this:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">LV_STATE_DEFAULT</span></code>: white</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LV_STATE_PRESSED</span></code>: gray</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LV_STATE_FOCUSED</span></code>: red</p></li>
+</ul>
+<ol class="simple">
+<li><p>By the default the object is in default state, so it’s a simple case: the property is perfectly defined in object’s current state as white</p></li>
+<li><p>When the object is pressed there are 2 related properties: default with white (default is related to every state) and pressed with gray.
+The pressed state has 0x10 precedence which is higher than the default state’s 0x00 precedence, so gray color will be used.</p></li>
+<li><p>When the object is focused the same thing happens as in pressed state and red color will be used.</p></li>
+<li><p>When the object is focused and pressed both gray and red would work, but the pressed state has higher precedence than focused so gray color will be used.</p></li>
+<li><p>It’s possible to set e.g rose color for <code class="docutils literal notranslate"><span class="pre">LV_STATE_PRESSED</span> <span class="pre">|</span> <span class="pre">LV_STATE_FOCUSED</span></code>.
+In this case this combined state has 0x2 + 0x10 = 0x12 precedence, which higher than the pressed states precedence so rose color would be used.</p></li>
+<li><p>When the object is checked there is no property to set the background color for this state. So in lack of a better option the object remains white from the default state’s property.</p></li>
+</ol>
+</div>
+<div class="section" id="cascading-styles">
+<h2>Cascading styles<a class="headerlink" href="#cascading-styles" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="inheritance">
+<h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="part-of-the-objects">
+<h2>Part of the objects<a class="headerlink" href="#part-of-the-objects" title="Permalink to this headline">¶</a></h2>
+<p>Objects can have <em>parts</em> which can have their own style. For example a <a class="reference external" href="lv_has">page</a> has four parts:</p>
+<ul class="simple">
+<li><p>Background</p></li>
+<li><p>Scrollable</p></li>
+<li><p>Scrollbar</p></li>
+<li><p>Edge flash</p></li>
+</ul>
+<p>![page_small.png](A scrollable page in lvgl)</p>
+<p>There is three type of of object parts <strong>main</strong>, <strong>virtual</strong> and <strong>real</strong>.</p>
+<p>The main part is usually the background and largest part of the object. Some object has only has main part. For example a button has only a background.</p>
+<p>The virtual parts are additional parts just drawn on the fly to the main part. There is no “real” object behind them.
+For example the page’s scrollbar is not a real object, it’s just drawn when the page’s background is drawn.
+The virtual parts always have the same state as the main part.
+If the property can be inherited, the main part will be also considered before going to the parent.</p>
+<p>The real parts are real objects created and managed by the main object. For example the page’s scrollable part is real object.
+Real parts can be in different state than the main part.</p>
+<p>To see which parts an object has see their documentation.</p>
+</div>
+<div class="section" id="initialize-styles-and-set-get-properties">
+<h2>Initialize styles and set/get properties<a class="headerlink" href="#initialize-styles-and-set-get-properties" title="Permalink to this headline">¶</a></h2>
+<p>Styles are stored in <code class="docutils literal notranslate"><span class="pre">lv_style_t</span></code> variables. Style variables should be <code class="docutils literal notranslate"><span class="pre">static</span></code>, global or dynamically allocated. In other words they can not be local variables in functions which are destroyed when the function exists.
+Before using a style it should be initialized with <code class="docutils literal notranslate"><span class="pre">lv_style_init(&amp;my_style)</span></code>.
+After initializing the style properties can be set added to it.
+Property set functions looks like this: <code class="docutils literal notranslate"><span class="pre">lv_style_set_&lt;property_name&gt;(&amp;style,</span> <span class="pre">&lt;state&gt;,</span> <span class="pre">&lt;value&gt;);</span></code>
+For example the <a class="reference external" href="#states">above mentioned</a> example looks like this:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">lv_style_t</span> <span class="n">style1</span><span class="p">;</span>
+<span class="n">lv_style_set_bg_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style1</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_COLOR_WHITE</span><span class="p">);</span>
+<span class="n">lv_style_set_bg_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style1</span><span class="p">,</span> <span class="n">LV_STATE_PRESSED</span><span class="p">,</span> <span class="n">LV_COLOR_GRAY</span><span class="p">);</span>
+<span class="n">lv_style_set_bg_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style1</span><span class="p">,</span> <span class="n">LV_STATE_FOCUSED</span><span class="p">,</span> <span class="n">LV_COLOR_RED</span><span class="p">);</span>
+<span class="n">lv_style_set_bg_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style1</span><span class="p">,</span> <span class="n">LV_STATE_FOCUSED</span> <span class="o">|</span> <span class="n">LV_STATE_PRESSED</span><span class="p">,</span> <span class="n">lv_color_hex</span><span class="p">(</span><span class="mh">0xf88</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>It’s possible to copy a style with <code class="docutils literal notranslate"><span class="pre">lv_style_copy(&amp;style_destination,</span> <span class="pre">&amp;style_source)</span></code>. After copy properties still can be added freely.</p>
+<p>To remove a property use:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">lv_style_remove_prop</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STYLE_BG_COLOR</span> <span class="o">|</span> <span class="p">(</span><span class="n">LV_STATE_PRESSED</span> <span class="o">&lt;&lt;</span> <span class="n">LV_STYLE_STATE_POS</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>To get the value from style in a state functions with the following prototype are available: <code class="docutils literal notranslate"><span class="pre">lv_style_get_&lt;prperty_name&gt;(&amp;style,</span> <span class="pre">&lt;state&gt;,</span> <span class="pre">&lt;result</span> <span class="pre">poiner&gt;);</span></code>.
+The the best matching property will be selected and it’s precedence will be returned. <code class="docutils literal notranslate"><span class="pre">-1</span></code> will be returned if the property is not found. For example:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span>lv_color_t color;
+int16_t res;
+res = lv_style_get_bg_color(&amp;style1, LV_STATE_PRESSED, &amp;color);
+if(res &gt;= 0) {
+	... the bg_color is loaded into `color` ... 
+}
+</pre></div>
+</div>
+<p>To reset a style (free all it’s data) use</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">lv_style_reset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="managing-style-list">
+<h2>Managing style list<a class="headerlink" href="#managing-style-list" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="local-styles">
+<h2>Local styles<a class="headerlink" href="#local-styles" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="transitions">
+<h2>Transitions<a class="headerlink" href="#transitions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<p>The following properties can be used in the styles.</p>
+<div class="section" id="mixed-properties">
+<h3>Mixed properties<a class="headerlink" href="#mixed-properties" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>radius</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Set the radius of the background. 0: no radius, <code class="docutils literal notranslate"><span class="pre">LV_RADIUS_CIRCLE</span></code>: maximal radius.</p></li>
+<li><p><strong>clip_corner</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>): <code class="docutils literal notranslate"><span class="pre">true</span></code>: enable to clip the overflowed content on the rounded (radius &gt; 0) corners.</p></li>
+<li><p><strong>size</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Size of internal elements of the widgets. See the documentation of the widgets if this property is used or not.</p></li>
+<li><p><strong>transform_width</strong>  (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Make the object wider on both sides with this value.</p></li>
+<li><p><strong>transform_height</strong>  (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>) Make the object higher on both sides with this value.</p></li>
+<li><p><strong>opa_scale</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Inherited. Scale down all opacity values of the object by this factor. As it’s inherited the children objects will be affected too.</p></li>
+</ul>
+</div>
+<div class="section" id="padding-properties">
+<h3>Padding properties<a class="headerlink" href="#padding-properties" title="Permalink to this headline">¶</a></h3>
+<p>Set the space on the edges and between the children objects. Typically used by <a class="reference internal" href="../object-types/cont.html"><span class="doc">Container</span></a> object if <a class="reference external" href="/object-types/cont.html#layout">layout</a> or
+<a class="reference external" href="/object-types/cont.html#auto-fit">auto fit</a> is enabled. However other widgets also use them to set spacing. See the documentation of the widgets for the details.</p>
+<ul class="simple">
+<li><p><strong>pad_top</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Set the padding on the top.</p></li>
+<li><p><strong>pad_bottom</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Set the padding on the bottom.</p></li>
+<li><p><strong>pad_left</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Set the padding on the left.</p></li>
+<li><p><strong>pad_right</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Set the padding on the right.</p></li>
+<li><p><strong>pad_inner</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Set the padding inside the object between children.</p></li>
+</ul>
+</div>
+<div class="section" id="background-properties">
+<h3>Background properties<a class="headerlink" href="#background-properties" title="Permalink to this headline">¶</a></h3>
+<p>The background is a simple rectangle which can have gradient and <code class="docutils literal notranslate"><span class="pre">radius</span></code> rounding.</p>
+<ul class="simple">
+<li><p><strong>bg_color</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>) Specifies the color of the background. Default value: <code class="docutils literal notranslate"><span class="pre">LV_COLOR_WHITE</span></code></p></li>
+<li><p><strong>bg_opa</strong> (<code class="docutils literal notranslate"><span class="pre">lv_opa_t</span></code>) Specifies opacity of the background. Default value: <code class="docutils literal notranslate"><span class="pre">LV_OPA_TRANSP</span></code>.</p></li>
+<li><p><strong>bg_grad_color</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>) Specifies the color of the background’s gradient. The color on the right or bottom is <code class="docutils literal notranslate"><span class="pre">bg_grad_dir</span> <span class="pre">!=</span> <span class="pre">LV_GRAD_DIR_NONE</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">LV_COLOR_WHITE</span></code>.</p></li>
+<li><p><strong>bg_main_stop</strong> (<code class="docutils literal notranslate"><span class="pre">uint8_t</span></code>): Specifies where should the gradient start. 0: at left/top most position, 255: at right/bottom most position.</p></li>
+<li><p><strong>bg_grad_stop</strong> (<code class="docutils literal notranslate"><span class="pre">uint8_t</span></code>): Specifies where should the gradient start. 0: at left/top most position, 255: at right/bottom most position. Default value: 255.</p></li>
+<li><p><strong>bg_grad_dir</strong> (<code class="docutils literal notranslate"><span class="pre">lv_grad_dir_t</span></code>) Specifies the direction of the gradient. Can be <code class="docutils literal notranslate"><span class="pre">LV_GRAD_DIR_NONE/HOR/VER</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">LV_GRAD_DIR_NONE</span></code>.</p></li>
+<li><p><strong>bg_blend_mode</strong> (<code class="docutils literal notranslate"><span class="pre">lv_blend_mode_t</span></code>): Set the blend mode the background. Can be <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL/ADDITIVE/SUBTRACTIVE</span></code>). Default value: <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL</span></code>.</p></li>
+</ul>
+<img alt="Styling the background in lvgl" src="../_images/lv_ex_style_1.png" />
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;lvgl/lvgl.h&quot;</span><span class="cp"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Using the background style properties</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">lv_ex_style_1</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="n">lv_style_t</span> <span class="n">style</span><span class="p">;</span>
+    <span class="n">lv_style_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">);</span>
+    <span class="n">lv_style_set_radius</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+
+    <span class="cm">/*Make a gradient*/</span>
+    <span class="n">lv_style_set_bg_opa</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_OPA_COVER</span><span class="p">);</span>    <span class="cm">/*Transparent by default*/</span>
+    <span class="n">lv_style_set_bg_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_COLOR_RED</span><span class="p">);</span>
+    <span class="n">lv_style_set_bg_grad_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_COLOR_BLUE</span><span class="p">);</span>
+    <span class="n">lv_style_set_bg_grad_dir</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_GRAD_DIR_VER</span><span class="p">);</span>
+
+    <span class="cm">/*Shift the gradient to the bottom*/</span>
+    <span class="n">lv_style_set_bg_main_stop</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">128</span><span class="p">);</span>
+    <span class="n">lv_style_set_bg_grad_stop</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">192</span><span class="p">);</span>
+
+
+    <span class="cm">/*Create an object with the new style*/</span>
+    <span class="n">lv_obj_t</span> <span class="o">*</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">lv_obj_create</span><span class="p">(</span><span class="n">lv_scr_act</span><span class="p">(),</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">lv_obj_add_style</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">LV_OBJ_PART_MAIN</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">style</span><span class="p">);</span>
+    <span class="n">lv_obj_align</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">LV_ALIGN_CENTER</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="border-properties">
+<h3>Border properties<a class="headerlink" href="#border-properties" title="Permalink to this headline">¶</a></h3>
+<p>The border in drawn on to of the <em>background</em>. It has <code class="docutils literal notranslate"><span class="pre">radius</span></code> rounding.</p>
+<ul class="simple">
+<li><p><strong>border_color</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>) Specifies the color of the border.</p></li>
+<li><p><strong>border_opa</strong> (<code class="docutils literal notranslate"><span class="pre">lv_opa_t</span></code>) Specifies opacity of the border.</p></li>
+<li><p><strong>border_width</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Set the width of the border.</p></li>
+<li><p><strong>border_side</strong> (<code class="docutils literal notranslate"><span class="pre">lv_border_side_t</span></code>) Specifies which sides of the border to draw. Can be <code class="docutils literal notranslate"><span class="pre">LV_BORDER_SIDE_NONE/LEFT/RIGHT/TOP/BOTTOM/FULL</span></code>. ORed values are also possible. Default value: <code class="docutils literal notranslate"><span class="pre">LV_BORDER_SIDE_FULL</span></code>.</p></li>
+<li><p><strong>border_post</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>): If <code class="docutils literal notranslate"><span class="pre">true</span></code> the border will be drawn all children has been drawn.</p></li>
+<li><p><strong>border_blend_mode</strong> (<code class="docutils literal notranslate"><span class="pre">lv_blend_mode_t</span></code>): Set the blend mode of the border. Can be <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL/ADDITIVE/SUBTRACTIVE</span></code>). Default value: <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL</span></code>.</p></li>
+</ul>
+<img alt="Styling the border in lvgl" src="../_images/lv_ex_style_2.png" />
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;lvgl/lvgl.h&quot;</span><span class="cp"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Using the border style properties</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">lv_ex_style_2</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="n">lv_style_t</span> <span class="n">style</span><span class="p">;</span>
+    <span class="n">lv_style_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">);</span>
+
+    <span class="cm">/*Set a background color and a radius*/</span>
+    <span class="n">lv_style_set_radius</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+    <span class="n">lv_style_set_bg_opa</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_OPA_COVER</span><span class="p">);</span>
+    <span class="n">lv_style_set_bg_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_COLOR_RED</span><span class="p">);</span>
+
+    <span class="cm">/*Add border to the bottom+right*/</span>
+    <span class="n">lv_style_set_border_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_COLOR_BLUE</span><span class="p">);</span>
+    <span class="n">lv_style_set_border_width</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+    <span class="n">lv_style_set_border_opa</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_OPA_50</span><span class="p">);</span>
+    <span class="n">lv_style_set_border_side</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_BORDER_SIDE_BOTTOM</span> <span class="o">|</span> <span class="n">LV_BORDER_SIDE_RIGHT</span><span class="p">);</span>
+
+    <span class="cm">/*Create an object with the new style*/</span>
+    <span class="n">lv_obj_t</span> <span class="o">*</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">lv_obj_create</span><span class="p">(</span><span class="n">lv_scr_act</span><span class="p">(),</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">lv_obj_add_style</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">LV_OBJ_PART_MAIN</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">style</span><span class="p">);</span>
+    <span class="n">lv_obj_align</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">LV_ALIGN_CENTER</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="outline-properties">
+<h3>Outline properties<a class="headerlink" href="#outline-properties" title="Permalink to this headline">¶</a></h3>
+<p>The outline is similar to <em>border</em> but is drawn outside of the object.</p>
+<ul class="simple">
+<li><p><strong>outline_color</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>) Specifies the color of the outline.</p></li>
+<li><p><strong>outline_opa</strong> (<code class="docutils literal notranslate"><span class="pre">lv_opa_t</span></code>) Specifies opacity of the outline.</p></li>
+<li><p><strong>outline_width</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Set the width of the outline.</p></li>
+<li><p><strong>outline_pad</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>) Set the space between the object and the outline.</p></li>
+<li><p><strong>outline_blend_mode</strong> (<code class="docutils literal notranslate"><span class="pre">lv_blend_mode_t</span></code>): Set the blend mode of the outline. Can be <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL/ADDITIVE/SUBTRACTIVE</span></code>). Default value: <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL</span></code>.</p></li>
+</ul>
+<img alt="Styling the outline in lvgl" src="../_images/lv_ex_style_3.png" />
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;lvgl/lvgl.h&quot;</span><span class="cp"></span>
+
+
+<span class="cm">/**</span>
+<span class="cm"> * Using the outline style properties</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">lv_ex_style_3</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="n">lv_style_t</span> <span class="n">style</span><span class="p">;</span>
+    <span class="n">lv_style_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">);</span>
+
+    <span class="cm">/*Set a background color and a radius*/</span>
+    <span class="n">lv_style_set_radius</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+    <span class="n">lv_style_set_bg_opa</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_OPA_COVER</span><span class="p">);</span>    <span class="cm">/*Transparent by default*/</span>
+    <span class="n">lv_style_set_bg_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_COLOR_RED</span><span class="p">);</span>
+
+    <span class="cm">/*Add outline*/</span>
+    <span class="n">lv_style_set_outline_width</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="n">lv_style_set_outline_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_COLOR_BLUE</span><span class="p">);</span>
+    <span class="n">lv_style_set_outline_pad</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+
+    <span class="cm">/*Create an object with the new style*/</span>
+    <span class="n">lv_obj_t</span> <span class="o">*</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">lv_obj_create</span><span class="p">(</span><span class="n">lv_scr_act</span><span class="p">(),</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">lv_obj_add_style</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">LV_OBJ_PART_MAIN</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">style</span><span class="p">);</span>
+    <span class="n">lv_obj_align</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">LV_ALIGN_CENTER</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="shadow-properties">
+<h3>Shadow properties<a class="headerlink" href="#shadow-properties" title="Permalink to this headline">¶</a></h3>
+<p>The shadow is a blurred area under the object.</p>
+<ul class="simple">
+<li><p><strong>shadow_color</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>) Specifies the color of the shadow.</p></li>
+<li><p><strong>shadow_opa</strong> (<code class="docutils literal notranslate"><span class="pre">lv_opa_t</span></code>) Specifies opacity of the shadow.</p></li>
+<li><p><strong>shadow_width</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Set the width (blur size) of the outline.</p></li>
+<li><p><strong>shadow_ofs_x</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Set the an X offset for the shadow.</p></li>
+<li><p><strong>shadow_ofs_y</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Set the an Y offset for the shadow.</p></li>
+<li><p><strong>shadow_spread</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): ake the shadow larger than the background in every direction by this value.</p></li>
+<li><p><strong>shadow_blend_mode</strong> (<code class="docutils literal notranslate"><span class="pre">lv_blend_mode_t</span></code>): Set the blend mode of the shadow. Can be <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL/ADDITIVE/SUBTRACTIVE</span></code>). Default value: <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL</span></code>.</p></li>
+</ul>
+<img alt="Styling the shadow in lvgl" src="../_images/lv_ex_style_4.png" />
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;lvgl/lvgl.h&quot;</span><span class="cp"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Using the Shadow style properties</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">lv_ex_style_4</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="n">lv_style_t</span> <span class="n">style</span><span class="p">;</span>
+    <span class="n">lv_style_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">);</span>
+
+    <span class="cm">/*Set a background color and a radius*/</span>
+    <span class="n">lv_style_set_radius</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+    <span class="n">lv_style_set_bg_opa</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_OPA_COVER</span><span class="p">);</span>    <span class="cm">/*Transparent by default*/</span>
+    <span class="n">lv_style_set_bg_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_COLOR_RED</span><span class="p">);</span>
+
+    <span class="cm">/*Add a shadow*/</span>
+    <span class="n">lv_style_set_shadow_width</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+    <span class="n">lv_style_set_shadow_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_COLOR_BLUE</span><span class="p">);</span>
+    <span class="n">lv_style_set_shadow_ofs_x</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="n">lv_style_set_shadow_ofs_y</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+
+    <span class="cm">/*Create an object with the new style*/</span>
+    <span class="n">lv_obj_t</span> <span class="o">*</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">lv_obj_create</span><span class="p">(</span><span class="n">lv_scr_act</span><span class="p">(),</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">lv_obj_add_style</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">LV_OBJ_PART_MAIN</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">style</span><span class="p">);</span>
+    <span class="n">lv_obj_align</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">LV_ALIGN_CENTER</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="pattern-properties">
+<h3>Pattern properties<a class="headerlink" href="#pattern-properties" title="Permalink to this headline">¶</a></h3>
+<p>The pattern is an image (or symbol) drawn in the middle of the background or repeated to fill the whole background.</p>
+<ul class="simple">
+<li><p><strong>pattern_image</strong> (<code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">void</span> <span class="pre">*</span></code>): Pointer to an <code class="docutils literal notranslate"><span class="pre">lv_img_dsc_t</span></code> variable, a path to an image file or a symbol.</p></li>
+<li><p><strong>pattern_opa</strong> (<code class="docutils literal notranslate"><span class="pre">lv_opa_t</span></code>): Specifies opacity of the pattern.</p></li>
+<li><p><strong>pattern_recolor</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>): Mix this color to the pattern image. In case of symbols (texts) it will be the text color.</p></li>
+<li><p><strong>pattern_recolor_opa</strong> (<code class="docutils literal notranslate"><span class="pre">lv_opa_t</span></code>): Intensity of recoloring. Default value: <code class="docutils literal notranslate"><span class="pre">LV_OPA_TRANSP</span></code> (no recoloring).</p></li>
+<li><p><strong>pattern_repeat</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>): <code class="docutils literal notranslate"><span class="pre">true</span></code>: the pattern will be repeated as a mosaic. <code class="docutils literal notranslate"><span class="pre">false</span></code>: place the pattern in the middle of the background.</p></li>
+<li><p><strong>pattern_blend_mode</strong> (<code class="docutils literal notranslate"><span class="pre">lv_blend_mode_t</span></code>): Set the blend mode of the pattern. Can be <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL/ADDITIVE/SUBTRACTIVE</span></code>). Default value: <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL</span></code>.</p></li>
+</ul>
+<img alt="Styling the shadow in lvgl" src="../_images/lv_ex_style_5.png" />
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;lvgl/lvgl.h&quot;</span><span class="cp"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Using the pattern style properties</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">lv_ex_style_5</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="n">lv_style_t</span> <span class="n">style</span><span class="p">;</span>
+    <span class="n">lv_style_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">);</span>
+
+    <span class="cm">/*Set a background color and a radius*/</span>
+    <span class="n">lv_style_set_radius</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+    <span class="n">lv_style_set_bg_opa</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_OPA_COVER</span><span class="p">);</span>    <span class="cm">/*Transparent by default*/</span>
+    <span class="n">lv_style_set_bg_color</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_COLOR_RED</span><span class="p">);</span>
+
+    <span class="cm">/*Add a repeating pattern*/</span>
+    <span class="n">lv_style_set_pattern_image</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_SYMBOL_OK</span><span class="p">);</span>
+    <span class="n">lv_style_set_pattern_recolor</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_COLOR_BLUE</span><span class="p">);</span>
+    <span class="n">lv_style_set_pattern_opa</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="n">LV_OPA_50</span><span class="p">);</span>
+    <span class="n">lv_style_set_pattern_repeat</span><span class="p">(</span><span class="o">&amp;</span><span class="n">style</span><span class="p">,</span> <span class="n">LV_STATE_DEFAULT</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+
+    <span class="cm">/*Create an object with the new style*/</span>
+    <span class="n">lv_obj_t</span> <span class="o">*</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">lv_obj_create</span><span class="p">(</span><span class="n">lv_scr_act</span><span class="p">(),</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">lv_obj_add_style</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">LV_OBJ_PART_MAIN</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">style</span><span class="p">);</span>
+    <span class="n">lv_obj_align</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">LV_ALIGN_CENTER</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="value-properties">
+<h3>Value properties<a class="headerlink" href="#value-properties" title="Permalink to this headline">¶</a></h3>
+<p>Value is an arbitrary text drawn to the background. It can be a lightweighted replacement of the creating label objects.</p>
+<ul class="simple">
+<li><p><strong>value_str</strong> (<code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char</span> <span class="pre">*</span></code>): Pointer to text to display. Only the pointer is saved.</p></li>
+<li><p><strong>value_color</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>): Color of the text.</p></li>
+<li><p><strong>value_opa</strong> (<code class="docutils literal notranslate"><span class="pre">lv_opa_t</span></code>): Opacity of the text.</p></li>
+<li><p><strong>value_font</strong> (<code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">lv_font_t</span> <span class="pre">*</span></code>): Pointer to font of the text.</p></li>
+<li><p><strong>value_letter_space</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Letter space of the text.</p></li>
+<li><p><strong>value_line_space</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Line space of the text.</p></li>
+<li><p><strong>value_align</strong> (<code class="docutils literal notranslate"><span class="pre">lv_align_t</span></code>): Alignment of the text. Can be <code class="docutils literal notranslate"><span class="pre">LV_ALIGN_...</span></code>.</p></li>
+<li><p><strong>value_ofs_x</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): X offset from the original position of the alignment.</p></li>
+<li><p><strong>value_ofs_y</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Y offset from the original position of the alignment.</p></li>
+<li><p><strong>value_blend_mode</strong> (<code class="docutils literal notranslate"><span class="pre">lv_blend_mode_t</span></code>): Set the blend mode of the text. Can be <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL/ADDITIVE/SUBTRACTIVE</span></code>). Default value: <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL</span></code>.</p></li>
+</ul>
+<img alt="Styling the value text in lvgl" src="lv_examples/src/lv_ex_style/lv_ex_style_6.*" />
+</div>
+<div class="section" id="text-properties">
+<h3>Text properties<a class="headerlink" href="#text-properties" title="Permalink to this headline">¶</a></h3>
+<p>Properties for textual object.</p>
+<ul class="simple">
+<li><p><strong>text_color</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>): Color of the text.</p></li>
+<li><p><strong>text_opa</strong> (<code class="docutils literal notranslate"><span class="pre">lv_opa_t</span></code>): Opacity of the text.</p></li>
+<li><p><strong>text_font</strong> (<code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">lv_font_t</span> <span class="pre">*</span></code>): Pointer to font of the text.</p></li>
+<li><p><strong>text_letter_space</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Letter space of the text.</p></li>
+<li><p><strong>text_line_space</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Line space of the text.</p></li>
+<li><p><strong>text_decor</strong> (<code class="docutils literal notranslate"><span class="pre">lv_text_decor_t</span></code>): Add text decoration. Can be <code class="docutils literal notranslate"><span class="pre">LV_TEXT_DECOR_NONE/UNDERLINE/STRIKETHROUGH</span></code>.</p></li>
+<li><p><strong>text_sel_color</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>): Set background color of text selection.</p></li>
+<li><p><strong>text_blend_mode</strong> (<code class="docutils literal notranslate"><span class="pre">lv_blend_mode_t</span></code>): Set the blend mode of the text. Can be <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL/ADDITIVE/SUBTRACTIVE</span></code>). Default value: <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="line-properties">
+<h3>Line properties<a class="headerlink" href="#line-properties" title="Permalink to this headline">¶</a></h3>
+<p>Properties of lines.</p>
+<ul class="simple">
+<li><p><strong>line_color</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>): Color of the line.</p></li>
+<li><p><strong>line_opa</strong> (<code class="docutils literal notranslate"><span class="pre">lv_opa_t</span></code>): Opacity of the line.</p></li>
+<li><p><strong>line_width</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Width of the line.</p></li>
+<li><p><strong>line_dash_width</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Width of dash. Dashing is drawn only for horizontal or vertical lines. 0: disable dash.</p></li>
+<li><p><strong>line_dash_gap</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Gap between two dash line. Dashing is drawn only for horizontal or vertical lines. 0: disable dash.</p></li>
+<li><p><strong>line_rounded</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>): <code class="docutils literal notranslate"><span class="pre">true</span></code>: draw rounded line endings.</p></li>
+<li><p><strong>line_blend_mode</strong> (<code class="docutils literal notranslate"><span class="pre">lv_blend_mode_t</span></code>): Set the blend mode of the line. Can be <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL/ADDITIVE/SUBTRACTIVE</span></code>). Default value: <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL</span></code>.</p></li>
+</ul>
+<img alt="Styling aline in lvgl" src="lv_examples/src/lv_ex_style/lv_ex_style_7.*" />
+</div>
+<div class="section" id="image-properties">
+<h3>Image properties<a class="headerlink" href="#image-properties" title="Permalink to this headline">¶</a></h3>
+<p>Properties of image.</p>
+<ul class="simple">
+<li><p><strong>image_recolor</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>):  Mix this color to the pattern image. In case of symbols (texts) it will be the text color.</p></li>
+<li><p><strong>image_recolor_opa</strong> (<code class="docutils literal notranslate"><span class="pre">lv_opa_t</span></code>): Intensity of recoloring. Default value: <code class="docutils literal notranslate"><span class="pre">LV_OPA_TRANSP</span></code> (no recoloring).</p></li>
+<li><p><strong>image_opa</strong> (<code class="docutils literal notranslate"><span class="pre">lv_opa_t</span></code>): Opacity of the image.</p></li>
+<li><p><strong>image_blend_mode</strong> (<code class="docutils literal notranslate"><span class="pre">lv_blend_mode_t</span></code>): Set the blend mode of the image. Can be <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL/ADDITIVE/SUBTRACTIVE</span></code>). Default value: <code class="docutils literal notranslate"><span class="pre">LV_BLEND_MODE_NORMAL</span></code>.</p></li>
+</ul>
+<img alt="Styling an image in lvgl" src="lv_examples/src/lv_ex_style/lv_ex_style_8.*" />
+</div>
+<div class="section" id="transition-properties">
+<h3>Transition properties<a class="headerlink" href="#transition-properties" title="Permalink to this headline">¶</a></h3>
+<p>Properties to describe state change animations.</p>
+<ul class="simple">
+<li><p><strong>transition_time</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Time of the transition.</p></li>
+<li><p><strong>transition_delay</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Delay before the transition.</p></li>
+<li><p><strong>transition_1</strong> (<code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">name</span></code>): A property on which transition should be applied. Use the property name with upper case with <code class="docutils literal notranslate"><span class="pre">LV_STYLE_</span></code> prefix, e.g. <code class="docutils literal notranslate"><span class="pre">LV_STYLE_BG_COLOR</span></code></p></li>
+<li><p><strong>transition_2</strong> (<code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">name</span></code>): Same as <em>transition_1</em> just for an other property.</p></li>
+<li><p><strong>transition_3</strong> (<code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">name</span></code>): Same as <em>transition_1</em> just for an other property.</p></li>
+<li><p><strong>transition_4</strong> (<code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">name</span></code>): Same as <em>transition_1</em> just for an other property.</p></li>
+<li><p><strong>transition_5</strong> (<code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">name</span></code>): Same as <em>transition_1</em> just for an other property.</p></li>
+<li><p><strong>transition_6</strong> (<code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">name</span></code>): Same as <em>transition_1</em> just for an other property.</p></li>
+<li><p><strong>transition_path</strong> (<code class="docutils literal notranslate"><span class="pre">lv_anim_path_cb_t</span></code>): An animation path for the transition. Built pats can be used, e.g. <code class="docutils literal notranslate"><span class="pre">lv_anim_path_overshoot</span></code>.</p></li>
+</ul>
+<img alt="Styling an transitions in lvgl" src="lv_examples/src/lv_ex_style/lv_ex_style_9.*" />
+</div>
+<div class="section" id="scale-properties">
+<h3>Scale properties<a class="headerlink" href="#scale-properties" title="Permalink to this headline">¶</a></h3>
+<p>Auxiliary properties for scale like elements. Scales have a normal and and end region.
+As the name implies the end region is the end of the scale where can be critical values or inactive values. The normal region is before the end region.
+Both region could have different properties.</p>
+<ul class="simple">
+<li><p><strong>scale_grad_color</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>):  In normal region make gradient to this color on the scale lines.</p></li>
+<li><p><strong>scale_end_color</strong> (<code class="docutils literal notranslate"><span class="pre">lv_color_t</span></code>):  Color of the scale lines in the end region.</p></li>
+<li><p><strong>scale_width</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Width of the scale. Default value: <code class="docutils literal notranslate"><span class="pre">LV_DPI</span> <span class="pre">/</span> <span class="pre">8</span></code>.</p></li>
+<li><p><strong>scale_border_width</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Width of a border drawn on the outer side of the scale in the normal region.</p></li>
+<li><p><strong>scale_end_border_width</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Width of a border drawn on the outer side of the scale in the end region.</p></li>
+<li><p><strong>scale_end_line_width</strong> (<code class="docutils literal notranslate"><span class="pre">lv_style_int_t</span></code>): Width of a scale lines in the end region.</p></li>
+</ul>
+<p>A style is a structure with attributes like colors, paddings, opacity, font, etc.</p>
 <p>There is a common style type called <strong>lv_style_t</strong> for every object type.</p>
 <p>By setting the fields of the <code class="docutils literal notranslate"><span class="pre">lv_style_t</span></code> variables and assigning them to objects with <code class="docutils literal notranslate"><span class="pre">lv_obj_set_style</span></code>, you can influence the appearance of the objects.</p>
 <div class="admonition important">
@@ -1110,6 +1564,8 @@
   <span class="p">...</span>
 <span class="p">}</span>
 </pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="use-the-styles">
 <h2>Use the styles<a class="headerlink" href="#use-the-styles" title="Permalink to this headline">¶</a></h2>
@@ -1362,7 +1818,7 @@ Check the <a class="reference external" href="https://littlevgl.com/themes">Exis
     <p>
         &copy; Copyright 2019, Gabor Kiss-Vamosi
       <span class="lastupdated">
-        Last updated on Oct 11, 2019.
+        Last updated on Mar 02, 2020.
       </span>
 
     </p>
