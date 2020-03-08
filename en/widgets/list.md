@@ -1,24 +1,38 @@
 ```eval_rst
-:github_url: https://github.com/littlevgl/docs/blob/master/en/object-types/list.md
+:github_url: https://github.com/littlevgl/docs/blob/master/en/widgets/list.md
 ```
 # List (lv_list)
 
 ## Overview
-
-The Lists are built from a background [Page](/object-types/page) and [Buttons](/object-types/btn) on it. 
-The Buttons contain an optional icon-like [Image](/object-types/img) (which can be a symbol too) and a [Label](/object-types/label). 
+The Lists are built from a background [Page](/widgets/page) and [Buttons](/widgets/btn) on it. 
+The Buttons contain an optional icon-like [Image](/widgets/img) (which can be a symbol too) and a [Label](/widgets/label). 
 When the list becomes long enough it can be scrolled. 
 
+## Parts and Styles
+The List has the same parts as the [Page](/widgets/page)
+- `LV_LIST_PART_BG`
+- `LV_LIST_PART_SCRL`
+- `LV_LIST_PART_SCRLBAR`
+- `LV_LIST_PART_EDGE_FLASH`
+
+Refer to the [Page](/widgets/page) documentation for details.
+
+
+The buttons on the list are treated as normal buttons and they only have a main part called `LV_BTN_PART_MAIN`.
+
+## Usage
+
 ### Add buttons
-You can add new list elements with `lv_list_add_btn(list, &icon_img, "Text")` or with symbol `lv_list_add_btn(list, SYMBOL_EDIT, "Edit text")`. 
+You can add new list elements (button) with `lv_list_add_btn(list, &icon_img, "Text")` or with symbol `lv_list_add_btn(list, SYMBOL_EDIT, "Edit text")`. 
 If you do not want to add image use `NULL` as image source. The function returns with a pointer to the created button to allow further configurations.
 
 The width of the buttons is set to maximum according to the object width. 
-The height of the buttons are adjusted automatically according to the content. (*content height* + *padding.top* + *padding.bottom*).
+The height of the buttons are adjusted automatically according to the content. (*content height* + *padding_top* + *padding_bottom*).
 
 The labels are created with `LV_LABEL_LONG_SROLL_CIRC` long mode to automatically scroll the long labels circularly.
 
-You can use `lv_list_get_btn_label(list_btn)` and `lv_list_get_btn_img(list_btn)` to get the label and the image of a list button. You can get the text directly with `lv_list_get_btn_text(list_btn)`.
+`lv_list_get_btn_label(list_btn)` and `lv_list_get_btn_img(list_btn)` can be used to get the label and the image of a list button. 
+The text can be et directly with `lv_list_get_btn_text(list_btn)`.
 
 ### Delete buttons
 To delete a list element just use `lv_obj_del(btn)` on the return value of `lv_list_add_btn()`. 
@@ -33,34 +47,15 @@ You can focus on a button directly using `lv_list_focus(btn, LV_ANIM_ON/OFF)`.
 The **animation time** of up/down/focus movements can be set via: `lv_list_set_anim_time(list, anim_time)`. Zero animation time means not animations. 
 
 ### Layout
-By default the list is vertical. To get a horizontal list use `lv_list_set_layout(list, LV_LAYOUT_ROW_M)`.
+By default the list is vertical. To get a horizontal list use `lv_list_set_layout(list, LV_LAYOUT_ROW_MID)`.
  
 ### Edge flash
 A circle-like effect can be shown when the list reaches the most top or bottom position. 
-`lv_list_set_edge_flash(list, en)` enables this feature.
+`lv_list_set_edge_flash(list, true)` enables this feature.
 
 ### Scroll propagation
-If the list is created on an other scrollable element (like a [Page](/object-types/page)) and the list can't be scrolled further the **scrolling can be propagated to the parent**. 
+If the list is created on an other scrollable element (like a [Page](/object-types/page)) and the list can't be scrolled further the scrolling can be propagated to the parent. 
 This way the scroll will be continued on the parent. It can be enabled with `lv_list_set_scroll_propagation(list, true)`
-
-If the buttons have `lv_btn_set_toggle` enabled then `lv_list_set_single_mode(list, true)` can be used to ensure that only one button can be in toggled state at the same time.
-
-## Style usage
-
-The `lv_list_set_style(list, LV_LIST_STYLE_..., &style)` function sets the style of a list. 
-- **LV_LIST_STYLE_BG** list background style. Default: `lv_style_transp_fit`
-- **LV_LIST_STYLE_SCRL** scrollable part's style. Default: `lv_style_pretty`
-- **LV_LIST_STYLE_SB** scrollbars' style. Default: `lv_style_pretty_color`. For details see [Page](/object-types/page) 
-- **LV_LIST_STYLE_BTN_REL** button released style. Default: `lv_style_btn_rel`
-- **LV_LIST_STYLE_BTN_PR** button pressed style. Default: `lv_style_btn_pr`
-- **LV_LIST_STYLE_BTN_TGL_REL** button toggled released style. Default: `lv_style_btn_tgl_rel`
-- **LV_LIST_STYLE_BTN_TGL_PR** button toggled pressed style. Default: `lv_style_btn_tgl_pr`
-- **LV_LIST_STYLE_BTN_INA** button inactive style. Default: `lv_style_btn_ina`
-
-Because *BG* has a transparent style by default if there is only a few buttons the list will look shorter but become scrollable when more list elements are added.
-
-To modify the height of the buttons adjust the `body.padding.top/bottom` fields of the corresponding styles (`LV_LIST_STYLE_BTN_REL/PR/...`)
-
 
 ## Events
 Only the [Generic events](/overview/event.html#generic-events) are sent by the object type.

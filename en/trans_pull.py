@@ -4,7 +4,7 @@ import sys
 import os
 
 langs = ['tr', 'zh-CN', 'hu', 'fr']
-folders = ['overview', 'get-started', 'object-types', 'porting'];
+folders = ['overview', 'get-started', 'widgets', 'porting'];
 files = ['index.md'];
 
 lang_str = ""

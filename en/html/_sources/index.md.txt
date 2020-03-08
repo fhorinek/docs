@@ -196,6 +196,6 @@ You can download it here and open offline:
    get-started/index
    porting/index
    overview/index
-   object-types/index
+   widgets/index
 
 ```
