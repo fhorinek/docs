@@ -1131,7 +1131,7 @@
 <h1>Keyboard (lv_keyboard)<a class="headerlink" href="#keyboard-lv-keyboard" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>The Keyboard object is a special <a class="reference external" href="/widget/btnmatrix">Button matrix</a> with predefined keymaps and other features to realize a virtual keyboard to write text.</p>
+<p>The Keyboard object is a special <a class="reference internal" href="btnmatrix.html"><span class="doc">Button matrix</span></a> with predefined keymaps and other features to realize a virtual keyboard to write text.</p>
 </div>
 <div class="section" id="parts-and-styles">
 <h2>Parts and Styles<a class="headerlink" href="#parts-and-styles" title="Permalink to this headline">¶</a></h2>
@@ -1157,7 +1157,7 @@
 </div>
 <div class="section" id="assign-text-area">
 <h3>Assign Text area<a class="headerlink" href="#assign-text-area" title="Permalink to this headline">¶</a></h3>
-<p>You can assign a <a class="reference external" href="/widget/textarea">Text area</a> to the Keyboard to automatically put the clicked characters there.
+<p>You can assign a <a class="reference internal" href="textarea.html"><span class="doc">Text area</span></a> to the Keyboard to automatically put the clicked characters there.
 To assign the text area, use <code class="docutils literal notranslate"><span class="pre">lv_keyboard_set_textarea(kb,</span> <span class="pre">ta)</span></code>.</p>
 <p>The assigned text area’s <strong>cursor can be managed</strong> by the keyboard: when the keyboard is assigned, the previous text area’s cursor will be hidden and the new one will be shown.
 When the keyboard is closed by the <em>Ok</em> or <em>Close</em> buttons, the cursor also will be hidden. The cursor manager feature is enabled by <code class="docutils literal notranslate"><span class="pre">lv_keyboard_set_cursor_manage(kb,</span> <span class="pre">true)</span></code>. The default is not managed.</p>
@@ -1165,7 +1165,7 @@ When the keyboard is closed by the <em>Ok</em> or <em>Close</em> buttons, the cu
 <div class="section" id="new-keymap">
 <h3>New Keymap<a class="headerlink" href="#new-keymap" title="Permalink to this headline">¶</a></h3>
 <p>You can specify a new map (layout) for the keyboard with <code class="docutils literal notranslate"><span class="pre">lv_keyboard_set_map(kb,</span> <span class="pre">map)</span></code> and <code class="docutils literal notranslate"><span class="pre">lv_keyboard_set_ctrl_map(kb,</span> <span class="pre">ctrl_map)</span></code>.
-Learn more about the <a class="reference external" href="/widget/btnmatrix">Button matrix</a> object.
+Learn more about the <a class="reference internal" href="btnmatrix.html"><span class="doc">Button matrix</span></a> object.
 Keep in mind that, using following keywords will have the same effect as with the original map:</p>
 <ul class="simple">
 <li><p><em>LV_SYMBOL_OK</em> - Apply.</p></li>

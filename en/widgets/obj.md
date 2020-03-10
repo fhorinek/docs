@@ -1,5 +1,5 @@
 ```eval_rst
-:github_url: https://github.com/littlevgl/docs/blob/master/en/widget/obj.md
+:github_url: https://github.com/littlevgl/docs/blob/master/en/widgets/obj.md
 ```
 # Base object (lv_obj)
 
@@ -104,7 +104,7 @@ Read the [Event overview](/overview/event) to learn more about the events.
 There are some attributes which can be enabled/disabled by `lv_obj_set_...(obj, true/false)`:
 
 - **hidden** -  Hide the object. It will not be drawn and will be considered by input devices as if it doesn't exist., Its children will be hidden too.
-- **click** -  Allows you to click the object via input devices. If disabled, then click events are passed to the object behind this one. (E.g. [Labels](/widget/label) are not clickable by default)
+- **click** -  Allows you to click the object via input devices. If disabled, then click events are passed to the object behind this one. (E.g. [Labels](/widgets/label) are not clickable by default)
 - **top** -  If enabled then when this object or any of its children is clicked then this object comes to the foreground.
 - **drag** - Enable dragging (moving by an input device)
 - **drag_dir** - Enable dragging only in specific directions. Can be `LV_DRAG_DIR_HOR/VER/ALL`.
@@ -129,10 +129,10 @@ Therefore, if you want to disable the Opa scaling for an object when the parent 
 There are some specific actions which happen automatically in the library.
 To prevent one or more that kind of actions, you can protect the object against them. The following protections exists:
 - **LV_PROTECT_NONE** No protection
-- **LV_PROTECT_POS**  Prevent automatic positioning (e.g.  Layout in [Containers](/widget/cont))
-- **LV_PROTECT_FOLLOW** Prevent the object be followed (make a "line break") in automatic ordering (e.g. Layout in [Containers](/widget/cont))
-- **LV_PROTECT_PARENT** Prevent automatic parent change. (e.g. [Page](/widget/page) moves the children created on the background to the scrollable)
-- **LV_PROTECT_PRESS_LOST** Prevent losing press when the press is slid out of the objects. (E.g. a [Button](/widget/btn) can be released out of it if it was being pressed)
+- **LV_PROTECT_POS**  Prevent automatic positioning (e.g.  Layout in [Containers](/widgets/cont))
+- **LV_PROTECT_FOLLOW** Prevent the object be followed (make a "line break") in automatic ordering (e.g. Layout in [Containers](/widgets/cont))
+- **LV_PROTECT_PARENT** Prevent automatic parent change. (e.g. [Page](/widgets/page) moves the children created on the background to the scrollable)
+- **LV_PROTECT_PRESS_LOST** Prevent losing press when the press is slid out of the objects. (E.g. a [Button](/widgets/btn) can be released out of it if it was being pressed)
 - **LV_PROTECT_CLICK_FOCUS** Prevent automatically focusing the object if it's in a *Group* and click focus is enabled.
 - **LV_PROTECT_CHILD_CHG** Disable the child change signal. Used internally by the library
 

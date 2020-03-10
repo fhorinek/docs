@@ -195,8 +195,8 @@ The following properties can be used in the styles.
 - **opa_scale** (`lv_style_int_t`): Inherited. Scale down all opacity values of the object by this factor. As it's inherited the children objects will be affected too. 
 
 ### Padding properties
-Set the space on the edges and between the children objects. Typically used by [Container](/widget/cont) object if [layout](/widget/cont#layout) or 
-[auto fit](/widget/cont#auto-fit) is enabled. However other widgets also use them to set spacing. See the documentation of the widgets for the details. 
+Set the space on the edges and between the children objects. Typically used by [Container](/widgets/cont) object if [layout](/widgets/cont#layout) or 
+[auto fit](/widgets/cont#auto-fit) is enabled. However other widgets also use them to set spacing. See the documentation of the widgets for the details. 
  - **pad_top** (`lv_style_int_t`): Set the padding on the top.
  - **pad_bottom** (`lv_style_int_t`): Set the padding on the bottom.
  - **pad_left** (`lv_style_int_t`): Set the padding on the left.

@@ -1,11 +1,11 @@
 ```eval_rst
-:github_url: https://github.com/littlevgl/docs/blob/master/en/widget/slider.md
+:github_url: https://github.com/littlevgl/docs/blob/master/en/widgets/slider.md
 ```
 # Slider (lv_slider)
 
 ## Overview
 
-The Slider object looks like a [Bar](/widget/bar) supplemented with a knob. The knob can be dragged to set a value. The Slider also can be vertical or horizontal.
+The Slider object looks like a [Bar](/widgets/bar) supplemented with a knob. The knob can be dragged to set a value. The Slider also can be vertical or horizontal.
 
 
 ## Parts and Styles

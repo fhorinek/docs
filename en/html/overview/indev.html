@@ -1162,8 +1162,8 @@ For images, <em>clicking</em> is disabled by default.</p>
 <h3>Groups<a class="headerlink" href="#groups" title="Permalink to this headline">¶</a></h3>
 <p>The objects, you want to control with keypad or encoder, needs to be added to a <em>Group</em>.
 In every group, there is exactly one focused object which receives the pressed keys or the encoder actions.
-For example, if a <a class="reference external" href="/widget/textarea">Text area</a> is focused and you press some letter on a keyboard, the keys will be sent and inserted into the text area.
-Similarly, if a <a class="reference external" href="/widget/slider">Slider</a> is focused and you press the left or right arrows, the slider’s value will be changed.</p>
+For example, if a <a class="reference internal" href="../widgets/textarea.html"><span class="doc">Text area</span></a> is focused and you press some letter on a keyboard, the keys will be sent and inserted into the text area.
+Similarly, if a <a class="reference internal" href="../widgets/slider.html"><span class="doc">Slider</span></a> is focused and you press the left or right arrows, the slider’s value will be changed.</p>
 <p>You need to associate an input device with a group. An input device can send the keys to only one group but, a group can receive data from more than one input device too.</p>
 <p>To create a group use <code class="docutils literal notranslate"><span class="pre">lv_group_t</span> <span class="pre">*</span> <span class="pre">g</span> <span class="pre">=</span> <span class="pre">lv_group_create()</span></code> and to add an object to the group use <code class="docutils literal notranslate"><span class="pre">lv_group_add_obj(g,</span> <span class="pre">obj)</span></code>.</p>
 <p>The associate a group with an input device use <code class="docutils literal notranslate"><span class="pre">lv_indev_set_group(indev,</span> <span class="pre">g)</span></code>, where <code class="docutils literal notranslate"><span class="pre">indev</span></code> is the return value of <code class="docutils literal notranslate"><span class="pre">lv_indev_drv_register()</span></code></p>
@@ -1178,11 +1178,11 @@ Similarly, if a <a class="reference external" href="/widget/slider">Slider</a> i
 <li><p><strong>LV_KEY_DOWN</strong> Decrease value or move downwards</p></li>
 <li><p><strong>LV_KEY_RIGHT</strong> Increase value or move the the right</p></li>
 <li><p><strong>LV_KEY_LEFT</strong> Decrease value or move the the left</p></li>
-<li><p><strong>LV_KEY_ESC</strong>  Close or exit (E.g. close a <a class="reference external" href="/widget/dropdown">Drop down list</a>)</p></li>
-<li><p><strong>LV_KEY_DEL</strong>  Delete (E.g. a character on the right in a <a class="reference external" href="/widget/textarea">Text area</a>)</p></li>
-<li><p><strong>LV_KEY_BACKSPACE</strong> Delete a character on the left (E.g. in a <a class="reference external" href="/widget/textarea">Text area</a>)</p></li>
-<li><p><strong>LV_KEY_HOME</strong> Go to the beginning/top (E.g. in a <a class="reference external" href="/widget/textarea">Text area</a>)</p></li>
-<li><p><strong>LV_KEY_END</strong> Go to the end (E.g. in a <a class="reference external" href="/widget/textarea">Text area</a>))</p></li>
+<li><p><strong>LV_KEY_ESC</strong>  Close or exit (E.g. close a <a class="reference internal" href="../widgets/dropdown.html"><span class="doc">Drop down list</span></a>)</p></li>
+<li><p><strong>LV_KEY_DEL</strong>  Delete (E.g. a character on the right in a <a class="reference internal" href="../widgets/textarea.html"><span class="doc">Text area</span></a>)</p></li>
+<li><p><strong>LV_KEY_BACKSPACE</strong> Delete a character on the left (E.g. in a <a class="reference internal" href="../widgets/textarea.html"><span class="doc">Text area</span></a>)</p></li>
+<li><p><strong>LV_KEY_HOME</strong> Go to the beginning/top (E.g. in a <a class="reference internal" href="../widgets/textarea.html"><span class="doc">Text area</span></a>)</p></li>
+<li><p><strong>LV_KEY_END</strong> Go to the end (E.g. in a <a class="reference internal" href="../widgets/textarea.html"><span class="doc">Text area</span></a>))</p></li>
 </ul>
 <p>The most important special keys are <code class="docutils literal notranslate"><span class="pre">LV_KEY_NEXT/PREV</span></code>, <code class="docutils literal notranslate"><span class="pre">LV_KEY_ENTER</span></code> and <code class="docutils literal notranslate"><span class="pre">LV_KEY_UP/DOWN/LEFT/RIGHT</span></code>.
 In your <code class="docutils literal notranslate"><span class="pre">read_cb</span></code> function, you should translate some of your keys to these special keys to navigate in the group and interact with the selected object.</p>
@@ -1196,7 +1196,7 @@ In your <code class="docutils literal notranslate"><span class="pre">read_cb</sp
 Pressing <code class="docutils literal notranslate"><span class="pre">LV_KEY_ENTER</span></code> will change to <em>Edit</em> mode.</p>
 <p>In <em>Edit</em> mode, <code class="docutils literal notranslate"><span class="pre">LV_KEY_NEXT/PREV</span></code> is usually used to edit the object.
 Depending on the object’s type, a short or long press of <code class="docutils literal notranslate"><span class="pre">LV_KEY_ENTER</span></code> changes back to <em>Navigate</em> mode.
-Usually, an object which can not be pressed (like a <a class="reference external" href="/widget/slider">Slider</a>) leaves <em>Edit</em> mode on short click. But with object where short click has meaning (e.g. <a class="reference external" href="/widget/btn">Button</a>), long press is required.</p>
+Usually, an object which can not be pressed (like a <a class="reference internal" href="../widgets/slider.html"><span class="doc">Slider</span></a>) leaves <em>Edit</em> mode on short click. But with object where short click has meaning (e.g. <a class="reference internal" href="../widgets/btn.html"><span class="doc">Button</span></a>), long press is required.</p>
 </div>
 <div class="section" id="styling-the-focused-object">
 <h4>Styling the focused object<a class="headerlink" href="#styling-the-focused-object" title="Permalink to this headline">¶</a></h4>

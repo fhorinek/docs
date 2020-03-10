@@ -6,7 +6,7 @@
 
 ## Overview
 
-The Checkbox objects are built from a [Button](/widget/btn) background which contains an also Button *bullet* and a [Label](/widget/label) to realize a classical checkbox.
+The Checkbox objects are built from a [Button](/widgets/btn) background which contains an also Button *bullet* and a [Label](/widgets/label) to realize a classical checkbox.
 
 ## Parts and Styles
 The Check box's main part is called `LV_CHECKBOX_PART_BG`. It's a container for a "bullet" and a text next to it. The background uses all the typical background style properties.

@@ -6,7 +6,7 @@
 
 ## Overview
 
-A Canvas is like an [Image](/widget/img) where the user can draw anything. Rectangles, texts, images, lines arcs can be drawn here using lvgl's drawing engine. 
+A Canvas is like an [Image](/widgets/img) where the user can draw anything. Rectangles, texts, images, lines arcs can be drawn here using lvgl's drawing engine. 
 Besides some "effects" can be applied as well like rotation, zoom and blur.
 
 

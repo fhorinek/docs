@@ -101,7 +101,7 @@ It works like when you select a text on your PC with your mouse.
 
 ### Scrollbars
 The scrollbars can shown according to different policies set by `lv_textarea_set_sb_mode(textarea, LV_SCRLBAR_MODE_...)`. 
-Learn more at the [Page](/widget/page) object.
+Learn more at the [Page](/widgets/page) object.
 
 ### Scroll propagation
 When the Text area is scrolled on an other scrollable object (like a Page) and the scrolling has reached the edge of the Text area, the scrolling can be propagated to the parent. 
@@ -109,7 +109,7 @@ In other words, when the Text area can be scrolled further, the parent will be s
 
 It can be enabled with `lv_ta_set_scroll_propagation(ta, true)`.
 
-Learn more at the [Page](/widget/page) object.
+Learn more at the [Page](/widgets/page) object.
 
 ### Edge flash
 When the Text area is scrolled to edge a circle like flash animation can be shown if it is enabled with `lv_ta_set_edge_flash(ta, true)`

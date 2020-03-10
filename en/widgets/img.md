@@ -33,7 +33,7 @@ You also need to use LittlevGL's file system module and register a driver with s
 To set an image sourced from a file, use `lv_img_set_src(img, "S:folder1/my_img.bin")`.
 
 
-You can set a **symbol** similarly to [Labels](/widget/label). In this case, the image will be rendered as text according to the *font* specified in the style.  It enables to use of light-weighted mono-color
+You can set a **symbol** similarly to [Labels](/widgets/label). In this case, the image will be rendered as text according to the *font* specified in the style.  It enables to use of light-weighted mono-color
 "letters" instead of real images. You can set symbol like `lv_img_set_src(img1, LV_SYMBOL_OK)`.
 
 ### Label as an image

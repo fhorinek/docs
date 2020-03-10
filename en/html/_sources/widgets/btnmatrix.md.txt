@@ -56,12 +56,12 @@ The number of elements should be equal to the number of buttons (excluding newli
 The "One check" feature can be enabled with `lv_btnmatrix_set_one_check(btnm, true)` to allow only one button to be checked (toggled) at once.
 
 ### Recolor
-The **texts** on the button can be **recolored** similarly to the recolor feature for [Label](/widget/label) object. To enable it, use `lv_btnmatrix_set_recolor(btnm, true)`. 
+The **texts** on the button can be **recolored** similarly to the recolor feature for [Label](/widgets/label) object. To enable it, use `lv_btnmatrix_set_recolor(btnm, true)`. 
 After that a button with `#FF0000 Red#` text will be red.
 
 ### Notes
 The Button matrix object is very light weighted because the buttons are not created just virtually drawn on the fly.
-This way, 1 button use only 8 extra bytes instead of the ~100-150 byte size of a normal [Button](/widget/btn) object (plus the size of its container and a label for each button).
+This way, 1 button use only 8 extra bytes instead of the ~100-150 byte size of a normal [Button](/widgets/btn) object (plus the size of its container and a label for each button).
 
 The disadvantage of this setup is that the ability to style individual buttons to be different from others is limited (aside from the toggling feature). 
 If you require that ability, using individual buttons is very likely to be a better approach.

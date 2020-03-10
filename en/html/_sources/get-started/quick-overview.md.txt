@@ -74,7 +74,7 @@ It will redraw the screen if required, handle input devices etc.
 
 ### Objects (Widgets)
 
-The graphical elements like Buttons, Labels, Sliders, Charts etc are called objects in LittelvGL. Go to [Object types](/widget/index) to see the full list of available types.
+The graphical elements like Buttons, Labels, Sliders, Charts etc are called objects in LittelvGL. Go to [Object types](/widgets/index) to see the full list of available types.
 
 Every object has a parent object. The child object moves with the parent and if you delete the parent the children will be deleted too. Children can be visible only on their parent.
 

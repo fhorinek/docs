@@ -1130,8 +1130,8 @@
   <div class="section" id="objects">
 <h1>Objects<a class="headerlink" href="#objects" title="Permalink to this headline">¶</a></h1>
 <p>In the LittlevGL the <strong>basic building blocks</strong> of a user interface are the objects, also called <em>Widgets</em>.
-For example a <a class="reference external" href="/widget/btn">Button</a>, <a class="reference external" href="/widget/label">Label</a>, <a class="reference external" href="/widget/img">Image</a>, <a class="reference external" href="/widget/list">List</a>, <a class="reference external" href="/widget/chart">Chart</a> or <a class="reference external" href="/widget/textarea">Text area</a>.</p>
-<p>Check all the <a class="reference external" href="/widget/index">Object types</a> here.</p>
+For example a <a class="reference internal" href="../widgets/btn.html"><span class="doc">Button</span></a>, <a class="reference internal" href="../widgets/label.html"><span class="doc">Label</span></a>, <a class="reference internal" href="../widgets/img.html"><span class="doc">Image</span></a>, <a class="reference internal" href="../widgets/list.html"><span class="doc">List</span></a>, <a class="reference internal" href="../widgets/chart.html"><span class="doc">Chart</span></a> or <a class="reference internal" href="../widgets/textarea.html"><span class="doc">Text area</span></a>.</p>
+<p>Check all the <a class="reference internal" href="../widgets/index.html"><span class="doc">Object types</span></a> here.</p>
 <div class="section" id="object-attributes">
 <h2>Object attributes<a class="headerlink" href="#object-attributes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="basic-attributes">
@@ -1150,7 +1150,7 @@ For example a <a class="reference external" href="/widget/btn">Button</a>, <a cl
 <span class="n">lv_obj_set_pos</span><span class="p">(</span><span class="n">btn1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">);</span>      <span class="cm">/*Button position*/</span>
 </pre></div>
 </div>
-<p>To see all the available functions visit the Base object’s <a class="reference external" href="/widget/obj">documentation</a>.</p>
+<p>To see all the available functions visit the Base object’s <a class="reference internal" href="../widgets/obj.html"><span class="doc">documentation</span></a>.</p>
 </div>
 <div class="section" id="specific-attributes">
 <h3>Specific attributes<a class="headerlink" href="#specific-attributes" title="Permalink to this headline">¶</a></h3>
@@ -1167,7 +1167,7 @@ For example a <a class="reference external" href="/widget/btn">Button</a>, <a cl
 <span class="n">lv_slider_set_action</span><span class="p">(</span><span class="n">slider1</span><span class="p">,</span> <span class="n">my_action</span><span class="p">);</span>     <span class="cm">/*Set a callback function*/</span>
 </pre></div>
 </div>
-<p>The API of the object types are described in their <a class="reference external" href="/widget/index">Documentation</a> but you can also check the respective header files (e.g. <em>lv_objx/lv_slider.h</em>)</p>
+<p>The API of the object types are described in their <a class="reference internal" href="../widgets/index.html"><span class="doc">Documentation</span></a> but you can also check the respective header files (e.g. <em>lv_objx/lv_slider.h</em>)</p>
 </div>
 </div>
 <div class="section" id="object-s-working-mechanisms">
@@ -1240,7 +1240,7 @@ It is useful e.g. if you want to delete the parent of an object in the child’s
 </pre></div>
 </div>
 <p>There is always an active screen on each display. By default, the library creates and loads a “Base object” as the screen for each display.To get the currently active screen use the <code class="docutils literal notranslate"><span class="pre">lv_scr_act()</span></code> function. To load a new one, use <code class="docutils literal notranslate"><span class="pre">lv_scr_load(scr1)</span></code>.</p>
-<p>Screens can be created with any object type. For example, a <a class="reference external" href="/widget/obj">Base object</a> or an image to make a wallpaper.</p>
+<p>Screens can be created with any object type. For example, a <a class="reference internal" href="../widgets/obj.html"><span class="doc">Base object</span></a> or an image to make a wallpaper.</p>
 <p>Screens are created on the currently selected <em>default display</em>.
 The <em>default screen</em> is the last registered screen with <code class="docutils literal notranslate"><span class="pre">lv_disp_drv_register</span></code> or you can explicitly select a new default display using <code class="docutils literal notranslate"><span class="pre">lv_disp_set_default(disp)</span></code>.
 <code class="docutils literal notranslate"><span class="pre">lv_scr_act()</span></code> and <code class="docutils literal notranslate"><span class="pre">lv_scr_load()</span></code> operate on the currently default screen.</p>

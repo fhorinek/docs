@@ -1182,13 +1182,13 @@ The number of elements should be equal to the number of buttons (excluding newli
 </div>
 <div class="section" id="recolor">
 <h3>Recolor<a class="headerlink" href="#recolor" title="Permalink to this headline">¶</a></h3>
-<p>The <strong>texts</strong> on the button can be <strong>recolored</strong> similarly to the recolor feature for <a class="reference external" href="/widget/label">Label</a> object. To enable it, use <code class="docutils literal notranslate"><span class="pre">lv_btnmatrix_set_recolor(btnm,</span> <span class="pre">true)</span></code>.
+<p>The <strong>texts</strong> on the button can be <strong>recolored</strong> similarly to the recolor feature for <a class="reference internal" href="label.html"><span class="doc">Label</span></a> object. To enable it, use <code class="docutils literal notranslate"><span class="pre">lv_btnmatrix_set_recolor(btnm,</span> <span class="pre">true)</span></code>.
 After that a button with <code class="docutils literal notranslate"><span class="pre">#FF0000</span> <span class="pre">Red#</span></code> text will be red.</p>
 </div>
 <div class="section" id="notes">
 <h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
 <p>The Button matrix object is very light weighted because the buttons are not created just virtually drawn on the fly.
-This way, 1 button use only 8 extra bytes instead of the ~100-150 byte size of a normal <a class="reference external" href="/widget/btn">Button</a> object (plus the size of its container and a label for each button).</p>
+This way, 1 button use only 8 extra bytes instead of the ~100-150 byte size of a normal <a class="reference internal" href="btn.html"><span class="doc">Button</span></a> object (plus the size of its container and a label for each button).</p>
 <p>The disadvantage of this setup is that the ability to style individual buttons to be different from others is limited (aside from the toggling feature).
 If you require that ability, using individual buttons is very likely to be a better approach.</p>
 </div>

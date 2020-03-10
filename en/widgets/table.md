@@ -69,7 +69,7 @@ By default, the texts are word-wrapped to fit into the width of the cell and the
 To disable this and keep the text as it is enable `lv_table_set_cell_crop(table, row, col, true)`.
 
 ### Scroll
-The make the Table scrollable place it on a [Page](/widget/page)
+The make the Table scrollable place it on a [Page](/widgets/page)
 
 ## Events
 Only the [Generic events](/overview/event.html#generic-events) are sent by the object type.

@@ -10,7 +10,7 @@ The Window is container-like objects built from a header with title and button a
  
 ## Parts and Styles
 The main part is `LV_WIN_PART_BG` which holds the two other real parts:
-1. `LV_WIN_PART_HEADER`: a header [Container](/widget/cont) on the top with a title and control buttons
+1. `LV_WIN_PART_HEADER`: a header [Container](/widgets/cont) on the top with a title and control buttons
 2. `LV_WIN_PART_CONTENT_SCRL` the scrollable part of a [Page](/widgets/page) for the content below the header. 
 
 
@@ -27,7 +27,7 @@ On the header, there is a title which can be modified by: `lv_win_set_title(win,
 
 ### Control buttons
 Control buttons can be added to the right side of the header with: `lv_win_add_btn(win, LV_SYMBOL_CLOSE)`. 
-The second parameter is an [Image](/widget/img) source so it can be a symbol, a pointer to an `lv_img_dsc_t `variable or a path to file.
+The second parameter is an [Image](/widgets/img) source so it can be a symbol, a pointer to an `lv_img_dsc_t `variable or a path to file.
 
 The width of the buttons can be set with `lv_win_set_btn_width(win, w)`. If `w == 0` the buttons will be square-shaped.
 

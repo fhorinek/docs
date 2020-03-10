@@ -41,7 +41,7 @@ Learn more about [Keys](/overview/indev).
 
 ```eval_rst
 
-.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_sw/index.rst
+.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_switch/index.rst
 
 ```
 
@@ -50,7 +50,7 @@ Learn more about [Keys](/overview/indev).
 
 ```eval_rst
 
-.. doxygenfile:: lv_sw.h
+.. doxygenfile:: lv_switch.h
   :project: lvgl
         
 ```

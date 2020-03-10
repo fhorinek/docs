@@ -1,5 +1,5 @@
 ```eval_rst
-:github_url: https://github.com/littlevgl/docs/blob/master/en/widget/tabview.md
+:github_url: https://github.com/littlevgl/docs/blob/master/en/widgets/tabview.md
 ```
 # Tabview (lv_tabview)
 
@@ -31,7 +31,7 @@ The created Pages can be used as normal Pages and they have the usual Page parts
 ## Usage 
 
 ### Adding tab
-New tabs can be added with `lv_tabview_add_tab(tabview, "Tab name")`. It will return with a pointer to a [Page](/widget/page) object where the tab's content can be created.
+New tabs can be added with `lv_tabview_add_tab(tabview, "Tab name")`. It will return with a pointer to a [Page](/widgets/page) object where the tab's content can be created.
 
 ### Change tab
 To select a new tab you can:
