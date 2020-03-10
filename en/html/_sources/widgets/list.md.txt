@@ -18,11 +18,9 @@ The List has the same parts as the [Page](/widgets/page)
 Refer to the [Page](/widgets/page) documentation for details.
 
 
-The buttons on the list are treated as normal buttons and they only a main part called `LV_BTN_PART_MAIN`.
-
+The buttons on the list are treated as normal buttons and they only have a main part called `LV_BTN_PART_MAIN`.
 
 ## Usage
-
 
 ### Add buttons
 You can add new list elements (button) with `lv_list_add_btn(list, &icon_img, "Text")` or with symbol `lv_list_add_btn(list, SYMBOL_EDIT, "Edit text")`. 
@@ -56,7 +54,7 @@ A circle-like effect can be shown when the list reaches the most top or bottom p
 `lv_list_set_edge_flash(list, true)` enables this feature.
 
 ### Scroll propagation
-If the list is created on an other scrollable element (like a [Page](/object-types/page)) and the list can't be scrolled further the scrolling can be propagated to the parent. 
+If the list is created on an other scrollable element (like a [Page](/widget/page)) and the list can't be scrolled further the scrolling can be propagated to the parent. 
 This way the scroll will be continued on the parent. It can be enabled with `lv_list_set_scroll_propagation(list, true)`
 
 ## Events

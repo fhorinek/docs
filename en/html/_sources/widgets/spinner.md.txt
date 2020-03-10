@@ -1,31 +1,37 @@
 ```eval_rst
-:github_url: https://github.com/littlevgl/docs/blob/master/en/object-types/preload.md
+:github_url: https://github.com/littlevgl/docs/blob/master/en/widgets/spinner.md
 ```
-# Preloader (lv_preload)
+# Spinner (lv_spinner)
 
 ## Overview
-The preloader object is a spinning arc over a border. 
+The Spinner object is a spinning arc over a border. 
+
+## Parts and Styles
+
+The Spinner uses the the following parts:
+- `LV_SPINNER_PART_BG`: main part
+- `LV_SPINNER_PART_INDIC`: the spinning arc (virtual part)
+
+The parts and style works the same as in case of [Arc](/widgets/arc). Read its documentation for a details description.
+
+## Usage
 
 ### Arc length
-The length of the arc can be adjusted by `lv_preload_set_arc_length(preload, deg)`.
+The length of the arc can be adjusted by `lv_spinner_set_arc_length(spinner, deg)`.
 
 ### Spinning speed
-The speed of the spinning can be adjusted by `lv_preload_set_spin_time(preload, time_ms)`.
+The speed of the spinning can be adjusted by `lv_spinner_set_spin_time(preload, time_ms)`.
 
 ### Spin types
 You can choose from more spin types:
-- **LV_PRELOAD_TYPE_SPINNING_ARC** spin the arc, slow down on the top
-- **LV_PRELOAD_TYPE_FILLSPIN_ARC** spin the arc, slow down on the top but also stretch the arc
+- **LV_SPINNER_TYPE_SPINNING_ARC** spin the arc, slow down on the top
+- **LV_SPINNER_TYPE_FILLSPIN_ARC** spin the arc, slow down on the top but also stretch the arc
+- **LV_SPINNER_TYPE_CONSTANT_ARC** spin the arc at a constant speed
 
-To apply one if them use `lv_preload_set_type(preload, LV_PRELOAD_TYPE_...)`
+To apply one if them use `lv_spinner_set_type(preload, LV_SPINNER_TYPE_...)`
 
 ### Spin direction
-The direction of spinning can be changed with `lv_preload_set_dir(preload, LV_PRELOAD_DIR_FORWARD/BACKWARD)`.
-
-## Styles
-You can set the styles with `lv_preload_set_style(btn, LV_PRELOAD_STYLE_MAIN, &style)`. It describes both the arc and the border style:
-- **arc** is described by the `line` properties
-- **border** is described by the `body.border` properties including `body.padding.left/top` (the smaller is used) to give a smaller radius for the border.
+The direction of spinning can be changed with `lv_spinner_set_dir(preload, LV_SPINNER_DIR_FORWARD/BACKWARD)`.
 
 
 ## Events
@@ -42,7 +48,7 @@ Learn more about [Keys](/overview/indev).
 
 ```eval_rst
 
-.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_preload/index.rst
+.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_spinner/index.rst
 
 ```
 
@@ -53,7 +59,7 @@ No examples yet.
 
 ```eval_rst
 
-.. doxygenfile:: lv_preload.h
+.. doxygenfile:: lv_spinner.h
   :project: lvgl
         
 ```

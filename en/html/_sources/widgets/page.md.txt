@@ -5,7 +5,7 @@
 
 ## Overview
 
-The Page consist of two [Containers](/object-types/cont) on each other: 
+The Page consist of two [Containers](/widget/cont) on each other: 
 - a **background**
 - a top which is **scrollable**. 
 

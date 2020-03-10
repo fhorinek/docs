@@ -6,7 +6,7 @@
 
 ## Overview
 
-The Checkbox objects are built from a [Button](/object-types/btn) background which contains an also Button *bullet* and a [Label](/object-types/label) to realize a classical checkbox.
+The Checkbox objects are built from a [Button](/widget/btn) background which contains an also Button *bullet* and a [Label](/widget/label) to realize a classical checkbox.
 
 ## Parts and Styles
 The Check box's main part is called `LV_CHECKBOX_PART_BG`. It's a container for a "bullet" and a text next to it. The background uses all the typical background style properties.
@@ -55,7 +55,7 @@ Learn more about [Keys](/overview/indev).
 
 ```eval_rst
 
-.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_cb/index.rst
+.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_checkbox/index.rst
 
 ```
 
@@ -63,7 +63,7 @@ Learn more about [Keys](/overview/indev).
 
 ```eval_rst
 
-.. doxygenfile:: lv_cb.h
+.. doxygenfile:: lv_checkbox.h
   :project: lvgl
 
 ```

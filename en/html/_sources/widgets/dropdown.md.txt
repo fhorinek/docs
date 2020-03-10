@@ -16,7 +16,7 @@ When the user selects a new value, the list is deleted.
 The drop-down list's main part is called `LV_DROPDOWN_PART_MAIN` which is a simple [lv_obj](/widgets/obj) object. 
 It uses all the typical background properties. *Pressed*, *Focused*, *Edited* etc. stiles are also applied as usual.
 
-The list, which is created when the main object is clicked, is an [lv_page](/widgets/lv_page). 
+The list, which is created when the main object is clicked, is an [Page](/widgets/page). 
 Its background part can be referenced with `LV_DROPDOWN_PART_LIST` and uses all the typical background properties for the rectangle itself and text properties for the options. 
 To adjust the space between the options use the *text_line_space* style property.
 Padding values can be used to make some space on the edges.
@@ -89,7 +89,7 @@ The following *Keys* are processed by the Buttons:
 
 ```eval_rst
 
-.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_ddlist/index.rst
+.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_dropdown/index.rst
 
 ```
 
@@ -97,7 +97,7 @@ The following *Keys* are processed by the Buttons:
 
 ```eval_rst
 
-.. doxygenfile:: lv_ddlist.h
+.. doxygenfile:: lv_dropdown.h
   :project: lvgl
 
 ```

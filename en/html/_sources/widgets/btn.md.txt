@@ -41,7 +41,7 @@ You can configure the buttons as *toggle button* with `lv_btn_set_checkable(btn,
 
 
 ### Layout and Fit
-Similarly to [Containers](/object-types/cont), buttons also have layout and fit attributes.
+Similarly to [Containers](/widget/cont), buttons also have layout and fit attributes.
 - `lv_btn_set_layout(btn, LV_LAYOUT_...) `set a layout. The default is `LV_LAYOUT_CENTER`.
 So, if you add a label, then it will be automatically aligned to the middle and can't be moved with `lv_obj_set_pos()`.
 You can disable the layout with `lv_btn_set_layout(btn, LV_LAYOUT_OFF)`.

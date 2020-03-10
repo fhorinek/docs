@@ -45,7 +45,7 @@ Learn more about [Keys](/overview/indev).
 
 ```eval_rst
 
-.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_lmeter/index.rst
+.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_linemeter/index.rst
 
 ```
 
@@ -53,7 +53,7 @@ Learn more about [Keys](/overview/indev).
 
 ```eval_rst
 
-.. doxygenfile:: lv_lmeter.h
+.. doxygenfile:: lv_linemeter.h
   :project: lvgl
         
 ```

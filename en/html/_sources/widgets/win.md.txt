@@ -1,28 +1,42 @@
 ```eval_rst
-:github_url: https://github.com/littlevgl/docs/blob/master/en/object-types/win.md
+:github_url: https://github.com/littlevgl/docs/blob/master/en/widgets/win.md
 ```
 # Window (lv_win)
 
 ## Overview
 
-The windows are one of the most complex container-like objects. They are built from two main parts: 
-1. a header [Container](/object-types/cont) on the top 
-2. a [Page](/object-types/page) for the content below the header. 
+The Window is container-like objects built from a header with title and button and a content area. 
+
+ 
+## Parts and Styles
+The main part is `LV_WIN_PART_BG` which holds the two other real parts:
+1. `LV_WIN_PART_HEADER`: a header [Container](/widget/cont) on the top with a title and control buttons
+2. `LV_WIN_PART_CONTENT_SCRL` the scrollable part of a [Page](/widgets/page) for the content below the header. 
+
+
+Besides these, `LV_WIN_PART_CONTENT_SCRL` has a scrollbar part called `LV_WIN_PART_CONTENT_SCRL`.
+Read the documentation of [Page](/widgets/page) for more details on the scrollbars.
+
+All parts supports the typical background properties. The title uses the *Text* properties of the header part.
+ 
+The height of the control buttons is: *header height - header padding_top -  header padding_bottom*.
+ 
 
 ### Title
-On the header, there is a title which can be modified by: `lv_win_set_title(win, "New title")`. The title always inherits the style of the header.
+On the header, there is a title which can be modified by: `lv_win_set_title(win, "New title")`. 
 
 ### Control buttons
-You can add control buttons to the right side of the header with: `lv_win_add_btn(win, LV_SYMBOL_CLOSE)`. 
-The second parameter is an [Image](/object-types/img) source.
+Control buttons can be added to the right side of the header with: `lv_win_add_btn(win, LV_SYMBOL_CLOSE)`. 
+The second parameter is an [Image](/widget/img) source so it can be a symbol, a pointer to an `lv_img_dsc_t `variable or a path to file.
+
+The width of the buttons can be set with `lv_win_set_btn_width(win, w)`. If `w == 0` the buttons will be square-shaped.
 
 `lv_win_close_event_cb` can be used as an event callback to close the Window.
 
-You can modify the size of the control buttons with the `lv_win_set_btn_size(win, new_size)` function.
-
 ### Scrollbars
 
-The scrollbar behavior can be set by `lv_win_set_sb_mode(win, LV_SB_MODE_...)`. See [Page](/object-types/page) for details.
+The scrollbar behavior can be set by `lv_win_set_scrlbar_mode(win, LV_SCRLBAR_MODE_...)`. 
+See [Page](/widgets/page) for details.
 
 ### Manual scroll and focus
 To scroll the Window directly you can use `lv_win_scroll_hor(win, dist_px)` or `lv_win_scroll_ver(win, dist_px)`.
@@ -32,20 +46,8 @@ To make the Window show an object on it use `lv_win_focus(win, child, LV_ANIM_ON
 The time of scroll and focus animations can  be adjusted with `lv_win_set_anim_time(win, anim_time_ms)`
 
 ### Layout
-To set a layout for the content use `lv_win_set_layout(win, LV_LAYOUT_...)`. See [Container](/object-types/cont) for details.
-
-## Style usage
-
-Use `lv_win_set_style(win, LV_WIN_STYLE_...,  &style)` to set a new style for an element of the Window:
-
-- **LV_WIN_STYE_BG** main background which uses all `style.body` properties (header and content page are placed on it) (default: `lv_style_plain`)
-- **LV_WIN_STYLE_CONTENT** content page's scrollable part which uses all `style.body` properties (default: `lv_style_transp`)
-- **LV_WIN_STYLE_SB** scroll bar's style which uses all `style.body` properties. `left/top` padding sets the scrollbars' padding respectively and the inner padding sets the scrollbar's width.  (default: `lv_style_pretty_color`)
-- **LV_WIN_STYLE_HEADER** header's style which uses all `style.body` properties (default: `lv_style_plain_color`)
-- **LV_WIN_STYLE_BTN_REL** released button's style (on header) which uses all `style.body` properties (default: `lv_style_btn_rel`)
-- **LV_WIN_STYLE_BTN_PR** released button's style (on header) which uses all `style.body` properties (default: `lv_style_btn_pr`)
-
-The height of the header is set to the greater value from *buttons' height* (set by `lv_win_set_btn_size`) and *title height* (comes from `header_style.text.font`) plus the `body.padding.top` and `body.padding.bottom` of the header style.
+To set a layout for the content use `lv_win_set_layout(win, LV_LAYOUT_...)`. 
+See [Container](/widgets/cont) for details.
 
 ## Events
 Only the [Generic events](/overview/event.html#generic-events) are sent by the object type.

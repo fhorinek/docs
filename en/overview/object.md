@@ -4,9 +4,9 @@
 # Objects
 
 In the LittlevGL the **basic building blocks** of a user interface are the objects, also called *Widgets*.
-For example a [Button](/object-types/btn), [Label](/object-types/label), [Image](/object-types/img), [List](/object-types/list), [Chart](/object-types/chart) or [Text area](/object-types/ta).
+For example a [Button](/widget/btn), [Label](/widget/label), [Image](/widget/img), [List](/widget/list), [Chart](/widget/chart) or [Text area](/widget/textarea).
 
-Check all the [Object types](/object-types/index) here.
+Check all the [Object types](/widget/index) here.
 
 ## Object attributes
 
@@ -27,7 +27,7 @@ lv_obj_set_size(btn1, 100, 50);	 /*Button size*/
 lv_obj_set_pos(btn1, 20,30);      /*Button position*/
 ```
 
-To see all the available functions visit the Base object's [documentation](/object-types/obj).
+To see all the available functions visit the Base object's [documentation](/widget/obj).
 
 ### Specific attributes
 
@@ -45,7 +45,7 @@ lv_slider_set_value(slider1, 40, LV_ANIM_ON);	/*Set the current value (position)
 lv_slider_set_action(slider1, my_action);     /*Set a callback function*/
 ```
 
-The API of the object types are described in their [Documentation](/object-types/index) but you can also check the respective header files (e.g. *lv_objx/lv_slider.h*)
+The API of the object types are described in their [Documentation](/widget/index) but you can also check the respective header files (e.g. *lv_objx/lv_slider.h*)
 
 ## Object's working mechanisms
 
@@ -136,7 +136,7 @@ lv_obj_t * scr1 = lv_obj_create(NULL, NULL);
 There is always an active screen on each display. By default, the library creates and loads a "Base object" as the screen for each display.  
 To get the currently active screen use the `lv_scr_act()` function. To load a new one, use `lv_scr_load(scr1)`.
 
-Screens can be created with any object type. For example, a [Base object](/object-types/obj) or an image to make a wallpaper.
+Screens can be created with any object type. For example, a [Base object](/widget/obj) or an image to make a wallpaper.
 
 
 Screens are created on the currently selected *default display*.

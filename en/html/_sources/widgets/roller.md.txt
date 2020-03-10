@@ -5,7 +5,7 @@
 
 ## Overview
 
-Roller allows you to simply select one option from more with scrolling. Its functionalities are similar to [Drop-down list](/object-types/ddlist).
+Roller allows you to simply select one option from more with scrolling. 
 
 ## Parts and Styles
 The Roller's main part is called `LV_ROLLER_PART_BG`. It's a rectangle and uses all the typical background properties. 

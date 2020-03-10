@@ -1,5 +1,5 @@
 ```eval_rst
-:github_url: https://github.com/littlevgl/docs/blob/master/en/object-types/table.md
+:github_url: https://github.com/littlevgl/docs/blob/master/en/widgets/table.md
 ```
 # Table (lv_table)
 
@@ -8,6 +8,22 @@
 Tables, as usual, are built from rows, columns, and cells containing texts.
 
 The Table object is very light weighted because only the texts are stored. No real objects are created for cells but they are just drawn on the fly.
+
+
+## Parts and Styles
+The main part of the Table is called `LV_TABLE_PART_BG`. It's a rectangle like background and uses all the typical background style properties.
+
+For the cells there are 4 virtual parts. Every cell has type (1, 2, 3 or 4) which tells which part's styles to apply on them. The cell parts are:
+- `LV_TABLE_PART_CELL1`
+- `LV_TABLE_PART_CELL2`
+- `LV_TABLE_PART_CELL3`
+- `LV_TABLE_PART_CELL4`
+
+The cells also use all the typical background style properties. If there is a line break (`\n`) in a cell's content then a horizontal division line will drawn after the line break using the *line* style properties.
+
+The style of texts in the cells are inherited from the cell parts or the background part.
+
+## Usage
 
 ### Rows and Columns
 
@@ -21,7 +37,7 @@ The height is calculated automatically from the cell styles (font, padding etc) 
 
 ### Set cell value
 
-The cells can store on texts so need to convert numbers to text before displaying them in a table.
+The cells can store only texts so numbers needs to be converted to text before displaying them in a table.
 
 `lv_table_set_cell_value(table, row, col, "Content")`. The text is saved by the table so it can be even a local variable.
 
@@ -49,17 +65,11 @@ Cells can be merged horizontally with `lv_table_set_cell_merge_right(table, col,
 
 
 ### Crop text
-By default, the texts are word-wrapped to fit into the width of the cell and the height of the cell is set automatically. To disable this and keep the text as it is enable `lv_table_set_cell_crop(table, row, col, true)`.
+By default, the texts are word-wrapped to fit into the width of the cell and the height of the cell is set automatically. 
+To disable this and keep the text as it is enable `lv_table_set_cell_crop(table, row, col, true)`.
 
 ### Scroll
-The make the Table scrollable place it on a [Page](/object-types/page)
-
-## Styles
-  
-Use `lv_table_set_style(page, LV_TABLE_STYLE_...,  &style)` to set a new style for an element of the page:
-
-- **LV_PAGE_STYLE_BG** background's style which uses all `style.body` properties (default: `lv_style_plain_color`)
-- **LV_PAGE_STYLE_CELL1/2/3/4** 4 for styles for the 4 cell types. All `style.body` properties are used. (default: `lv_style_plain`)
+The make the Table scrollable place it on a [Page](/widget/page)
 
 ## Events
 Only the [Generic events](/overview/event.html#generic-events) are sent by the object type.

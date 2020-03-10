@@ -1,5 +1,5 @@
 ```eval_rst
-:github_url: https://github.com/littlevgl/docs/blob/master/en/object-types/tabview.md
+:github_url: https://github.com/littlevgl/docs/blob/master/en/widget/tabview.md
 ```
 # Tabview (lv_tabview)
 
@@ -21,7 +21,6 @@ The height of the tab's button matrix is calculated from the font height plus pa
 All the listed parts supports the typical background style properties and padding.
 
 
-
 `LV_TABVIEW_PART_TAB_BG` has an additional real part, an indicator, called `LV_TABVIEW_PART_INDIC`. 
 It's a thin rectangle-like object under the currently selected tab. When the tab view is animated to an other tab the indicator will be animated too. 
 It can be styles using the typical background style properties. The *size* style property will set the its thickness.
@@ -32,7 +31,7 @@ The created Pages can be used as normal Pages and they have the usual Page parts
 ## Usage 
 
 ### Adding tab
-New tabs can be added with `lv_tabview_add_tab(tabview, "Tab name")`. It will return with a pointer to a [Page](/object-types/page) object where the tab's content can be created.
+New tabs can be added with `lv_tabview_add_tab(tabview, "Tab name")`. It will return with a pointer to a [Page](/widget/page) object where the tab's content can be created.
 
 ### Change tab
 To select a new tab you can:

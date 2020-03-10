@@ -48,7 +48,7 @@ Learn more about [Keys](/overview/indev).
 
 ```eval_rst
 
-.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_preload/index.rst
+.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_spinner/index.rst
 
 ```
 
@@ -59,7 +59,7 @@ No examples yet.
 
 ```eval_rst
 
-.. doxygenfile:: lv_preload.h
+.. doxygenfile:: lv_spinner.h
   :project: lvgl
         
 ```

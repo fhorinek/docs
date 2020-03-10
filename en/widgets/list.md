@@ -54,7 +54,7 @@ A circle-like effect can be shown when the list reaches the most top or bottom p
 `lv_list_set_edge_flash(list, true)` enables this feature.
 
 ### Scroll propagation
-If the list is created on an other scrollable element (like a [Page](/object-types/page)) and the list can't be scrolled further the scrolling can be propagated to the parent. 
+If the list is created on an other scrollable element (like a [Page](/widget/page)) and the list can't be scrolled further the scrolling can be propagated to the parent. 
 This way the scroll will be continued on the parent. It can be enabled with `lv_list_set_scroll_propagation(list, true)`
 
 ## Events

@@ -7,7 +7,7 @@
 
 ## Overview
 
-The Keyboard object is a special [Button matrix](/object-types/btnmatrix) with predefined keymaps and other features to realize a virtual keyboard to write text.
+The Keyboard object is a special [Button matrix](/widget/btnmatrix) with predefined keymaps and other features to realize a virtual keyboard to write text.
 
 ## Parts and Styles
 Similarly to Button matices Keyboards consist of 2 part: 
@@ -28,7 +28,7 @@ The `TEXT` modes' layout contains buttons to change mode.
 To set the mode manually, use `lv_keyboard_set_mode(kb, mode)`. The default more is  `LV_KEYBOARD_MODE_TEXT_UPPER`.
 
 ### Assign Text area
-You can assign a [Text area](/object-types/ta) to the Keyboard to automatically put the clicked characters there.
+You can assign a [Text area](/widget/textarea) to the Keyboard to automatically put the clicked characters there.
 To assign the text area, use `lv_keyboard_set_textarea(kb, ta)`.
 
 The assigned text area's **cursor can be managed** by the keyboard: when the keyboard is assigned, the previous text area's cursor will be hidden and the new one will be shown.
@@ -37,7 +37,7 @@ When the keyboard is closed by the *Ok* or *Close* buttons, the cursor also will
 
 ### New Keymap
 You can specify a new map (layout) for the keyboard with `lv_keyboard_set_map(kb, map)` and `lv_keyboard_set_ctrl_map(kb, ctrl_map)`.
-Learn more about the [Button matrix](/object-types/btnm) object.
+Learn more about the [Button matrix](/widget/btnmatrix) object.
 Keep in mind that, using following keywords will have the same effect as with the original map:  
 - *LV_SYMBOL_OK* - Apply.
 - *LV_SYMBOL_CLOSE* - Close.
@@ -74,7 +74,7 @@ Learn more about [Keys](/overview/indev).
 
 ```eval_rst
 
-.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_kb/index.rst
+.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_keyboard/index.rst
 
 ```
 
@@ -82,7 +82,7 @@ Learn more about [Keys](/overview/indev).
 
 ```eval_rst
 
-.. doxygenfile:: lv_kb.h
+.. doxygenfile:: lv_keyboard.h
   :project: lvgl
 
 ```

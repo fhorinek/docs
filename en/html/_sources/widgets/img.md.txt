@@ -6,13 +6,13 @@
 
 ## Overview
 
-'Images' are the basic object to display images from images storen in flash (as arrays) or extranally as files. Images can display symbols (`LV_SYMBOL_...`) too.
+*Images* are the basic object to display from the flash (as arrays) or externally as files. Images can display symbols (`LV_SYMBOL_...`) too.
 
 Using the [Image decoder interface](/overview/images/#image-decoder) custom image formats can be supported as well.
 
 ## Parts and Styles
 The images has only a main part called `LV_IMG_PART_MAIN` which uses the typical background style propeties to draw a background rectangle and the *image* properties.
-The padding values are used to make the backround virtually larger. (It won't change the image's real size but the size modification is applied only during drawing)
+The padding values are used to make the background virtually larger. (It won't change the image's real size but the size modification is applied only during drawing)
 
 ## Usage
 
@@ -33,7 +33,7 @@ You also need to use LittlevGL's file system module and register a driver with s
 To set an image sourced from a file, use `lv_img_set_src(img, "S:folder1/my_img.bin")`.
 
 
-You can set a **symbol** similarly to [Labels](/object-types/label). In this case, the image will be rendered as text according to the *font* specified in the style.  It enables to use of light-weighted mono-color
+You can set a **symbol** similarly to [Labels](/widget/label). In this case, the image will be rendered as text according to the *font* specified in the style.  It enables to use of light-weighted mono-color
 "letters" instead of real images. You can set symbol like `lv_img_set_src(img1, LV_SYMBOL_OK)`.
 
 ### Label as an image

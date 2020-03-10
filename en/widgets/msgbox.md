@@ -26,7 +26,7 @@ To set the text use the `lv_msgbox_set_text(msgbox, "My text")` function. Not on
 
 ### Add buttons
  To add buttons use the `lv_msgbox_add_btns(msgbox, btn_str)` function. The button's text needs to be specified like `const char * btn_str[] = {"Apply", "Close", ""}`. 
- For more information visit the [Button matrix](/object-types/btnm) documentation.
+ For more information visit the [Button matrix](/widget/btnmatrix) documentation.
 
  The button matrix will be created only when `lv_msgbox_add_btns()` is called for the first time.
 
@@ -57,7 +57,7 @@ Learn more about [Keys](/overview/indev).
 
 ```eval_rst
 
-.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_mbox/index.rst
+.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_msgbox/index.rst
 
 ```
 
@@ -65,7 +65,7 @@ Learn more about [Keys](/overview/indev).
 
 ```eval_rst
 
-.. doxygenfile:: lv_mbox.h
+.. doxygenfile:: lv_msgbox.h
   :project: lvgl
         
 ```
