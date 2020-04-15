@@ -1196,7 +1196,7 @@
 <h3>C<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="simple-switch">
 <h4>Simple Switch<a class="headerlink" href="#simple-switch" title="Permalink to this headline">¶</a></h4>
-<img alt="Switch example in LittlevGL" src="lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.*" />
+<img alt="Switch example in LittlevGL" src="../_images/lv_ex_switch_1.png" />
 <div class="toggle docutils container">
 <div class="header docutils container">
 <p>code</p>
@@ -1238,6 +1238,226 @@
 </div>
 <div class="section" id="api">
 <h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv416lv_switch_part_t">
+<span id="_CPPv316lv_switch_part_t"></span><span id="_CPPv216lv_switch_part_t"></span><span id="lv_switch_part_t"></span><span class="target" id="lv__switch_8h_1acee529ba60eaf1d6fff0adcb1b833c87"></span><em class="property">typedef </em>uint8_t <code class="sig-name descname">lv_switch_part_t</code><a class="headerlink" href="#_CPPv416lv_switch_part_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="enum">
+<dt id="_CPPv4Ut8_anon_104">
+<span id="_CPPv3Ut8_anon_104"></span><span class="target" id="lv__switch_8h_1a10e74d65d7876276a8f6061c71dcf469"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut8_anon_104" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Switch parts. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv417LV_SWITCH_PART_BG">
+<span id="_CPPv317LV_SWITCH_PART_BG"></span><span id="_CPPv217LV_SWITCH_PART_BG"></span><span class="target" id="lv__switch_8h_1a10e74d65d7876276a8f6061c71dcf469ae5349f065c54f4556d202f5b9a049498"></span><code class="sig-name descname">LV_SWITCH_PART_BG</code> = <a class="reference internal" href="bar.html#_CPPv414LV_BAR_PART_BG" title="LV_BAR_PART_BG">LV_BAR_PART_BG</a><a class="headerlink" href="#_CPPv417LV_SWITCH_PART_BG" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Switch background. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv420LV_SWITCH_PART_INDIC">
+<span id="_CPPv320LV_SWITCH_PART_INDIC"></span><span id="_CPPv220LV_SWITCH_PART_INDIC"></span><span class="target" id="lv__switch_8h_1a10e74d65d7876276a8f6061c71dcf469afba7621d7cefd6b26878d7e09a315929"></span><code class="sig-name descname">LV_SWITCH_PART_INDIC</code> = <a class="reference internal" href="bar.html#_CPPv417LV_BAR_PART_INDIC" title="LV_BAR_PART_INDIC">LV_BAR_PART_INDIC</a><a class="headerlink" href="#_CPPv420LV_SWITCH_PART_INDIC" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Switch fill area. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv419LV_SWITCH_PART_KNOB">
+<span id="_CPPv319LV_SWITCH_PART_KNOB"></span><span id="_CPPv219LV_SWITCH_PART_KNOB"></span><span class="target" id="lv__switch_8h_1a10e74d65d7876276a8f6061c71dcf469aa0a08b1c6753d31acf514f6bfd14fea8"></span><code class="sig-name descname">LV_SWITCH_PART_KNOB</code> = <a class="reference internal" href="bar.html#_CPPv425_LV_BAR_PART_VIRTUAL_LAST" title="_LV_BAR_PART_VIRTUAL_LAST">_LV_BAR_PART_VIRTUAL_LAST</a><a class="headerlink" href="#_CPPv419LV_SWITCH_PART_KNOB" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Switch knob. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv428_LV_SWITCH_PART_VIRTUAL_LAST">
+<span id="_CPPv328_LV_SWITCH_PART_VIRTUAL_LAST"></span><span id="_CPPv228_LV_SWITCH_PART_VIRTUAL_LAST"></span><span class="target" id="lv__switch_8h_1a10e74d65d7876276a8f6061c71dcf469a5f7dc1f109ca41a33f8473de445bc891"></span><code class="sig-name descname">_LV_SWITCH_PART_VIRTUAL_LAST</code><a class="headerlink" href="#_CPPv428_LV_SWITCH_PART_VIRTUAL_LAST" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv416lv_switch_createP8lv_obj_tPK8lv_obj_t">
+<span id="_CPPv316lv_switch_createP8lv_obj_tPK8lv_obj_t"></span><span id="_CPPv216lv_switch_createP8lv_obj_tPK8lv_obj_t"></span><span id="lv_switch_create__lv_obj_tP.lv_obj_tCP"></span><span class="target" id="lv__switch_8h_1acd92cfd9a4d89d6bb127acb77e545ed5"></span><a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<code class="sig-name descname">lv_switch_create</code><span class="sig-paren">(</span><a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<em>par</em>, <em class="property">const</em> <a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<em>copy</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416lv_switch_createP8lv_obj_tPK8lv_obj_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a switch objects <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>pointer to the created switch </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">par</span></code>: pointer to an object, it will be the parent of the new switch </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">copy</span></code>: pointer to a switch object, if not NULL then the new object will be copied from it </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv412lv_switch_onP8lv_obj_t16lv_anim_enable_t">
+<span id="_CPPv312lv_switch_onP8lv_obj_t16lv_anim_enable_t"></span><span id="_CPPv212lv_switch_onP8lv_obj_t16lv_anim_enable_t"></span><span id="lv_switch_on__lv_obj_tP.lv_anim_enable_t"></span><span class="target" id="lv__switch_8h_1a1eb77f9d3d02618704aeed1dddd71649"></span>void <code class="sig-name descname">lv_switch_on</code><span class="sig-paren">(</span><a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<em>sw</em>, <a class="reference internal" href="../overview/animation.html#_CPPv416lv_anim_enable_t" title="lv_anim_enable_t">lv_anim_enable_t</a> <em>anim</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412lv_switch_onP8lv_obj_t16lv_anim_enable_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Turn ON the switch <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sw</span></code>: pointer to a switch object </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anim</span></code>: LV_ANIM_ON: set the value with an animation; LV_ANIM_OFF: change the value immediately </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv413lv_switch_offP8lv_obj_t16lv_anim_enable_t">
+<span id="_CPPv313lv_switch_offP8lv_obj_t16lv_anim_enable_t"></span><span id="_CPPv213lv_switch_offP8lv_obj_t16lv_anim_enable_t"></span><span id="lv_switch_off__lv_obj_tP.lv_anim_enable_t"></span><span class="target" id="lv__switch_8h_1a91a4a20745a394db04991b606053dc5a"></span>void <code class="sig-name descname">lv_switch_off</code><span class="sig-paren">(</span><a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<em>sw</em>, <a class="reference internal" href="../overview/animation.html#_CPPv416lv_anim_enable_t" title="lv_anim_enable_t">lv_anim_enable_t</a> <em>anim</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413lv_switch_offP8lv_obj_t16lv_anim_enable_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Turn OFF the switch <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sw</span></code>: pointer to a switch object </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anim</span></code>: LV_ANIM_ON: set the value with an animation; LV_ANIM_OFF: change the value immediately </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv416lv_switch_toggleP8lv_obj_t16lv_anim_enable_t">
+<span id="_CPPv316lv_switch_toggleP8lv_obj_t16lv_anim_enable_t"></span><span id="_CPPv216lv_switch_toggleP8lv_obj_t16lv_anim_enable_t"></span><span id="lv_switch_toggle__lv_obj_tP.lv_anim_enable_t"></span><span class="target" id="lv__switch_8h_1a60fac00954e5c39501a9f40ed02ad050"></span>bool <code class="sig-name descname">lv_switch_toggle</code><span class="sig-paren">(</span><a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<em>sw</em>, <a class="reference internal" href="../overview/animation.html#_CPPv416lv_anim_enable_t" title="lv_anim_enable_t">lv_anim_enable_t</a> <em>anim</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416lv_switch_toggleP8lv_obj_t16lv_anim_enable_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Toggle the position of the switch <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>resulting state of the switch. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sw</span></code>: pointer to a switch object </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anim</span></code>: LV_ANIM_ON: set the value with an animation; LV_ANIM_OFF: change the value immediately </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv422lv_switch_set_knob_imgP8lv_obj_tPKv">
+<span id="_CPPv322lv_switch_set_knob_imgP8lv_obj_tPKv"></span><span id="_CPPv222lv_switch_set_knob_imgP8lv_obj_tPKv"></span><span id="lv_switch_set_knob_img__lv_obj_tP.voidCP"></span><span class="target" id="lv__switch_8h_1a87eb022c870516c51ac3ab811ffec15b"></span>void <code class="sig-name descname">lv_switch_set_knob_img</code><span class="sig-paren">(</span><a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<em>sw</em>, <em class="property">const</em> void *<em>img_src</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422lv_switch_set_knob_imgP8lv_obj_tPKv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set an image to display on the knob of the switch. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sw</span></code>: pointer to a switch object </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">img_src</span></code>: pointer to an <code class="docutils literal notranslate"><span class="pre">lv_img_dsc_t</span></code> variable or a path to an image (not an <code class="docutils literal notranslate"><span class="pre">lv_img</span></code> object) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv425lv_switch_set_knob_on_imgP8lv_obj_tPKv">
+<span id="_CPPv325lv_switch_set_knob_on_imgP8lv_obj_tPKv"></span><span id="_CPPv225lv_switch_set_knob_on_imgP8lv_obj_tPKv"></span><span id="lv_switch_set_knob_on_img__lv_obj_tP.voidCP"></span><span class="target" id="lv__switch_8h_1a67bbb1cf33bd7e98508f825be12e130e"></span>void <code class="sig-name descname">lv_switch_set_knob_on_img</code><span class="sig-paren">(</span><a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<em>sw</em>, <em class="property">const</em> void *<em>img_src</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425lv_switch_set_knob_on_imgP8lv_obj_tPKv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set an image to display on the knob of the switch when it’s in ON state <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sw</span></code>: pointer to a switch object </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">img_src</span></code>: pointer to an <code class="docutils literal notranslate"><span class="pre">lv_img_dsc_t</span></code> variable or a path to an image (not an <code class="docutils literal notranslate"><span class="pre">lv_img</span></code> object) </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv423lv_switch_set_anim_timeP8lv_obj_t8uint16_t">
+<span id="_CPPv323lv_switch_set_anim_timeP8lv_obj_t8uint16_t"></span><span id="_CPPv223lv_switch_set_anim_timeP8lv_obj_t8uint16_t"></span><span id="lv_switch_set_anim_time__lv_obj_tP.uint16_t"></span><span class="target" id="lv__switch_8h_1a7e83c8676d9c22daa771ef488bdbb615"></span><em class="property">static</em> void <code class="sig-name descname">lv_switch_set_anim_time</code><span class="sig-paren">(</span><a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<em>sw</em>, uint16_t <em>anim_time</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423lv_switch_set_anim_timeP8lv_obj_t8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the animation time of the switch <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>style pointer to a style </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sw</span></code>: pointer to a switch object </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anim_time</span></code>: animation time </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv419lv_switch_get_statePK8lv_obj_t">
+<span id="_CPPv319lv_switch_get_statePK8lv_obj_t"></span><span id="_CPPv219lv_switch_get_statePK8lv_obj_t"></span><span id="lv_switch_get_state__lv_obj_tCP"></span><span class="target" id="lv__switch_8h_1a7bac64b43d7d24fc2e7b8ae62b46c173"></span><em class="property">static</em> bool <code class="sig-name descname">lv_switch_get_state</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<em>sw</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419lv_switch_get_statePK8lv_obj_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the state of a switch <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>false: OFF; true: ON </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sw</span></code>: pointer to a switch object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv426lv_slider_get_knob_off_imgP8lv_obj_tPKv">
+<span id="_CPPv326lv_slider_get_knob_off_imgP8lv_obj_tPKv"></span><span id="_CPPv226lv_slider_get_knob_off_imgP8lv_obj_tPKv"></span><span id="lv_slider_get_knob_off_img__lv_obj_tP.voidCP"></span><span class="target" id="lv__switch_8h_1ab597d920bfb8f4c3bef47d6c878c6c21"></span><em class="property">const</em> void *<code class="sig-name descname">lv_slider_get_knob_off_img</code><span class="sig-paren">(</span><a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<em>sw</em>, <em class="property">const</em> void *<em>img_src</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426lv_slider_get_knob_off_imgP8lv_obj_tPKv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get an image to display on the knob of the switch when it’s in OFF state <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the image source: pointer to an <code class="docutils literal notranslate"><span class="pre">lv_img_dsc_t</span></code> variable or a path to an image (not an <code class="docutils literal notranslate"><span class="pre">lv_img</span></code> object) </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sw</span></code>: pointer to a switch object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv425lv_slider_get_knob_on_imgP8lv_obj_tPKv">
+<span id="_CPPv325lv_slider_get_knob_on_imgP8lv_obj_tPKv"></span><span id="_CPPv225lv_slider_get_knob_on_imgP8lv_obj_tPKv"></span><span id="lv_slider_get_knob_on_img__lv_obj_tP.voidCP"></span><span class="target" id="lv__switch_8h_1a5c7b5400195acfd083219b2ebbe9ca29"></span><em class="property">const</em> void *<code class="sig-name descname">lv_slider_get_knob_on_img</code><span class="sig-paren">(</span><a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<em>sw</em>, <em class="property">const</em> void *<em>img_src</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425lv_slider_get_knob_on_imgP8lv_obj_tPKv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get an image to display on the knob of the switch when it’s in ON state <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the image source: pointer to an <code class="docutils literal notranslate"><span class="pre">lv_img_dsc_t</span></code> variable or a path to an image (not an <code class="docutils literal notranslate"><span class="pre">lv_img</span></code> object) </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sw</span></code>: pointer to a switch object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv423lv_switch_get_anim_timePK8lv_obj_t">
+<span id="_CPPv323lv_switch_get_anim_timePK8lv_obj_t"></span><span id="_CPPv223lv_switch_get_anim_timePK8lv_obj_t"></span><span id="lv_switch_get_anim_time__lv_obj_tCP"></span><span class="target" id="lv__switch_8h_1a614dfd03f019e7dfac0bcd2ee0af3ef8"></span><em class="property">static</em> uint16_t <code class="sig-name descname">lv_switch_get_anim_time</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="obj.html#_CPPv48lv_obj_t" title="lv_obj_t">lv_obj_t</a> *<em>sw</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423lv_switch_get_anim_timePK8lv_obj_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the animation time of the switch <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>style pointer to a style </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sw</span></code>: pointer to a switch object </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv415lv_switch_ext_t">
+<span id="_CPPv315lv_switch_ext_t"></span><span id="_CPPv215lv_switch_ext_t"></span><span id="lv_switch_ext_t"></span><span class="target" id="structlv__switch__ext__t"></span><em class="property">struct </em><code class="sig-name descname">lv_switch_ext_t</code><a class="headerlink" href="#_CPPv415lv_switch_ext_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N15lv_switch_ext_t3barE">
+<span id="_CPPv3N15lv_switch_ext_t3barE"></span><span id="_CPPv2N15lv_switch_ext_t3barE"></span><span id="lv_switch_ext_t::bar__lv_bar_ext_t"></span><span class="target" id="structlv__switch__ext__t_1ab4f491cc9ce6d6bf1c29bad4f845ec47"></span><a class="reference internal" href="bar.html#_CPPv412lv_bar_ext_t" title="lv_bar_ext_t">lv_bar_ext_t</a> <code class="sig-name descname">bar</code><a class="headerlink" href="#_CPPv4N15lv_switch_ext_t3barE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N15lv_switch_ext_t10style_knobE">
+<span id="_CPPv3N15lv_switch_ext_t10style_knobE"></span><span id="_CPPv2N15lv_switch_ext_t10style_knobE"></span><span id="lv_switch_ext_t::style_knob__lv_style_list_t"></span><span class="target" id="structlv__switch__ext__t_1abbcdca6fe4969b9f0f125a50298ff3fc"></span>lv_style_list_t <code class="sig-name descname">style_knob</code><a class="headerlink" href="#_CPPv4N15lv_switch_ext_t10style_knobE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N15lv_switch_ext_t5stateE">
+<span id="_CPPv3N15lv_switch_ext_t5stateE"></span><span id="_CPPv2N15lv_switch_ext_t5stateE"></span><span id="lv_switch_ext_t::state__uint8_t"></span><span class="target" id="structlv__switch__ext__t_1a0def5c455775c541805863c5e3eacdf9"></span>uint8_t <code class="sig-name descname">state</code><a class="headerlink" href="#_CPPv4N15lv_switch_ext_t5stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
 </div>
 </div>
 
@@ -1263,7 +1483,7 @@
     <p>
         &copy; Copyright 2019, Gabor Kiss-Vamosi
       <span class="lastupdated">
-        Last updated on Mar 10, 2020.
+        Last updated on Apr 15, 2020.
       </span>
 
     </p>

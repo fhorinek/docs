@@ -534,6 +534,25 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../widgets/canvas.html#api">API</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../widgets/checkbox.html">Checkbox (lv_cb)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../widgets/checkbox.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../widgets/checkbox.html#parts-and-styles">Parts and Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../widgets/checkbox.html#usage">Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/checkbox.html#text">Text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/checkbox.html#check-uncheck">Check/Uncheck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/checkbox.html#disabled">Disabled</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../widgets/checkbox.html#events">Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../widgets/checkbox.html#keys">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../widgets/checkbox.html#example">Example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/checkbox.html#c">C</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/checkbox.html#micropython">MicroPython</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../widgets/checkbox.html#api">API</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../widgets/chart.html">Chart (lv_chart)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../widgets/chart.html#overview">Overview</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../widgets/chart.html#data-series">Data series</a></li>
@@ -928,7 +947,11 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../widgets/switch.html#events">Events</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../widgets/switch.html#keys">Keys</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../widgets/switch.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../widgets/switch.html#example">Example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/switch.html#c">C</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../widgets/switch.html#micropython">MicroPython</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../widgets/switch.html#api">API</a></li>
 </ul>
 </li>
@@ -1122,7 +1145,7 @@
 <h1>C<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="simple-text-area">
 <h2>Simple Text area<a class="headerlink" href="#simple-text-area" title="Permalink to this headline">¶</a></h2>
-<img alt="Text area example in LittlevGL" src="lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.*" />
+<img alt="Text area example in LittlevGL" src="../../../../_images/lv_ex_textarea_1.png" />
 <div class="toggle docutils container">
 <div class="header docutils container">
 <p>code</p>
@@ -1165,7 +1188,7 @@
 </div>
 <div class="section" id="text-are-with-password-field">
 <h2>Text are with password field<a class="headerlink" href="#text-are-with-password-field" title="Permalink to this headline">¶</a></h2>
-<img alt="Form with password field in LittlevGL" src="lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.*" />
+<img alt="Form with password field in LittlevGL" src="../../../../_images/lv_ex_textarea_2.png" />
 <div class="toggle docutils container">
 <div class="header docutils container">
 <p>code</p>
@@ -1189,7 +1212,6 @@
     <span class="n">lv_obj_set_width</span><span class="p">(</span><span class="n">pwd_ta</span><span class="p">,</span> <span class="n">LV_HOR_RES</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">20</span><span class="p">);</span>
     <span class="n">lv_obj_set_pos</span><span class="p">(</span><span class="n">pwd_ta</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
     <span class="n">lv_obj_set_event_cb</span><span class="p">(</span><span class="n">pwd_ta</span><span class="p">,</span> <span class="n">ta_event_cb</span><span class="p">);</span>
-    <span class="n">lv_theme_apply</span><span class="p">(</span><span class="n">pwd_ta</span><span class="p">,</span> <span class="n">LV_THEME_TEXTAREA_ONELINE</span><span class="p">);</span>
 
     <span class="cm">/* Create a label and position it above the text box */</span>
     <span class="n">lv_obj_t</span> <span class="o">*</span> <span class="n">pwd_label</span> <span class="o">=</span> <span class="n">lv_label_create</span><span class="p">(</span><span class="n">lv_scr_act</span><span class="p">(),</span> <span class="nb">NULL</span><span class="p">);</span>
@@ -1208,11 +1230,10 @@
 
     <span class="cm">/* Create a keyboard and make it fill the width of the above text areas */</span>
     <span class="n">kb</span> <span class="o">=</span> <span class="n">lv_keyboard_create</span><span class="p">(</span><span class="n">lv_scr_act</span><span class="p">(),</span> <span class="nb">NULL</span><span class="p">);</span>
-    <span class="n">lv_obj_set_pos</span><span class="p">(</span><span class="n">kb</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">90</span><span class="p">);</span>
     <span class="n">lv_obj_set_event_cb</span><span class="p">(</span><span class="n">kb</span><span class="p">,</span> <span class="n">kb_event_cb</span><span class="p">);</span> <span class="cm">/* Setting a custom event handler stops the keyboard from closing automatically */</span>
-    <span class="n">lv_obj_set_size</span><span class="p">(</span><span class="n">kb</span><span class="p">,</span>  <span class="n">LV_HOR_RES</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">140</span><span class="p">);</span>
+    <span class="n">lv_obj_set_size</span><span class="p">(</span><span class="n">kb</span><span class="p">,</span>  <span class="n">LV_HOR_RES</span><span class="p">,</span> <span class="n">LV_VER_RES</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
 
-    <span class="n">lv_keyboard_set_ta</span><span class="p">(</span><span class="n">kb</span><span class="p">,</span> <span class="n">pwd_ta</span><span class="p">);</span> <span class="cm">/* Focus it on one of the text areas to start */</span>
+    <span class="n">lv_keyboard_set_textarea</span><span class="p">(</span><span class="n">kb</span><span class="p">,</span> <span class="n">pwd_ta</span><span class="p">);</span> <span class="cm">/* Focus it on one of the text areas to start */</span>
     <span class="n">lv_keyboard_set_cursor_manage</span><span class="p">(</span><span class="n">kb</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span> <span class="cm">/* Automatically show/hide cursors on text areas */</span>
 <span class="p">}</span>
 
@@ -1227,7 +1248,7 @@
     <span class="k">if</span><span class="p">(</span><span class="n">event</span> <span class="o">==</span> <span class="n">LV_EVENT_CLICKED</span><span class="p">)</span> <span class="p">{</span>
         <span class="cm">/* Focus on the clicked text area */</span>
         <span class="k">if</span><span class="p">(</span><span class="n">kb</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
-            <span class="n">lv_keyboard_set_ta</span><span class="p">(</span><span class="n">kb</span><span class="p">,</span> <span class="n">ta</span><span class="p">);</span>
+            <span class="n">lv_keyboard_set_textarea</span><span class="p">(</span><span class="n">kb</span><span class="p">,</span> <span class="n">ta</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">event</span> <span class="o">==</span> <span class="n">LV_EVENT_INSERT</span><span class="p">)</span> <span class="p">{</span>
@@ -1262,7 +1283,7 @@
     <p>
         &copy; Copyright 2019, Gabor Kiss-Vamosi
       <span class="lastupdated">
-        Last updated on Mar 10, 2020.
+        Last updated on Apr 15, 2020.
       </span>
 
     </p>

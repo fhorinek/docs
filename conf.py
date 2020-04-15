@@ -39,7 +39,7 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.todo',
     'recommonmark',
     'sphinx_markdown_tables',
-    #'breathe'
+    'breathe'
     ]
 
 # Add any paths that contain templates here, relative to this directory.

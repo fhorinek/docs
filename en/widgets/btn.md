@@ -5,7 +5,7 @@
 
 ## Overview
 
-Buttons are simple rectangle-like objects. They are derived from [Containers](/lv_widgets/lv_cont) so [layout](/lv_widgets/lv_cont#layout) and [fit](/lv_widgets/lv_cont#fit) are also available. 
+Buttons are simple rectangle-like objects. They are derived from [Containers](/widgets/cont) so [layout](/widgets/cont#layout) and [fit](/widgets/cont#fit) are also available. 
 Besides, it can be enabled to automatically go to checked state on click.
 
 

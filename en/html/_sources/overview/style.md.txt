@@ -72,7 +72,7 @@ So is button is pressed, and text color comes from here, the pressed text color 
 
 
 ## Part of the objects
-Objects can have *parts* which can have their own style. For example a [page](lv_has) has four parts:
+Objects can have *parts* which can have their own style. For example a [page](/widgets/page) has four parts:
 - Background
 - Scrollable
 - Scrollbar
@@ -119,12 +119,13 @@ lv_style_remove_prop(&style, LV_STYLE_BG_COLOR | (LV_STATE_PRESSED << LV_STYLE_S
 
 To get the value from style in a state functions with the following prototype are available: `lv_style_get_<prperty_name>(&style, <state>, <result poiner>);`.
 The the best matching property will be selected and it's precedence will be returned. `-1` will be returned if the property is not found. For example:
+
 ```c
 lv_color_t color;
 int16_t res;
 res = lv_style_get_bg_color(&style1, LV_STATE_PRESSED, &color);
 if(res >= 0) {
-	... the bg_color is loaded into `color` ... 
+	//the bg_color is loaded into `color`
 }
 ```
 
@@ -322,6 +323,14 @@ Properties for textual object.
 - **text_sel_color** (`lv_color_t`): Set background color of text selection.
 - **text_blend_mode** (`lv_blend_mode_t`): Set the blend mode of the text. Can be `LV_BLEND_MODE_NORMAL/ADDITIVE/SUBTRACTIVE`). Default value: `LV_BLEND_MODE_NORMAL`.
 
+```eval_rst
+.. image:: /lv_examples/src/lv_ex_style/lv_ex_style_7.*
+  :alt: Styling aline in lvgl
+
+.. literalinclude:: /lv_examples/src/lv_ex_style/lv_ex_style_7.c
+  :language: c
+```
+
 ### Line properties
 Properties of lines.
 - **line_color** (`lv_color_t`): Color of the line. 
@@ -332,13 +341,6 @@ Properties of lines.
 - **line_rounded** (`bool`): `true`: draw rounded line endings.
 - **line_blend_mode** (`lv_blend_mode_t`): Set the blend mode of the line. Can be `LV_BLEND_MODE_NORMAL/ADDITIVE/SUBTRACTIVE`). Default value: `LV_BLEND_MODE_NORMAL`.
 
-```eval_rst
-.. image:: /lv_examples/src/lv_ex_style/lv_ex_style_7.*
-  :alt: Styling aline in lvgl
-
-.. literalinclude:: /lv_examples/src/lv_ex_style/lv_ex_style_7.c
-  :language: c
-```
 
 ### Image properties
 Properties of image.
@@ -348,10 +350,10 @@ Properties of image.
 - **image_blend_mode** (`lv_blend_mode_t`): Set the blend mode of the image. Can be `LV_BLEND_MODE_NORMAL/ADDITIVE/SUBTRACTIVE`). Default value: `LV_BLEND_MODE_NORMAL`.
 
 ```eval_rst
-.. image:: /lv_examples/src/lv_ex_style/lv_ex_style_8.*
+.. image:: /lv_examples/src/lv_ex_style/lv_ex_style_9.*
   :alt: Styling an image in lvgl
 
-.. literalinclude:: /lv_examples/src/lv_ex_style/lv_ex_style_8.c
+.. literalinclude:: /lv_examples/src/lv_ex_style/lv_ex_style_9.c
   :language: c
 ```
 
@@ -368,10 +370,10 @@ Properties to describe state change animations.
 - **transition_path** (`lv_anim_path_cb_t`): An animation path for the transition. Built pats can be used, e.g. `lv_anim_path_overshoot`.
 
 ```eval_rst
-.. image:: /lv_examples/src/lv_ex_style/lv_ex_style_9.*
+.. image:: /lv_examples/src/lv_ex_style/lv_ex_style_10.*
   :alt: Styling an transitions in lvgl
 
-.. literalinclude:: /lv_examples/src/lv_ex_style/lv_ex_style_9.c
+.. literalinclude:: /lv_examples/src/lv_ex_style/lv_ex_style_10.c
   :language: c
 ```
 

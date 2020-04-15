@@ -12,7 +12,7 @@ The Tab view object can be used to organize content in tabs.
 The Tab view object has several parts. The main is `LV_TABVIEW_PART_BG`. It a rectangle-like container which holds the other parts of the Tab view.
 
 On the background 2 important real parts are created: 
-- `LV_TABVIEW_PART_BG_SCRL`: it's the scrollable part of [Page](widgets/page). It holds the content of the tabs next to each other. The background of the Page is always transparent and can't be accessed externally. 
+- `LV_TABVIEW_PART_BG_SCRL`: it's the scrollable part of [Page](/widgets/page). It holds the content of the tabs next to each other. The background of the Page is always transparent and can't be accessed externally. 
 - `LV_TABVIEW_PART_TAB_BG`: The tab buttons which is a [Button matrix](/widgets/btnmatrix). 
 Clicking on a button will scroll `LV_TABVIEW_PART_BG_SCRL` to the related tab's content. The tab buttons can be accessed via `LV_TABVIEW_PART_TAB_BTN`. 
 The height of the tab's button matrix is calculated from the font height plus padding of the background's and the button's style.

@@ -48,7 +48,7 @@ To draw something to the canvas use
 
 `draw_dsc` is an `lv_draw_rect/label/img/line_dsc_t` varaibale which should be first initialized with `lv_draw_rect/label/img/line_dsc_init()` function and then it's filed should be modified with the desired colors and other values.
 
-The draw function can draw to any color format. For example, it's possible to draw a text to an `LV_IMG_VF_ALPHA_8BIT` canvas and use the result image as a mask in [lv_objmask](/widgets/lv_obj_mask) later.
+The draw function can draw to any color format. For example, it's possible to draw a text to an `LV_IMG_VF_ALPHA_8BIT` canvas and use the result image as a mask in [lv_objmask](/widgets/objmask) later.
 
 ### Traformations
 `lv_canvas_transform()` can be used to rotate and/or scale the image of an imageand store the result on the canvas. The functions needs to following paramters:

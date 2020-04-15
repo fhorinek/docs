@@ -5,7 +5,7 @@
 
 ## Overview
 The Message boxes act as pop-ups. 
-They are built from a background [Container](/widgets/cont), a [Label](/widgets/label) and a [Button matrix](widgets/btnmatrix) for buttons. 
+They are built from a background [Container](/widgets/cont), a [Label](/widgets/label) and a [Button matrix](/widgets/btnmatrix) for buttons. 
 
 The text will be broken into multiple lines automatically (has `LV_LABEL_LONG_MODE_BREAK`) and the height will be set automatically to involve the text and the buttons (`LV_FIT_TIGHT` fit vertically)-
 
@@ -13,7 +13,7 @@ The text will be broken into multiple lines automatically (has `LV_LABEL_LONG_MO
 The Message box's main part is called `LV_MSGBOX_PART_MAIN` and it uses all the typical background style properties. Using padding will add space on the sides. *pad_inner* will add space between the text and the buttons. 
 The *label* style properties affect the style of text.
 
-The buttons parts are the same as in case of [Button matrix](widgets/btnmatrix):
+The buttons parts are the same as in case of [Button matrix](/widgets/btnmatrix):
 - `LV_MSGBOX_PART_BTN_BG` the background of the buttons
 - `LV_MSGBOX_PART_BTN` the buttons
 
