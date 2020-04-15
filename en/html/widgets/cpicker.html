@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Color picker (lv_cpicker) &mdash; LittlevGL 6.1.2 documentation</title>
+  <title>color picker (lv_cpicker) &mdash; LittlevGL 6.1.2 documentation</title>
   
 
   
@@ -596,16 +596,23 @@
 <li class="toctree-l3"><a class="reference internal" href="cont.html#api">API</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Color picker (lv_cpicker)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#types-of-color-pickers">Types of color pickers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#notes">Notes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">color picker (lv_cpicker)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parts-and-styles">Parts and Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#type">Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-color">Set color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#color-mode">Color mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#knob-color">Knob color</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#styles">Styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#events">Events</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#c">C</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#micropython">MicroPython</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#api">API</a></li>
 </ul>
 </li>
@@ -1128,7 +1135,7 @@
         
           <li><a href="index.html">Object types (Widgets)</a> &raquo;</li>
         
-      <li>Color picker (lv_cpicker)</li>
+      <li>color picker (lv_cpicker)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -1151,78 +1158,87 @@
            <div itemprop="articleBody">
             
   <div class="section" id="color-picker-lv-cpicker">
-<h1>Color picker (lv_cpicker)<a class="headerlink" href="#color-picker-lv-cpicker" title="Permalink to this headline">¶</a></h1>
+<h1>color picker (lv_cpicker)<a class="headerlink" href="#color-picker-lv-cpicker" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>The <em>color picker</em> object <strong>draws a color band and knob</strong> that enable users to <strong>choose a color’s hue, saturation, and/or value</strong>.</p>
-<div class="section" id="types-of-color-pickers">
-<h3>Types of color pickers<a class="headerlink" href="#types-of-color-pickers" title="Permalink to this headline">¶</a></h3>
-<p>The color band of a <em>color picker</em> can currently be drawn in two ways:</p>
-<ul class="simple">
-<li><p>As a linear bar (<code class="docutils literal notranslate"><span class="pre">LV_CPICKER_TYPE_RECT</span></code>).</p></li>
-<li><p>As a circular ring (<code class="docutils literal notranslate"><span class="pre">LV_CPICKER_TYPE_DISC</span></code>).</p></li>
-</ul>
-<p>You can switch between these modes with <code class="docutils literal notranslate"><span class="pre">lv_cpicker_set_type(cpicker,</span> <span class="pre">type</span></code>).</p>
+<p>As its name implies <em>Color picker</em> allows to select color. The Hue, Saturation and Value of the color can be selected after each other.</p>
+<p>The widget has two forms: circle (disc) and rectangle.</p>
+<p>In both forms, be long pressing the object, the color picker will change to the next parameter of the color (hue, saturation or value).
+Besides, double click will reset the current parameter.</p>
 </div>
-<div class="section" id="notes">
-<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
-<p>In circular mode, the <strong>width and height</strong> of the <em>color picker</em> should be the <strong>same</strong>.</p>
+<div class="section" id="parts-and-styles">
+<h2>Parts and Styles<a class="headerlink" href="#parts-and-styles" title="Permalink to this headline">¶</a></h2>
+<p>The Color picker’s main part is called <code class="docutils literal notranslate"><span class="pre">LV_CPICKER_PART_BG</span></code>. In circular form it uses <em>scale_width</em> to set the the width of the circle and <em>pad_inner</em> for padding between the circle and the inner preview circle.
+In rectangle mode <em>radius</em> can be used to apply a radius on the rectangle.</p>
+<p>The object has  virtual part called <code class="docutils literal notranslate"><span class="pre">LV_CPICKER_PART_KNOB</span></code> which is rectangle (or circle) drawn on the current value.
+It uses all the rectangle like style properties and padding to make it larger than the width of the circle or rectangle background.</p>
 </div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="type">
+<h3>Type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
+<p>The type of the Color picker can be changed with <code class="docutils literal notranslate"><span class="pre">lv_cpicker_set_type(cpicker,</span> <span class="pre">LV_CPICKER_TYPE_RECT/DISC)</span></code></p>
 </div>
-<div class="section" id="styles">
-<h2>Styles<a class="headerlink" href="#styles" title="Permalink to this headline">¶</a></h2>
-<p>To set the style of a <em>color picker</em> object, use <code class="docutils literal notranslate"><span class="pre">lv_cpicker_set_style(cpicker,</span> <span class="pre">LV_CPICKER_STYLE_XXX,</span> <span class="pre">&amp;style)</span></code>. <code class="docutils literal notranslate"><span class="pre">XXX</span></code> can either be <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> or <code class="docutils literal notranslate"><span class="pre">INDICATOR</span></code>, which represent the color band and knob, respectively.</p>
-<ul class="simple">
-<li><p><strong>line.width</strong> - the thickness of the color ring (in <code class="docutils literal notranslate"><span class="pre">DISC</span></code> mode)</p></li>
-<li><p><strong>body.[main/grad]_color</strong> - the background color of the color picker</p></li>
-</ul>
+<div class="section" id="set-color">
+<h3>Set color<a class="headerlink" href="#set-color" title="Permalink to this headline">¶</a></h3>
+<p>The colro can be set manually with <code class="docutils literal notranslate"><span class="pre">lv_cpicker_set_hue/saturation/value(cpicker,</span> <span class="pre">x)</span></code> or all at once with <code class="docutils literal notranslate"><span class="pre">lv_cpicker_set_hsv(cpicker,</span> <span class="pre">hsv)</span></code> or <code class="docutils literal notranslate"><span class="pre">lv_cpicker_set_color(cpicker,</span> <span class="pre">rgb)</span></code></p>
+</div>
+<div class="section" id="color-mode">
+<h3>Color mode<a class="headerlink" href="#color-mode" title="Permalink to this headline">¶</a></h3>
+<p>The current color moed can be manually selected with <code class="docutils literal notranslate"><span class="pre">lv_cpicker_set_color_mode(cpicker,</span> <span class="pre">LV_CPICKER_COLOR_MODE_HUE/SATURATION/VALUE)</span></code>.</p>
+<p>The color moe be fixed (do not change with long press) using <code class="docutils literal notranslate"><span class="pre">lv_cpicker_set_color_mode_fixed(cpicker,</span> <span class="pre">true)</span></code></p>
+</div>
+<div class="section" id="knob-color">
+<h3>Knob color<a class="headerlink" href="#knob-color" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">lv_cpicker_set_knob_colored(cpicker,</span> <span class="pre">true)</span></code> make the knob to automatically show the selected color as background color.</p>
+</div>
 </div>
 <div class="section" id="events">
 <h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>
-<p>Besides the <a class="reference external" href="/overview/event.html#generic-events">Generic events</a> the following <a class="reference external" href="/overview/event.html#special-events">Special events</a> are sent by color pickers:</p>
-<ul class="simple">
-<li><p><strong>LV_EVENT_VALUE_CHANGED</strong> - sent when the color changes.</p></li>
-</ul>
+<p>Only the <a class="reference external" href="/overview/event.html#generic-events">Generic events</a> are sent by the object type.</p>
 <p>Learn more about <a class="reference internal" href="../overview/event.html"><span class="doc">Events</span></a>.</p>
 </div>
 <div class="section" id="keys">
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
-<p>No <em>Keys</em> are processed by the object type.</p>
+<ul class="simple">
+<li><p><strong>LV_KEY_UP</strong>, <strong>LV_KEY_RIGHT</strong> Increment the current parameter’s value by 1</p></li>
+<li><p><strong>LV_KEY_DOWN</strong>, <strong>LV_KEY_LEFT</strong> Decrement the current parameter’s by 1</p></li>
+<li><p><strong>LV_KEY_ENTER</strong> By long press the next mode will be shown. By double click the current parameter will be reset.</p></li>
+</ul>
 <p>Learn more about <a class="reference internal" href="../overview/indev.html"><span class="doc">Keys</span></a>.</p>
 </div>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<p>There is no official example available for this object type yet, but here is some sample test code:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="n">lv_coord_t</span> <span class="n">pickerSize</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+<div class="section" id="c">
+<h3>C<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="disc-color-picker">
+<h4>Disc color picker<a class="headerlink" href="#disc-color-picker" title="Permalink to this headline">¶</a></h4>
+<img alt="Color picker example in LittlevGL" src="../_images/lv_ex_cpicker_1.png" />
+<div class="toggle docutils container">
+<div class="header docutils container">
+<p>code</p>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;lvgl/lvgl.h&quot;</span><span class="cp"></span>
+<span class="cp">#if LV_USE_CPICKER</span>
 
-	<span class="cm">/* Set the style of the color ring */</span>
-    <span class="k">static</span> <span class="n">lv_style_t</span> <span class="n">styleMain</span><span class="p">;</span>
-    <span class="n">lv_style_copy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">styleMain</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">lv_style_plain</span><span class="p">);</span>
-    <span class="n">styleMain</span><span class="p">.</span><span class="n">line</span><span class="p">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
-	<span class="cm">/* Make the background white */</span>
-    <span class="n">styleMain</span><span class="p">.</span><span class="n">body</span><span class="p">.</span><span class="n">main_color</span> <span class="o">=</span> <span class="n">styleMain</span><span class="p">.</span><span class="n">body</span><span class="p">.</span><span class="n">grad_color</span> <span class="o">=</span> <span class="n">LV_COLOR_WHITE</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">lv_ex_cpicker_1</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">lv_obj_t</span> <span class="o">*</span> <span class="n">cpicker</span><span class="p">;</span>
 
-	<span class="cm">/* Set the style of the knob */</span>
-    <span class="k">static</span> <span class="n">lv_style_t</span> <span class="n">styleIndicator</span><span class="p">;</span>
-    <span class="n">lv_style_copy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">styleIndicator</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">lv_style_pretty</span><span class="p">);</span>
-    <span class="n">styleIndicator</span><span class="p">.</span><span class="n">body</span><span class="p">.</span><span class="n">border</span><span class="p">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">LV_COLOR_WHITE</span><span class="p">;</span>
-	<span class="cm">/* Ensure that the knob is fully opaque */</span>
-    <span class="n">styleIndicator</span><span class="p">.</span><span class="n">body</span><span class="p">.</span><span class="n">opa</span> <span class="o">=</span> <span class="n">LV_OPA_COVER</span><span class="p">;</span>
-    <span class="n">styleIndicator</span><span class="p">.</span><span class="n">body</span><span class="p">.</span><span class="n">border</span><span class="p">.</span><span class="n">opa</span> <span class="o">=</span> <span class="n">LV_OPA_COVER</span><span class="p">;</span>
+    <span class="n">cpicker</span> <span class="o">=</span> <span class="n">lv_cpicker_create</span><span class="p">(</span><span class="n">lv_scr_act</span><span class="p">(),</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">lv_obj_set_size</span><span class="p">(</span><span class="n">cpicker</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+    <span class="n">lv_obj_align</span><span class="p">(</span><span class="n">cpicker</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">LV_ALIGN_CENTER</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
 
-    <span class="n">lv_obj_t</span> <span class="o">*</span> <span class="n">scr</span> <span class="o">=</span> <span class="n">lv_scr_act</span><span class="p">();</span>
-
-    <span class="n">lv_obj_t</span> <span class="o">*</span> <span class="n">colorPicker</span> <span class="o">=</span> <span class="n">lv_cpicker_create</span><span class="p">(</span><span class="n">scr</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-    <span class="n">lv_obj_set_size</span><span class="p">(</span><span class="n">colorPicker</span><span class="p">,</span> <span class="n">pickerSize</span><span class="p">,</span> <span class="n">pickerSize</span><span class="p">);</span>
-	<span class="cm">/* Choose the &#39;DISC&#39; type */</span>
-    <span class="n">lv_cpicker_set_type</span><span class="p">(</span><span class="n">colorPicker</span><span class="p">,</span> <span class="n">LV_CPICKER_TYPE_DISC</span><span class="p">);</span>
-    <span class="n">lv_obj_align</span><span class="p">(</span><span class="n">colorPicker</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">LV_ALIGN_CENTER</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-	<span class="cm">/* Set the styles */</span>
-    <span class="n">lv_cpicker_set_style</span><span class="p">(</span><span class="n">colorPicker</span><span class="p">,</span> <span class="n">LV_CPICKER_STYLE_MAIN</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">styleMain</span><span class="p">);</span>
-    <span class="n">lv_cpicker_set_style</span><span class="p">(</span><span class="n">colorPicker</span><span class="p">,</span> <span class="n">LV_CPICKER_STYLE_INDICATOR</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">styleIndicator</span><span class="p">);</span>
-	<span class="cm">/* Change the knob&#39;s color to that of the selected color */</span>
-    <span class="n">lv_cpicker_set_indic_colored</span><span class="p">(</span><span class="n">colorPicker</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+<span class="cp">#endif</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="micropython">
+<h3>MicroPython<a class="headerlink" href="#micropython" title="Permalink to this headline">¶</a></h3>
+<p>No examples yet.</p>
 </div>
 </div>
 <div class="section" id="api">
@@ -1665,11 +1681,7 @@
     <p>
         &copy; Copyright 2020, Gabor Kiss-Vamosi
       <span class="lastupdated">
-<<<<<<< HEAD:en/html/widgets/cpicker.html
         Last updated on Apr 15, 2020.
-=======
-        Last updated on Apr 02, 2020.
->>>>>>> master:en/html/object-types/cpicker.html
       </span>
 
     </p>

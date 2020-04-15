@@ -1,77 +1,60 @@
 ```eval_rst
 :github_url: https://github.com/littlevgl/docs/blob/master/en/widgets/cpicker.md
 ```
-# Color picker (lv_cpicker)
+# color picker (lv_cpicker)
 
 ## Overview
+As its name implies *Color picker* allows to select color. The Hue, Saturation and Value of the color can be selected after each other. 
 
-The *color picker* object **draws a color band and knob** that enable users to **choose a color's hue, saturation, and/or value**.
+The widget has two forms: circle (disc) and rectangle.
 
-### Types of color pickers
+In both forms, be long pressing the object, the color picker will change to the next parameter of the color (hue, saturation or value).
+Besides, double click will reset the current parameter.
 
-The color band of a *color picker* can currently be drawn in two ways:
+## Parts and Styles
+The Color picker's main part is called `LV_CPICKER_PART_BG`. In circular form it uses *scale_width* to set the the width of the circle and *pad_inner* for padding between the circle and the inner preview circle. 
+In rectangle mode *radius* can be used to apply a radius on the rectangle.
 
-* As a linear bar (`LV_CPICKER_TYPE_RECT`).
-* As a circular ring (`LV_CPICKER_TYPE_DISC`).
+The object has  virtual part called `LV_CPICKER_PART_KNOB` which is rectangle (or circle) drawn on the current value. 
+It uses all the rectangle like style properties and padding to make it larger than the width of the circle or rectangle background.
 
-You can switch between these modes with `lv_cpicker_set_type(cpicker, type`).
+## Usage
 
-### Notes
+### Type
 
-In circular mode, the **width and height** of the *color picker* should be the **same**.
+The type of the Color picker can be changed with `lv_cpicker_set_type(cpicker, LV_CPICKER_TYPE_RECT/DISC)`
 
-## Styles
-To set the style of a *color picker* object, use `lv_cpicker_set_style(cpicker, LV_CPICKER_STYLE_XXX, &style)`. `XXX` can either be `MAIN` or `INDICATOR`, which represent the color band and knob, respectively.
 
-- **line.width** - the thickness of the color ring (in `DISC` mode)
-- **body.[main/grad]_color** - the background color of the color picker
+### Set color
+
+The colro can be set manually with `lv_cpicker_set_hue/saturation/value(cpicker, x)` or all at once with `lv_cpicker_set_hsv(cpicker, hsv)` or `lv_cpicker_set_color(cpicker, rgb)`
+
+### Color mode
+
+The current color moed can be manually selected with `lv_cpicker_set_color_mode(cpicker, LV_CPICKER_COLOR_MODE_HUE/SATURATION/VALUE)`.
+
+The color moe be fixed (do not change with long press) using `lv_cpicker_set_color_mode_fixed(cpicker, true)`
+
+### Knob color
+`lv_cpicker_set_knob_colored(cpicker, true)` make the knob to automatically show the selected color as background color.
 
 ## Events
-Besides the [Generic events](/overview/event.html#generic-events) the following [Special events](/overview/event.html#special-events) are sent by color pickers:
- - **LV_EVENT_VALUE_CHANGED** - sent when the color changes.
+Only the [Generic events](/overview/event.html#generic-events) are sent by the object type.
 
 Learn more about [Events](/overview/event).
 
 ## Keys
-No *Keys* are processed by the object type.
+- **LV_KEY_UP**, **LV_KEY_RIGHT** Increment the current parameter's value by 1
+- **LV_KEY_DOWN**, **LV_KEY_LEFT** Decrement the current parameter's by 1
+- **LV_KEY_ENTER** By long press the next mode will be shown. By double click the current parameter will be reset.
 
 Learn more about [Keys](/overview/indev).
 
-
 ## Example
 
-There is no official example available for this object type yet, but here is some sample test code:
+```eval_rst
 
-```c
-    const lv_coord_t pickerSize = 200;
-
-	/* Set the style of the color ring */
-    static lv_style_t styleMain;
-    lv_style_copy(&styleMain, &lv_style_plain);
-    styleMain.line.width = 30;
-	/* Make the background white */
-    styleMain.body.main_color = styleMain.body.grad_color = LV_COLOR_WHITE;
-
-	/* Set the style of the knob */
-    static lv_style_t styleIndicator;
-    lv_style_copy(&styleIndicator, &lv_style_pretty);
-    styleIndicator.body.border.color = LV_COLOR_WHITE;
-	/* Ensure that the knob is fully opaque */
-    styleIndicator.body.opa = LV_OPA_COVER;
-    styleIndicator.body.border.opa = LV_OPA_COVER;
-
-    lv_obj_t * scr = lv_scr_act();
-
-    lv_obj_t * colorPicker = lv_cpicker_create(scr, NULL);
-    lv_obj_set_size(colorPicker, pickerSize, pickerSize);
-	/* Choose the 'DISC' type */
-    lv_cpicker_set_type(colorPicker, LV_CPICKER_TYPE_DISC);
-    lv_obj_align(colorPicker, NULL, LV_ALIGN_CENTER, 0, 0);
-	/* Set the styles */
-    lv_cpicker_set_style(colorPicker, LV_CPICKER_STYLE_MAIN, &styleMain);
-    lv_cpicker_set_style(colorPicker, LV_CPICKER_STYLE_INDICATOR, &styleIndicator);
-	/* Change the knob's color to that of the selected color */
-    lv_cpicker_set_indic_colored(colorPicker, true);
+.. include:: /lv_examples/src/lv_ex_widgets/lv_ex_cpicker/index.rst
 
 ```
 

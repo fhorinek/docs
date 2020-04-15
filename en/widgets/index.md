@@ -30,6 +30,7 @@
    list
    linemeter
    msgbox
+   objmask
    page
    roller
    slider
